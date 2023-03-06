@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+		<!--=== Required Meta Tags ======-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!--=== CSS Link ===-->
+		<link rel="stylesheet" href="{{ asset('front/assets/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/owl.theme.default.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/owl.carousel.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/font-awesome.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/icofont.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/animate.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/magnific-popup.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/style.css') }}">
+		<link rel="stylesheet" href="{{ asset('front/assets/css/responsive.css') }}">
+
+		<!--=== Favicon ===-->
+		<link rel="icon" type="image/png" href="{{ asset('front/assets/images/favicon.png') }}">
+		<!--=== Title ===-->
+		<title>Bonax - Construction & Business HTML Template</title>
+    </head>
+
+    <body>
+		<!--=== Start Preloader Section ===-->
+		<div class="preloader">
+            <div class="content">
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+            </div>
+        </div>
+		<!--=== End Preloader Section ===-->
+
+		<!--=== Start Header Section ===-->
+		<header class="header-section">
+			<div class="up-header-content bg-color-150f03">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-8">
+							<ul class="header-info-content bg-color-f55e1a">
+								<li class="ps-0">
+									This  Learn The Page business Construction
+								</li>
+								<li>
+									<i class="icofont-envelope"></i>
+									<a href="mailto:bonax@gmail.com">
+										bonax@gmail.com
+									</a>
+								</li>
+								<li>
+									<i class="icofont-clock-time"></i>
+									Sun - Fri: 8.00am - 10.00pm
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-lg-4">
+							<ul class="header-social-content">
+								<li>
+									<a href="#" target="_blank">
+										<i class="icofont-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<i class="icofont-youtube-play"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<i class="icofont-linkedin"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<i class="icofont-pinterest"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<a class="navbar-brand" href="index.html">
+						<img src="assets/images/logo.png" alt="Logo">
+					</a>
+
+					<div class="for-mobile-options">
+						<div class="menu-right-options d-flex align-items-center">
+							<a href="cart.html" class="cart-option">
+								<i class="icofont-cart"></i>
+								<span>3</span>
+							</a>
+							<a href="contact.html" class="main-btn">
+								<span>
+									Contact Now
+									<i class="icofont-arrow-right"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+
+					<a href="javascript:void(0);" class="mobile-menu">
+						<div class="mobile-menu-btn">
+							<div class="mobile-menu-bar"></div>
+						</div>
+					</a>
+
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav m-auto">
+							<li class="nav-item">
+								<a href="#" class="nav-link dropdown-toggles active">Home</a>
+
+								<ul class="sub-menu">
+									<li class="nav-item">
+										<a href="index.html" class="nav-link active">Home Page One</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="index-2.html" class="nav-link">Home Page Two</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="index-3.html" class="nav-link">Home Page Three</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-item">
+								<a href="about.html" class="nav-link">About</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="#" class="nav-link dropdown-toggles">Company</a>
+
+								<ul class="sub-menu">
+									<li class="nav-item">
+										<a href="about.html" class="nav-link">About</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="#" class="nav-link dropdown-toggles">Projects</a>
+
+										<ul class="sub-menu-sub">
+											<li class="nav-item">
+												<a href="projects.html" class="nav-link">Projects Page</a>
+											</li>
+
+											<li class="nav-item">
+												<a href="project-details.html" class="nav-link">Project Details Page</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-item">
+								<a href="#" class="nav-link dropdown-toggles">Services</a>
+
+								<ul class="sub-menu">
+									<li class="nav-item">
+										<a href="services.html" class="nav-link">Services Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="services-details.html" class="nav-link">Services Details Page</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-item">
+								<a href="#" class="nav-link dropdown-toggles">Pages</a>
+
+								<ul class="sub-menu">
+									<li class="nav-item">
+										<a href="about.html" class="nav-link">About</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link dropdown-toggles">Team</a>
+
+										<ul class="sub-menu-sub">
+											<li class="nav-item">
+												<a href="team.html" class="nav-link">Team Page</a>
+											</li>
+
+											<li class="nav-item">
+												<a href="team-details.html" class="nav-link">Team Details Page</a>
+											</li>
+										</ul>
+									</li>
+
+									<li class="nav-item">
+										<a href="#" class="nav-link dropdown-toggles">Shop</a>
+
+										<ul class="sub-menu-sub">
+											<li class="nav-item">
+												<a href="products.html" class="nav-link">Products Page</a>
+											</li>
+
+											<li class="nav-item">
+												<a href="cart.html" class="nav-link">Cart Page</a>
+											</li>
+
+											<li class="nav-item">
+												<a href="checkout.html" class="nav-link">Checkout Page</a>
+											</li>
+
+											<li class="nav-item">
+												<a href="product-details.html" class="nav-link">Product Details Page</a>
+											</li>
+
+											<li class="nav-item">
+												<a href="wishlist.html" class="nav-link">Wishlist Page</a>
+											</li>
+
+											<li class="nav-item">
+												<a href="payment.html" class="nav-link">Payment Page</a>
+											</li>
+										</ul>
+									</li>
+
+									<li class="nav-item">
+										<a href="#" class="nav-link dropdown-toggles">Sign In / Sign Up</a>
+
+										<ul class="sub-menu-sub">
+											<li class="nav-item">
+												<a href="sign-in.html" class="nav-link">Sign In Page</a>
+											</li>
+
+											<li class="nav-item">
+												<a href="sign-up.html" class="nav-link">Sign Up Page</a>
+											</li>
+										</ul>
+									</li>
+
+									<li class="nav-item">
+										<a href="faq.html" class="nav-link">FAQ Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="testimonials.html" class="nav-link">Testimonials Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="terms-conditions.html" class="nav-link">Terms Conditions Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="privacy-policy.html" class="nav-link">Privacy Policy Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="coming-soon.html" class="nav-link">Coming Soon Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="404.html" class="nav-link">404 Page</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-item">
+								<a href="#" class="nav-link dropdown-toggles">Blog</a>
+
+								<ul class="sub-menu">
+									<li class="nav-item">
+										<a href="blog.html" class="nav-link">Blog Grid Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="blog-details.html" class="nav-link">Blog Details Page</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-item">
+								<a href="contact.html" class="nav-link">Contact</a>
+							</li>
+						</ul>
+
+						<div class="menu-right-options">
+							<a href="cart.html" class="cart-option">
+								<i class="icofont-cart"></i>
+								<span>3</span>
+							</a>
+							<a href="contact.html" class="main-btn">
+								<span>
+									Contact Now
+									<i class="icofont-arrow-right"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!--=== End Header Section ===-->
+
+		<!--=== Start Menu Slide Bar ===-->
+		<aside class="menu-slide-bar">
+			<div class="close-mobile-menu">
+				<div class="mobile-logo">
+					<a href="index.html" class="mobile-logo">
+						<img src="assets/images/logo.png" alt="Logo">
+					</a>
+				</div>
+
+				<a href="javascript:void(0);" class="close-btn">
+					<i class="icofont-close-line"></i>
+				</a>
+			</div>
+
+			<nav class="side-mobile-menu">
+				<ul id="mobile-menu-active">
+					<li class="nav-item has-children">
+						<a href="#" class="nav-link dropdown-toggles active">Home</a>
+
+						<ul class="sub-menu">
+							<li class="nav-item">
+								<a href="index.html" class="nav-link active">Home One</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="index-2.html" class="nav-link">Home Two</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="index-3.html" class="nav-link">Home Three</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item">
+						<a href="about.html" class="nav-link">About</a>
+					</li>
+
+					<li class="nav-item has-children">
+						<a href="#" class="nav-link dropdown-toggles">Company</a>
+
+						<ul class="sub-menu">
+							<li class="nav-item">
+								<a href="about.html" class="nav-link">About</a>
+							</li>
+
+							<li class="nav-item has-children">
+								<a href="#" class="nav-link dropdown-toggles">Projects</a>
+
+								<ul class="sub-menu">
+									<li class="nav-item">
+										<a href="projects.html" class="nav-link">Projects Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="project-details.html" class="nav-link">Project Details Page</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item has-children">
+						<a href="#" class="nav-link dropdown-toggles">Services</a>
+
+						<ul class="sub-menu">
+							<li class="nav-item">
+								<a href="services.html" class="nav-link">Services Page</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="services-details.html" class="nav-link">Services Details Page</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item has-children">
+						<a href="#" class="nav-link dropdown-toggles">Pages</a>
+
+						<ul class="sub-menu">
+							<li class="nav-item">
+								<a href="about.html" class="nav-link">About</a>
+							</li>
+
+							<li class="nav-item has-children">
+								<a href="#" class="nav-link dropdown-toggles">Team</a>
+
+								<ul class="sub-menu">
+									<li class="nav-item">
+										<a href="team.html" class="nav-link">Team Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="team-details.html" class="nav-link">Team Details Page</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-item has-children">
+								<a href="#" class="nav-link dropdown-toggles">Shop</a>
+
+								<ul class="sub-menu">
+									<li class="nav-item">
+										<a href="products.html" class="nav-link">Products Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="cart.html" class="nav-link">Cart Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="checkout.html" class="nav-link">Checkout Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="product-details.html" class="nav-link">Product Details Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="wishlist.html" class="nav-link">Wishlist Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="payment.html" class="nav-link">Payment Page</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-item has-children">
+								<a href="#" class="nav-link dropdown-toggles">Sign In / Sign Up</a>
+
+								<ul class="sub-menu">
+									<li class="nav-item">
+										<a href="sign-in.html" class="nav-link">Sign In Page</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="sign-up.html" class="nav-link">Sign Up Page</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="nav-item">
+								<a href="faq.html" class="nav-link">FAQ Page</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="testimonials.html" class="nav-link">Testimonials Page</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="terms-conditions.html" class="nav-link">Terms Conditions Page</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="privacy-policy.html" class="nav-link">Privacy Policy Page</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="coming-soon.html" class="nav-link">Coming Soon Page</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="404.html" class="nav-link">404 Page</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item has-children">
+						<a href="#" class="nav-link dropdown-toggles">Blog Page</a>
+
+						<ul class="sub-menu">
+							<li class="nav-item">
+								<a href="blog.html" class="nav-link">Blog Grid Page</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="blog-details.html" class="nav-link">Blog Details Page</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item">
+						<a href="contact.html" class="nav-link">Contact Page</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<div class="body-overlay"></div>
+		<!--=== End Menu Slide Bar ===-->
+        @yield('content')
+        <!--=== Start Footer Section ===-->
+		<section class="footer-section pt-100 pb-70">
+			<div class="container">
+				<div class="back-to-top text-center">
+					<i class="icofont-simple-up"></i>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-sm-6">
+						<div class="main-footer-item wow fadeInUp delay-0-2s">
+							<a href="index.html" class="footer-logo">
+								<img src="assets/images/white-logo.png" alt="Image">
+							</a>
+							<p>Louasi architecto beatae vitae dicta sunt Nemo enim ipsam quia voluptas sit aut odit aut fugit this beatae vitae dicta Nemo enim ipsam to...</p>
+
+							<ul class="footer-social-content">
+								<li>
+									<a href="#" target="_blank">
+										<i class="icofont-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<i class="icofont-youtube-play"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<i class="icofont-linkedin"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank">
+										<i class="icofont-pinterest"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="main-footer-item wow fadeInUp delay-0-4s">
+							<h3>Service</h3>
+
+							<ul class="import-link">
+								<li>
+									<a href="services.html">Why choose us</a>
+								</li>
+								<li>
+									<a href="projects.html">Our solutions</a>
+								</li>
+								<li>
+									<a href="team.html">Partners</a>
+								</li>
+								<li>
+									<a href="services.html">Core values</a>
+								</li>
+								<li>
+									<a href="projects.html">Our projects</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="main-footer-item wow fadeInUp delay-0-6s">
+							<h3>Quick Link</h3>
+
+							<ul class="import-link">
+								<li>
+									<a href="services.html">Residents</a>
+								</li>
+								<li>
+									<a href="projects.html">Business</a>
+								</li>
+								<li>
+									<a href="services.html">Online Service</a>
+								</li>
+								<li>
+									<a href="about.html">Visiting</a>
+								</li>
+								<li>
+									<a href="team.html">Employment</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="main-footer-item wow fadeInUp delay-0-8s">
+							<h3>Our Contact</h3>
+
+							<ul class="contact-info">
+								<li>
+									<i class="icofont-clock-time"></i>
+									<span>Open Hours of Government: Mon - Fri: 8.00 am. - 6.00 pm.</span>
+								</li>
+								<li>
+									<i class="icofont-location-pin"></i>
+									<span>13/A, Miranda Halim City. 2444/245 Halim City.</span>
+								</li>
+								<li>
+									<i class="icofont-phone"></i>
+									<a href="tel:+099-695-695-35">+099 695 695 35</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--=== End Footer Section ===-->
+
+		<!--=== Start Copy Right Section ===-->
+		<div class="copy-right-section">
+			<div class="container">
+				<p>Copyright © 2022  Bonax. All Rights Reserved.</p>
+			</div>
+		</div>
+		<!--=== End Copy Right Section ===-->
+
+        <!--=== JS Link ===-->
+        <script src="{{ asset('front/assets/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/bootstrap.bundle.min.js') }}"></script>
+		<script src="{{ asset('front/assets/js/mobile-menu.js') }}"></script>
+		<script src="{{ asset('front/assets/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/wow.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/magnific-popup.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/counterup.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/waypoints.min.js') }}"></script>
+        <script src="{{ asset('front/assets/js/countdown.min.js') }}"></script>
+		<script src="{{ asset('front/assets/js/main.js') }}"></script>
+    </body>
+</html>
