@@ -17,6 +17,9 @@ use TheHocineSaad\LaravelAlgereography\Models\Wilaya;
 Route::get('/', function () {
     return view('welcome-new');
 });
+Route::get('/detail-product', function () {
+    return view('detail-product');
+});
 Route::get('/register-pro', function () {
     $wilayas = Wilaya::all();
     return view('auth.register-pro',compact('wilayas'));
