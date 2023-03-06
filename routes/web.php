@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use TheHocineSaad\LaravelAlgereography\Models\Wilaya;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome-new');
 });
+Route::get('/register-pro', function () {
+    $wilayas = Wilaya::all();
+    return view('auth.register-pro',compact('wilayas'));
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
