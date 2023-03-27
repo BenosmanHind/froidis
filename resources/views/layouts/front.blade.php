@@ -19,7 +19,7 @@
 		<!--=== Favicon ===-->
 		<link rel="icon" type="image/png" href="{{ asset('front/assets/images/favicon.png') }}">
 		<!--=== Title ===-->
-		<title>Bonax - Construction & Business HTML Template</title>
+		<title>Froidis - Solutions Pour Le froid Industriel</title>
     </head>
 
     <body>
@@ -42,67 +42,20 @@
 
 		<!--=== Start Header Section ===-->
 		<header class="header-section">
-			<div class="up-header-content bg-color-150f03">
-				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-lg-8">
-							<ul class="header-info-content bg-color-f55e1a">
-								<li class="ps-0">
-									This  Learn The Page business Construction
-								</li>
-								<li>
-									<i class="icofont-envelope"></i>
-									<a href="mailto:bonax@gmail.com">
-										bonax@gmail.com
-									</a>
-								</li>
-								<li>
-									<i class="icofont-clock-time"></i>
-									Sun - Fri: 8.00am - 10.00pm
-								</li>
-							</ul>
-						</div>
-
-						<div class="col-lg-4">
-							<ul class="header-social-content">
-								<li>
-									<a href="#" target="_blank">
-										<i class="icofont-facebook"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" target="_blank">
-										<i class="icofont-youtube-play"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" target="_blank">
-										<i class="icofont-linkedin"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" target="_blank">
-										<i class="icofont-pinterest"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
+			
 
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
 					<a class="navbar-brand" href="index.html">
-						<img src="assets/images/logo.png" alt="Logo">
+						<img src="{{asset('front/assets/images/logo.png')}}" alt="Logo">
 					</a>
 
 					<div class="for-mobile-options">
 						<div class="menu-right-options d-flex align-items-center">
-							<a href="cart.html" class="cart-option">
+						{{--	<a href="cart.html" class="cart-option">
 								<i class="icofont-cart"></i>
 								<span>3</span>
-							</a>
+							</a>--}}
 							<a href="contact.html" class="main-btn">
 								<span>
 									Contact Now
@@ -121,29 +74,15 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav m-auto">
 							<li class="nav-item">
-								<a href="#" class="nav-link dropdown-toggles active">Home</a>
-
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="index.html" class="nav-link active">Home Page One</a>
-									</li>
-
-									<li class="nav-item">
-										<a href="index-2.html" class="nav-link">Home Page Two</a>
-									</li>
-
-									<li class="nav-item">
-										<a href="index-3.html" class="nav-link">Home Page Three</a>
-									</li>
-								</ul>
+								<a href="contact.html" class="nav-link">Accueil</a>
 							</li>
 
 							<li class="nav-item">
-								<a href="about.html" class="nav-link">About</a>
+								<a href="about.html" class="nav-link">Présentation</a>
 							</li>
 
 							<li class="nav-item">
-								<a href="#" class="nav-link dropdown-toggles">Company</a>
+								<a href="#" class="nav-link dropdown-toggles">Produits</a>
 
 								<ul class="sub-menu">
 									<li class="nav-item">
@@ -180,124 +119,22 @@
 								</ul>
 							</li>
 
-							<li class="nav-item">
-								<a href="#" class="nav-link dropdown-toggles">Pages</a>
 
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="about.html" class="nav-link">About</a>
-									</li>
-									<li class="nav-item">
-										<a href="#" class="nav-link dropdown-toggles">Team</a>
-
-										<ul class="sub-menu-sub">
-											<li class="nav-item">
-												<a href="team.html" class="nav-link">Team Page</a>
-											</li>
-
-											<li class="nav-item">
-												<a href="team-details.html" class="nav-link">Team Details Page</a>
-											</li>
-										</ul>
-									</li>
-
-									<li class="nav-item">
-										<a href="#" class="nav-link dropdown-toggles">Shop</a>
-
-										<ul class="sub-menu-sub">
-											<li class="nav-item">
-												<a href="products.html" class="nav-link">Products Page</a>
-											</li>
-
-											<li class="nav-item">
-												<a href="cart.html" class="nav-link">Cart Page</a>
-											</li>
-
-											<li class="nav-item">
-												<a href="checkout.html" class="nav-link">Checkout Page</a>
-											</li>
-
-											<li class="nav-item">
-												<a href="product-details.html" class="nav-link">Product Details Page</a>
-											</li>
-
-											<li class="nav-item">
-												<a href="wishlist.html" class="nav-link">Wishlist Page</a>
-											</li>
-
-											<li class="nav-item">
-												<a href="payment.html" class="nav-link">Payment Page</a>
-											</li>
-										</ul>
-									</li>
-
-									<li class="nav-item">
-										<a href="#" class="nav-link dropdown-toggles">Sign In / Sign Up</a>
-
-										<ul class="sub-menu-sub">
-											<li class="nav-item">
-												<a href="sign-in.html" class="nav-link">Sign In Page</a>
-											</li>
-
-											<li class="nav-item">
-												<a href="sign-up.html" class="nav-link">Sign Up Page</a>
-											</li>
-										</ul>
-									</li>
-
-									<li class="nav-item">
-										<a href="faq.html" class="nav-link">FAQ Page</a>
-									</li>
-
-									<li class="nav-item">
-										<a href="testimonials.html" class="nav-link">Testimonials Page</a>
-									</li>
-
-									<li class="nav-item">
-										<a href="terms-conditions.html" class="nav-link">Terms Conditions Page</a>
-									</li>
-
-									<li class="nav-item">
-										<a href="privacy-policy.html" class="nav-link">Privacy Policy Page</a>
-									</li>
-
-									<li class="nav-item">
-										<a href="coming-soon.html" class="nav-link">Coming Soon Page</a>
-									</li>
-
-									<li class="nav-item">
-										<a href="404.html" class="nav-link">404 Page</a>
-									</li>
-								</ul>
-							</li>
+						
 
 							<li class="nav-item">
-								<a href="#" class="nav-link dropdown-toggles">Blog</a>
-
-								<ul class="sub-menu">
-									<li class="nav-item">
-										<a href="blog.html" class="nav-link">Blog Grid Page</a>
-									</li>
-
-									<li class="nav-item">
-										<a href="blog-details.html" class="nav-link">Blog Details Page</a>
-									</li>
-								</ul>
+								<a href="contact.html" class="nav-link">Qualité</a>
 							</li>
-
 							<li class="nav-item">
 								<a href="contact.html" class="nav-link">Contact</a>
 							</li>
 						</ul>
 
 						<div class="menu-right-options">
-							<a href="cart.html" class="cart-option">
-								<i class="icofont-cart"></i>
-								<span>3</span>
-							</a>
+							
 							<a href="contact.html" class="main-btn">
 								<span>
-									Contact Now
+									Connectez-vous
 									<i class="icofont-arrow-right"></i>
 								</span>
 							</a>
