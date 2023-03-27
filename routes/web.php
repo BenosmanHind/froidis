@@ -23,6 +23,12 @@ Route::get('/detail-product', function () {
 Route::get('/categories', function () {
     return view('categories');
 });
+Route::get('/admin', function () {
+    return view('admin.dashboard-admin');
+});
+Route::get('/customers', function () {
+    return view('admin.customers');
+});
 Route::get('/register-pro', function () {
     $wilayas = Wilaya::all();
     return view('auth.register-pro',compact('wilayas'));

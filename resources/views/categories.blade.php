@@ -55,7 +55,7 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="main-product-item">
                     <div class="product-img">
-                        <a href="product-details.html">
+                        <a href="#">
                             <img src="{{ asset('front/assets/images/products/product-1.png') }}" alt="Image">
                         </a>
 
@@ -80,7 +80,7 @@
                     <div class="main-product-content d-flex">
                         <div>
                            <h3>
-                                <a href="product-details.html">
+                                <a href="#">
                                     Evaporateurs cubique
                                 </a>
                             </h3>
@@ -94,7 +94,7 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="main-product-item">
                     <div class="product-img">
-                        <a href="product-details.html">
+                        <a href="#">
                             <img src="{{ asset('front/assets/images/products/product-2.png') }}" alt="Image">
                         </a>
 
@@ -119,7 +119,7 @@
                     <div class="main-product-content d-flex">
                         <div>
                             <h3>
-                                <a href="product-details.html">
+                                <a href="#">
                                     Evaporateurs cubique
                                 </a>
                             </h3>
