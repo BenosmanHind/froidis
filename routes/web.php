@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::get('/detail-product', function () {
     return view('detail-product');
 });
+Route::get('/categories', function () {
+    return view('categories');
+});
 Route::get('/register-pro', function () {
     $wilayas = Wilaya::all();
     return view('auth.register-pro',compact('wilayas'));
