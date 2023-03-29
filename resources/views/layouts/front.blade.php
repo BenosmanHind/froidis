@@ -103,11 +103,7 @@
 									</li>
 								</ul>
 							</li>
-
-
-
-
-							<li class="nav-item">
+                            <li class="nav-item">
 								<a style="cursor: pointer" class="nav-link">Qualité</a>
 							</li>
 							<li class="nav-item">
@@ -116,13 +112,22 @@
 						</ul>
 
 						<div class="menu-right-options">
-
-							<a href="{{asset('/register-pro')}}" class="main-btn">
+                            @auth
+                            <a style="cursor: pointer" class="main-btn">
+								<span>
+									Dashboard
+									<i class="icofont-arrow-right"></i>
+								</span>
+							</a>
+                            @else
+                            <a href="{{asset('/register-pro')}}" class="main-btn">
 								<span>
 									Inscrivez-vous
 									<i class="icofont-arrow-right"></i>
 								</span>
 							</a>
+                            @endauth
+
 						</div>
 					</div>
 				</div>

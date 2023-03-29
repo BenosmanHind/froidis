@@ -27,7 +27,7 @@
                 <div class="sign-up-form">
                     <h2>Connectez-vous !</h2>
                     <p>Merci de saisir les informations pour se connecter </p>
-                    <form class="form-wrap" method="GET" action="{{ asset('/customers') }}">
+                    <form class="form-wrap" method="POST" action="{{ route('login') }}">
                         @csrf
 
 
