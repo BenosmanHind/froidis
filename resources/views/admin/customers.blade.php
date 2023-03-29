@@ -37,7 +37,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
                                     <tr>
                                         <td>1</td>
                                         <td>Benmouloud lahcene</td>
