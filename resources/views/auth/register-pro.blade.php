@@ -8,7 +8,7 @@
             <h2>Inscription</h2>
             <ul>
                 <li>
-                    <a href="index.html">Accueil</a>
+                    <a href="{{ asset('/') }}">Accueil</a>
                 </li>
                 <li style="color: #ffff">
                     Inscription
@@ -141,7 +141,7 @@
                                     </span>
                                 </a>
                             </li>
-                          
+
                             <li>
                                 <a href="https://www.linkedin.com/" target="_blank" class="hover-style">
                                     <span class="inner-border">

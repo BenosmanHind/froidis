@@ -8,7 +8,7 @@
             <h2>Inscription</h2>
             <ul>
                 <li>
-                    <a href="index.html">Accueil</a>
+                    <a href="{{ asset('/') }}">Accueil</a>
                 </li>
                 <li style="color: #ffff">
                     Connexion
@@ -29,7 +29,7 @@
                     <p>Merci de saisir les informations pour se connecter </p>
                     <form class="form-wrap" method="GET" action="{{ asset('/customers') }}">
                         @csrf
-                       
+
 
                         <div class="form-floating form-group">
                             <input type="text" class="form-control @error('email') is-invalid @enderror"  placeholder="Votre email" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -40,7 +40,7 @@
                                 </span>
                                 @enderror
                         </div>
-                        
+
 
                         <div class="form-floating form-group">
                             <input type="password" class="form-control @error('password') is-invalid @enderror" id="password-field1" placeholder="Your Password"name="password" value=""required autocomplete="new-password">
@@ -53,7 +53,7 @@
                                 @enderror
                         </div>
 
-                       
+
                         <div class="submit-btn">
                            <a href="{{asset('/admin')}}"> <button type="submit" class="main-btn">
                                 <span>Connexion</span>

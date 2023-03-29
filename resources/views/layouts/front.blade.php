@@ -23,11 +23,11 @@
     </head>
 
     <body>
-		
+
 
 		<!--=== Start Header Section ===-->
 		<header class="header-section">
-			
+
 
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
@@ -41,7 +41,7 @@
 								<i class="icofont-cart"></i>
 								<span>3</span>
 							</a>--}}
-							<a href="contact.html" class="main-btn">
+							<a style="cursor: pointer" class="main-btn">
 								<span>
 									Contact Now
 									<i class="icofont-arrow-right"></i>
@@ -59,31 +59,31 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav m-auto">
 							<li class="nav-item">
-								<a href="contact.html" class="nav-link">Accueil</a>
+								<a href="{{ asset('/') }}" class="nav-link">Accueil</a>
 							</li>
 
 							<li class="nav-item">
-								<a href="about.html" class="nav-link">Présentation</a>
+								<a style="cursor: pointer" class="nav-link">Présentation</a>
 							</li>
 
 							<li class="nav-item">
-								<a href="#" class="nav-link dropdown-toggles">Produits</a>
+								<a style="cursor: pointer" class="nav-link dropdown-toggles">Produits</a>
 
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a href="about.html" class="nav-link">About</a>
+										<a style="cursor: pointer" class="nav-link">About</a>
 									</li>
 
 									<li class="nav-item">
-										<a href="#" class="nav-link dropdown-toggles">Projects</a>
+										<a style="cursor: pointer" class="nav-link dropdown-toggles">Projects</a>
 
 										<ul class="sub-menu-sub">
 											<li class="nav-item">
-												<a href="projects.html" class="nav-link">Projects Page</a>
+												<a style="cursor: pointer" class="nav-link">Projects Page</a>
 											</li>
 
 											<li class="nav-item">
-												<a href="project-details.html" class="nav-link">Project Details Page</a>
+												<a style="cursor: pointer" class="nav-link">Project Details Page</a>
 											</li>
 										</ul>
 									</li>
@@ -91,32 +91,32 @@
 							</li>
 
 							<li class="nav-item">
-								<a href="#" class="nav-link dropdown-toggles">Services</a>
+								<a style="cursor: pointer" class="nav-link dropdown-toggles">Services</a>
 
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a href="services.html" class="nav-link">Services Page</a>
+										<a style="cursor: pointer" class="nav-link">Services Page</a>
 									</li>
 
 									<li class="nav-item">
-										<a href="services-details.html" class="nav-link">Services Details Page</a>
+										<a style="cursor: pointer" class="nav-link">Services Details Page</a>
 									</li>
 								</ul>
 							</li>
 
 
-						
+
 
 							<li class="nav-item">
-								<a href="contact.html" class="nav-link">Qualité</a>
+								<a style="cursor: pointer" class="nav-link">Qualité</a>
 							</li>
 							<li class="nav-item">
-								<a href="contact.html" class="nav-link">Contact</a>
+								<a style="cursor: pointer" class="nav-link">Contact</a>
 							</li>
 						</ul>
 
 						<div class="menu-right-options">
-							
+
 							<a href="{{asset('/register-pro')}}" class="main-btn">
 								<span>
 									Inscrivez-vous
@@ -337,60 +337,60 @@
 
 							<ul class="footer-social-content">
 								<li>
-									<a href="#" target="_blank">
+									<a style="cursor: pointer" target="_blank">
 										<i class="icofont-facebook"></i>
 									</a>
 								</li>
 								<li>
-									<a href="#" target="_blank">
+									<a style="cursor: pointer" target="_blank">
 										<i class="icofont-youtube-play"></i>
 									</a>
 								</li>
 								<li>
-									<a href="#" target="_blank">
+									<a style="cursor: pointer" target="_blank">
 										<i class="icofont-linkedin"></i>
 									</a>
 								</li>
-							
+
 							</ul>
 						</div>
 					</div>
 
-					
-					
+
+
 
 					<div class="col-md-4">
 						<div class="main-footer-item wow fadeInUp delay-0-8s">
 							<h3>TLEMCEN: Siège Social et Show Room</h3>
 
 							<ul class="contact-info" >
-								
+
 								<li>
 									<i style="color:#ffff" class="icofont-location-pin"></i>
 									<span> Groupement propriété 51, Portion13 local 01 et 01A Berdaa, Hennaya</span>
 								</li>
 								<li>
 									<i  style="color:#ffff" class="icofont-phone"></i>
-									<a href="tel:+099-695-695-35">+213 (0)560 047 047</a>
+									<a style="cursor: pointer">+213 (0)560 047 047</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-					
+
 
 					<div class="col-md-4">
 						<div class="main-footer-item wow fadeInUp delay-0-8s">
 							<h3>ALGER: Bureau et Show Room</h3>
 
 							<ul class="contact-info" >
-								
+
 								<li>
 									<i  style="color:#ffff" class="icofont-location-pin"></i>
 									<span>  Haouch Kot Lot N°54 Bis El Hamiz Dar El Beida ( Face du C.E.M El Wouroud)</span>
 								</li>
 								<li>
 									<i  style="color:#ffff" class="icofont-phone"></i>
-									<a href="tel:+099-695-695-35">Tél. : +213 (0)560 047 047</a>
+									<a style="cursor: pointer">Tél. : +213 (0)560 047 047</a>
 								</li>
 							</ul>
 						</div>

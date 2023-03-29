@@ -22,9 +22,9 @@
         <div class="banner-content text-center" style="max-width: 100%">
             <h1 class="wow fadeInUp delay-0-2s" style="font-size: 71px;">Leader Algérien du Froid <br> commercial et industriel</h1>
             <p class="wow fadeInUp delay-0-4s" style="max-width: 100%">Nous offrons des solutions innovantes pour répondre à vos besoins  <br> en matière de froid industriel.</p>
-            <a href="contact.html" class="main-btn wow fadeInUp delay-0-8s">
+            <a style="cursor: pointer" class="main-btn wow fadeInUp delay-0-8s">
                 <span>
-                    A propos de nous 
+                    A propos de nous
                     <i class="icofont-arrow-right"></i>
                 </span>
             </a>
@@ -46,26 +46,26 @@
                 <div class="main-services-item style-two wow fadeInUp delay-0-2s">
                     <i class="icofont-tree-alt"></i>
                     <h3>
-                        <a href="#">Agriculture</a>
+                        <a style="cursor: pointer">Agriculture</a>
                     </h3>
-                 
+
                 </div>
             </div>
-        
+
             <div class="col-md-3">
                 <div class="main-services-item style-two wow fadeInUp delay-0-4s">
                     <i class="icofont-fix-tools"></i>
                     <h3>
-                        <a href="#">professionnels</a>
+                        <a style="cursor: pointer">professionnels</a>
                     </h3>
                 </div>
             </div>
-        
+
             <div  class="col-md-3">
                 <div class="main-services-item style-two wow fadeInUp delay-0-6s">
                     <i class="icofont-industries"></i>
                     <h3>
-                        <a href="#">industrie</a>
+                        <a style="cursor: pointer">industrie</a>
                     </h3>
                 </div>
             </div>
@@ -74,13 +74,13 @@
                 <div class="main-services-item style-two wow fadeInUp delay-0-6s">
                     <i class="icofont-snow-alt"></i>
                     <h3>
-                        <a href="services-details.html">chambre froide</a>
+                        <a style="cursor: pointer">chambre froide</a>
                     </h3>
-              
+
                 </div>
             </div>
-            
-           
+
+
         </div>
     </div>
 
@@ -103,7 +103,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-2s">
-                    <a href="project-details.html" class="projects-img">
+                    <a href="{{asset('/categories')}}" class="projects-img">
                         <img src="{{asset('front/assets/images/projects/projects-1.jpg')}}" alt="Image">
                     </a>
 
@@ -120,14 +120,14 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-4s">
-                    <a href="project-details.html" class="projects-img">
+                    <a style="cursor: pointer" class="projects-img">
                         <img src="{{asset('front/assets/images/projects/projects-2.jpg')}}" alt="Image">
                     </a>
 
                     <div class="project-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="project-details.html">GROUPES DE CONDENSATION</a>
+                                <a style="cursor: pointer">GROUPES DE CONDENSATION</a>
                             </h3>
                             <p>Des groupes de condensation commerciaux et Industriels. </p>
                         </div>
@@ -137,14 +137,14 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-6s">
-                    <a href="project-details.html" class="projects-img">
+                    <a style="cursor: pointer" class="projects-img">
                         <img src="{{asset('front/assets/images/projects/projects-3.jpg')}}" alt="Image">
                     </a>
 
                     <div class="project-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="project-details.html">COMPRESSEURS FRIGORIFIQUES</a>
+                                <a style="cursor: pointer">COMPRESSEURS FRIGORIFIQUES</a>
                             </h3>
                             <p>Hermétiques en MANEUROP, DANFOSS et COPELAND et Semi-hermétique </p>
                         </div>
@@ -154,14 +154,14 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-2s">
-                    <a href="project-details.html" class="projects-img">
+                    <a style="cursor: pointer" class="projects-img">
                         <img src="{{asset('front/assets/images/projects/projects-4.jpg')}}" alt="Image">
                     </a>
 
                     <div class="project-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="project-details.html">CENTRALES FRIGORIFIQUES</a>
+                                <a style="cursor: pointer">CENTRALES FRIGORIFIQUES</a>
                             </h3>
                             <p>conçues pour le marché du froid industriel </p>
                         </div>
@@ -171,14 +171,14 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-4s">
-                    <a href="project-details.html" class="projects-img">
+                    <a style="cursor: pointer" class="projects-img">
                         <img src="{{asset('front/assets/images/projects/projects-5.jpg')}}" alt="Image">
                     </a>
 
                     <div class="project-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="project-details.html">CONDENSEURS A AIR</a>
+                                <a style="cursor: pointer">CONDENSEURS A AIR</a>
                             </h3>
                             <p>de la marque Masterkit Réfrigération</p>
                         </div>
@@ -188,14 +188,14 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-6s">
-                    <a href="project-details.html" class="projects-img">
+                    <a style="cursor: pointer" class="projects-img">
                         <img src="{{asset('front/assets/images/projects/projects-6.jpg')}}" alt="Image">
                     </a>
 
                     <div class="project-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="project-details.html">RÉGULATION ET CONTRÔLE</a>
+                                <a style="cursor: pointer">RÉGULATION ET CONTRÔLE</a>
                             </h3>
                             <p>Une large gamme certifiée et adaptée à tous vos besoins</p>
                         </div>
@@ -220,7 +220,7 @@
 
                     <button class="main-btn" style="background-color: #fff">
                         <span style="color: #173a7a">
-                            Lire plus 
+                            Lire plus
                             <i class="icofont-arrow-right"></i>
                         </span>
                     </button>
@@ -259,12 +259,12 @@
                 </div>
                 <div class="col-lg-6 wow fadeInRight delay-0-2s d-flex justify-content-end">
                     <img src="{{asset('front/assets/images/iso-9001.jpg')}}" alt="Image">
-                    
+
                 </div>
             </div>
         </div>
 
-       
+
     </div>
 </section>
 <!--=== End Blog Section ===-->
@@ -279,16 +279,16 @@
         </div>
 
         <div class="services-slider owl-carousel owl-theme">
-            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" > 
+            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" >
                 <img src="{{asset('front/assets/images/p1.png')}}" alt="Image">
             </div>
-            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" > 
+            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" >
                 <img src="{{asset('front/assets/images/p2.png')}}" alt="Image">
             </div>
-            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" > 
+            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" >
                 <img src="{{asset('front/assets/images/p3.png')}}" alt="Image">
             </div>
-       
+
         </div>
     </div>
 
@@ -310,17 +310,17 @@
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6">
                 <div class="main-blog-item wow fadeInUp delay-0-2s">
-                    <a href="blog-details.html" class="blog-img">
+                    <a style="cursor: pointer" class="blog-img">
                         <img src="{{asset('front/assets/images/blog/blog-1.jpg')}}" alt="Image">
                     </a>
 
                     <div class="blog-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="blog-details.html">Projet froidis 1 </a>
+                                <a style="cursor: pointer">Projet froidis 1 </a>
                             </h3>
                             <p>Description pour le profjet froidis N°1</p>
-                            <a href="blog-details.html" class="main-detail-btn">
+                            <a style="cursor: pointer" class="main-detail-btn">
                                 Lire plus
                                 <i class="icofont-plus"></i>
                             </a>
@@ -330,17 +330,17 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="main-blog-item wow fadeInUp delay-0-2s">
-                    <a href="blog-details.html" class="blog-img">
+                    <a style="cursor: pointer" class="blog-img">
                         <img src="{{asset('front/assets/images/blog/blog-2.jpg')}}" alt="Image">
                     </a>
 
                     <div class="blog-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="blog-details.html">Projet froidis 2 </a>
+                                <a style="cursor: pointer">Projet froidis 2 </a>
                             </h3>
                             <p>Description pour le profjet froidis N°2</p>
-                            <a href="blog-details.html" class="main-detail-btn">
+                            <a style="cursor: pointer"class="main-detail-btn">
                                 Lire plus
                                 <i class="icofont-plus"></i>
                             </a>
@@ -350,17 +350,17 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="main-blog-item wow fadeInUp delay-0-2s">
-                    <a href="blog-details.html" class="blog-img">
+                    <a style="cursor: pointer" class="blog-img">
                         <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
                     </a>
 
                     <div class="blog-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="blog-details.html">Projet froidis 3 </a>
+                                <a style="cursor: pointer">Projet froidis 3 </a>
                             </h3>
                             <p>Description pour le profjet froidis N°3</p>
-                            <a href="blog-details.html" class="main-detail-btn">
+                            <a style="cursor: pointer" class="main-detail-btn">
                                 Lire plus
                                 <i class="icofont-plus"></i>
                             </a>
@@ -368,7 +368,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>

@@ -45,14 +45,9 @@
                                         <td><span class="badge badge-warning">En attente</span></td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="" class="btn btn-warning shadow btn-xs sharp mr-1"><i class="fas fa-pencil-alt"></i></a>
-                                                <form action="" method="post">
-                                                    {{csrf_field()}}
-                                                    {{method_field('DELETE')}}
-                                                    <button class="btn btn-danger shadow btn-xs sharp" onclick="return confirm('Vous voulez vraiment supprimer?')"><i class="fa fa-trash"></i></button>
-                                               </form>
+                                                <a href="#" class="btn btn-warning shadow btn-xs sharp mr-1"><i class="fas fa-pencil-alt"></i></a>
+                                               <button class="btn btn-danger shadow btn-xs sharp" ><i class="fa fa-trash"></i></button>
                                             </div>
-                                            </form>
                                         </td>
                                     </tr>
                                     <tr>
@@ -63,14 +58,9 @@
                                         <td><span class="badge badge-success">Validé</span></td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="" class="btn btn-warning shadow btn-xs sharp mr-1"><i class="fas fa-pencil-alt"></i></a>
-                                                <form action="" method="post">
-                                                    {{csrf_field()}}
-                                                    {{method_field('DELETE')}}
-                                                    <button class="btn btn-danger shadow btn-xs sharp" onclick="return confirm('Vous voulez vraiment supprimer?')"><i class="fa fa-trash"></i></button>
-                                               </form>
+                                                <a href="#" class="btn btn-warning shadow btn-xs sharp mr-1"><i class="fas fa-pencil-alt"></i></a>
+                                                <button class="btn btn-danger shadow btn-xs sharp" ><i class="fa fa-trash"></i></button>
                                             </div>
-                                            </form>
                                         </td>
                                     </tr>
                                 </tbody>
