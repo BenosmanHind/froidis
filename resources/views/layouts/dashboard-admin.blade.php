@@ -67,7 +67,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
-                <img class="brand-title" src="{{ asset('dashboard/images/logo-text-white.png') }}" alt="">
+                <img src="{{asset('front/assets/images/froidis-white.png')}}" alt="Image">
             </a>
 
             <div class="nav-control">
