@@ -10,7 +10,7 @@
                 <li>
                     <a href="index.html">Accueil</a>
                 </li>
-                <li>
+                <li style="color: #ffff">
                     Inscription
                 </li>
             </ul>
@@ -25,8 +25,8 @@
         <div class="row d-flex justify-content-center">
         <div class="col-lg-6 col-md-6 ps-0">
                 <div class="sign-up-form">
-                    <h2>Sign Up To Bonax</h2>
-                    <p>Registration takes less than a minute.</p>
+                    <h2>Professionnels, inscrivez-vous dès maintenant !</h2>
+                    <p>Rejoignez notre plateforme dès maintenant pour bénéficier d'un accès exclusif à des produits de qualité, des services personnalisés et des conseils d'experts en froid industriel.</p>
                     <form class="form-wrap" method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-floating form-group">
@@ -129,9 +129,9 @@
                             </button>
                         </div>
 
-                        <p class="already">Vous avez déja un compte? <a href="sign-in.html">Connectez-vous</a></p>
+                        <p class="already">Vous avez déja un compte? <a href="{{asset('/sign-in')}}">Connectez-vous</a></p>
 
-                        <span class="or">or</span>
+                        <span class="or">Réseaux sociaux</span>
 
                         <ul class="footer-social-link">
                             <li>
@@ -141,13 +141,7 @@
                                     </span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://www.twitter.com/" target="_blank" class="hover-style">
-                                    <span class="inner-border">
-                                        <i class="icofont-twitter"></i>
-                                    </span>
-                                </a>
-                            </li>
+                          
                             <li>
                                 <a href="https://www.linkedin.com/" target="_blank" class="hover-style">
                                     <span class="inner-border">

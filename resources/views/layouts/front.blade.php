@@ -23,22 +23,7 @@
     </head>
 
     <body>
-		<!--=== Start Preloader Section ===-->
-		<div class="preloader">
-            <div class="content">
-                <div class="ball"></div>
-                <div class="ball"></div>
-                <div class="ball"></div>
-                <div class="ball"></div>
-                <div class="ball"></div>
-                <div class="ball"></div>
-                <div class="ball"></div>
-                <div class="ball"></div>
-                <div class="ball"></div>
-                <div class="ball"></div>
-            </div>
-        </div>
-		<!--=== End Preloader Section ===-->
+		
 
 		<!--=== Start Header Section ===-->
 		<header class="header-section">
@@ -46,7 +31,7 @@
 
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
-					<a class="navbar-brand" href="index.html">
+					<a class="navbar-brand" href="{{asset("/")}}">
 						<img src="{{asset('front/assets/images/logo.png')}}" alt="Logo">
 					</a>
 
@@ -132,9 +117,9 @@
 
 						<div class="menu-right-options">
 							
-							<a href="contact.html" class="main-btn">
+							<a href="{{asset('/register-pro')}}" class="main-btn">
 								<span>
-									Connectez-vous
+									Inscrivez-vous
 									<i class="icofont-arrow-right"></i>
 								</span>
 							</a>
@@ -346,9 +331,9 @@
 					<div class="col-lg-3 col-sm-6">
 						<div class="main-footer-item wow fadeInUp delay-0-2s">
 							<a href="index.html" class="footer-logo">
-								<img src="assets/images/white-logo.png" alt="Image">
+								<img src="{{asset('front/assets/images/froidis-white.png')}}" alt="Image">
 							</a>
-							<p>Louasi architecto beatae vitae dicta sunt Nemo enim ipsam quia voluptas sit aut odit aut fugit this beatae vitae dicta Nemo enim ipsam to...</p>
+							<p>Leader Algérien du Froid commercial et industriel depuis 1995</p>
 
 							<ul class="footer-social-content">
 								<li>
@@ -366,79 +351,46 @@
 										<i class="icofont-linkedin"></i>
 									</a>
 								</li>
-								<li>
-									<a href="#" target="_blank">
-										<i class="icofont-pinterest"></i>
-									</a>
-								</li>
+							
 							</ul>
 						</div>
 					</div>
 
-					<div class="col-lg-3 col-sm-6">
-						<div class="main-footer-item wow fadeInUp delay-0-4s">
-							<h3>Service</h3>
+					
+					
 
-							<ul class="import-link">
-								<li>
-									<a href="services.html">Why choose us</a>
-								</li>
-								<li>
-									<a href="projects.html">Our solutions</a>
-								</li>
-								<li>
-									<a href="team.html">Partners</a>
-								</li>
-								<li>
-									<a href="services.html">Core values</a>
-								</li>
-								<li>
-									<a href="projects.html">Our projects</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-sm-6">
-						<div class="main-footer-item wow fadeInUp delay-0-6s">
-							<h3>Quick Link</h3>
-
-							<ul class="import-link">
-								<li>
-									<a href="services.html">Residents</a>
-								</li>
-								<li>
-									<a href="projects.html">Business</a>
-								</li>
-								<li>
-									<a href="services.html">Online Service</a>
-								</li>
-								<li>
-									<a href="about.html">Visiting</a>
-								</li>
-								<li>
-									<a href="team.html">Employment</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-sm-6">
+					<div class="col-md-4">
 						<div class="main-footer-item wow fadeInUp delay-0-8s">
-							<h3>Our Contact</h3>
+							<h3>TLEMCEN: Siège Social et Show Room</h3>
 
-							<ul class="contact-info">
+							<ul class="contact-info" >
+								
 								<li>
-									<i class="icofont-clock-time"></i>
-									<span>Open Hours of Government: Mon - Fri: 8.00 am. - 6.00 pm.</span>
+									<i style="color:#ffff" class="icofont-location-pin"></i>
+									<span> Groupement propriété 51, Portion13 local 01 et 01A Berdaa, Hennaya</span>
 								</li>
 								<li>
-									<i class="icofont-location-pin"></i>
-									<span>13/A, Miranda Halim City. 2444/245 Halim City.</span>
+									<i  style="color:#ffff" class="icofont-phone"></i>
+									<a href="tel:+099-695-695-35">+213 (0)560 047 047</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+
+					<div class="col-md-4">
+						<div class="main-footer-item wow fadeInUp delay-0-8s">
+							<h3>ALGER: Bureau et Show Room</h3>
+
+							<ul class="contact-info" >
+								
+								<li>
+									<i  style="color:#ffff" class="icofont-location-pin"></i>
+									<span>  Haouch Kot Lot N°54 Bis El Hamiz Dar El Beida ( Face du C.E.M El Wouroud)</span>
 								</li>
 								<li>
-									<i class="icofont-phone"></i>
-									<a href="tel:+099-695-695-35">+099 695 695 35</a>
+									<i  style="color:#ffff" class="icofont-phone"></i>
+									<a href="tel:+099-695-695-35">Tél. : +213 (0)560 047 047</a>
 								</li>
 							</ul>
 						</div>
@@ -451,7 +403,7 @@
 		<!--=== Start Copy Right Section ===-->
 		<div class="copy-right-section">
 			<div class="container">
-				<p>Copyright © 2022  Bonax. All Rights Reserved.</p>
+				<p>Copyright © 2023  Froidis. All Rights Reserved.</p>
 			</div>
 		</div>
 		<!--=== End Copy Right Section ===-->

@@ -1,5 +1,21 @@
 @extends('layouts.front')
 @section('content')
+
+<style>
+    .partenaire-services::before{
+        content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2063C6;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  z-index: -1;
+
+    }
+</style>
 <!--=== Start Banner Section ===-->
 <section class="banner-section bg-1">
     <div class="container">
@@ -18,11 +34,11 @@
 <!--=== End Banner Section ===-->
 
 <!--=== Start Services Section ===-->
-<section class="services-section bg-2 bg-color-f7f8f9 pt-100 pb-70">
+<section class="services-section  pt-100 pb-70" style="background-color: #173a7a;">
     <div class="container">
         <div class="main-section-title wow fadeInUp delay-0-2s">
-            <span class="up-title">Secteurs d'activité</span>
-            <h2>Depuis 1995, Une large gamme de secteurs d'activité.</h2>
+            <span class="up-title" style="color: #fff">Secteurs d'activité</span>
+            <h2 style="color: #fff">Depuis 1995, Une large gamme de secteurs d'activité.</h2>
         </div>
 
         <div class="row">
@@ -68,7 +84,7 @@
         </div>
     </div>
 
-    <img src="assets/images/services-bg-shape.png" class="services-bg-shape" alt="Image">
+    <img src="{{asset('front/assets/images/services-bg-shape.png')}}" class="services-bg-shape" alt="Image">
 </section>
 <!--=== End Services Section ===-->
 
@@ -94,9 +110,9 @@
                     <div class="project-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="project-details.html">ÉVAPORATEURS</a>
+                                <a href="{{asset('/categories')}}">ÉVAPORATEURS</a>
                             </h3>
-                            <p>we uptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                            <p>"MASTERKIT Réfrigération" produits adaptés à vos exigences.</p>
                         </div>
                     </div>
                 </div>
@@ -105,7 +121,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-4s">
                     <a href="project-details.html" class="projects-img">
-                        <img src="assets/images/projects/projects-2.jpg" alt="Image">
+                        <img src="{{asset('front/assets/images/projects/projects-2.jpg')}}" alt="Image">
                     </a>
 
                     <div class="project-content hover-style">
@@ -122,15 +138,15 @@
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-6s">
                     <a href="project-details.html" class="projects-img">
-                        <img src="assets/images/projects/projects-3.jpg" alt="Image">
+                        <img src="{{asset('front/assets/images/projects/projects-3.jpg')}}" alt="Image">
                     </a>
 
                     <div class="project-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="project-details.html">Presentation Buldint</a>
+                                <a href="project-details.html">COMPRESSEURS FRIGORIFIQUES</a>
                             </h3>
-                            <p>we uptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                            <p>Hermétiques en MANEUROP, DANFOSS et COPELAND et Semi-hermétique </p>
                         </div>
                     </div>
                 </div>
@@ -139,15 +155,15 @@
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-2s">
                     <a href="project-details.html" class="projects-img">
-                        <img src="assets/images/projects/projects-4.jpg" alt="Image">
+                        <img src="{{asset('front/assets/images/projects/projects-4.jpg')}}" alt="Image">
                     </a>
 
                     <div class="project-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="project-details.html">Presentation Buldint</a>
+                                <a href="project-details.html">CENTRALES FRIGORIFIQUES</a>
                             </h3>
-                            <p>we uptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                            <p>conçues pour le marché du froid industriel </p>
                         </div>
                     </div>
                 </div>
@@ -156,15 +172,15 @@
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-4s">
                     <a href="project-details.html" class="projects-img">
-                        <img src="assets/images/projects/projects-5.jpg" alt="Image">
+                        <img src="{{asset('front/assets/images/projects/projects-5.jpg')}}" alt="Image">
                     </a>
 
                     <div class="project-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="project-details.html">Presentation Buldint</a>
+                                <a href="project-details.html">CONDENSEURS A AIR</a>
                             </h3>
-                            <p>we uptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                            <p>de la marque Masterkit Réfrigération</p>
                         </div>
                     </div>
                 </div>
@@ -173,15 +189,15 @@
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-6s">
                     <a href="project-details.html" class="projects-img">
-                        <img src="assets/images/projects/projects-6.jpg" alt="Image">
+                        <img src="{{asset('front/assets/images/projects/projects-6.jpg')}}" alt="Image">
                     </a>
 
                     <div class="project-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="project-details.html">Presentation Buldint</a>
+                                <a href="project-details.html">RÉGULATION ET CONTRÔLE</a>
                             </h3>
-                            <p>we uptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
+                            <p>Une large gamme certifiée et adaptée à tous vos besoins</p>
                         </div>
                     </div>
                 </div>
@@ -191,235 +207,6 @@
 </section>
 <!--=== End Projects Section ===-->
 
-<!--=== Start Team Section ===-->
-<section class="team-section bg-1 bg-color-f2f3f5 pt-100 pb-70">
-    <div class="container">
-        <div class="main-section-title-wrap">
-            <div class="row">
-                <div class="col-lg-6 wow fadeInLeft delay-0-2s">
-                    <div class="main-section-title left-title">
-                        <span class="up-title">Our Team Membar</span>
-                        <h2>This Best Team Membar Of Meting Helped Succee</h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInRight delay-0-2s">
-                    <p>Louasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="main-team-item fadeInUp delay-0-2s">
-                    <a href="team-details.html" class="team-img">
-                        <img src="assets/images/team/tean-1.jpg" alt="Image">
-                    </a>
-
-                    <div class="team-content hover-style wow">
-                        <div class="inner-border">
-                            <h3>
-                                <a href="team-details.html">Jhuhon Dew</a>
-                            </h3>
-                            <span>Founder</span>
-
-                            <div class="team-social-link">
-                                <button class="controller">
-                                    <i class="icofont-arrow-right"></i>
-                                </button>
-
-                                <ul class="social-link">
-                                    <li>
-                                        <a href="https://www.facebook.com/" target="_blank">
-                                            <i class="icofont-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.twitter.com/" target="_blank">
-                                            <i class="icofont-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" target="_blank">
-                                            <i class="icofont-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.vimeo.com/" target="_blank">
-                                            <i class="icofont-vimeo"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="main-team-item wow fadeInUp delay-0-4s">
-                    <a href="team-details.html" class="team-img">
-                        <img src="assets/images/team/tean-2.jpg" alt="Image">
-                    </a>
-
-                    <div class="team-content hover-style">
-                        <div class="inner-border">
-                            <h3>
-                                <a href="team-details.html">Kilvaz Smith</a>
-                            </h3>
-                            <span>Marketer</span>
-
-                            <div class="team-social-link">
-                                <button class="controller">
-                                    <i class="icofont-arrow-right"></i>
-                                </button>
-
-                                <ul class="social-link">
-                                    <li>
-                                        <a href="https://www.facebook.com/" target="_blank">
-                                            <i class="icofont-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.twitter.com/" target="_blank">
-                                            <i class="icofont-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" target="_blank">
-                                            <i class="icofont-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.vimeo.com/" target="_blank">
-                                            <i class="icofont-vimeo"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="main-team-item hover-style wow fadeInUp delay-0-6s">
-                    <a href="team-details.html" class="team-img">
-                        <img src="assets/images/team/tean-3.jpg" alt="Image">
-                    </a>
-
-                    <div class="team-content hover-style">
-                        <div class="inner-border">
-                            <h3>
-                                <a href="team-details.html">Admon Smith</a>
-                            </h3>
-                            <span>Founder</span>
-
-                            <div class="team-social-link">
-                                <button class="controller">
-                                    <i class="icofont-arrow-right"></i>
-                                </button>
-
-                                <ul class="social-link">
-                                    <li>
-                                        <a href="https://www.facebook.com/" target="_blank">
-                                            <i class="icofont-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.twitter.com/" target="_blank">
-                                            <i class="icofont-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" target="_blank">
-                                            <i class="icofont-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.vimeo.com/" target="_blank">
-                                            <i class="icofont-vimeo"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--=== End Team Section ===-->
-
-<!--=== Start Testimonial Section ===-->
-<section class="testimonial-section ptb-100">
-    <div class="container">
-        <div class="main-section-title-wrap">
-            <div class="row">
-                <div class="col-lg-6 wow fadeInLeft delay-0-2s">
-                    <div class="main-section-title left-title">
-                        <span class="up-title">Our Testimonial</span>
-                        <h2>This Best Testimonial Membar Of Meting Helped Succee</h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInRight delay-0-2s">
-                    <p>Louasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonial-slider owl-carousel owl-theme">
-            <div class="main-testimonial-item">
-                <img src="assets/images/testimonial/testimonial-1.jpg" alt="Image">
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less this fsat normal distribution of to using 'Content here,</p>
-                <h3>Juhon Dew</h3>
-                <span>Founder</span>
-                <ul>
-                    <li>
-                        <i class="icofont-star"></i>
-                    </li>
-                    <li>
-                        <i class="icofont-star"></i>
-                    </li>
-                    <li>
-                        <i class="icofont-star"></i>
-                    </li>
-                    <li>
-                        <i class="icofont-star"></i>
-                    </li>
-                    <li>
-                        <i class="icofont-star"></i>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="main-testimonial-item">
-                <img src="assets/images/testimonial/testimonial-2.jpg" alt="Image">
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less this fsat normal distribution of to using 'Content here,</p>
-                <h3>Adam Dew</h3>
-                <span>Founder</span>
-                <ul>
-                    <li>
-                        <i class="icofont-star"></i>
-                    </li>
-                    <li>
-                        <i class="icofont-star"></i>
-                    </li>
-                    <li>
-                        <i class="icofont-star"></i>
-                    </li>
-                    <li>
-                        <i class="icofont-star"></i>
-                    </li>
-                    <li>
-                        <i class="icofont-star"></i>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<!--=== End Testimonial Section ===-->
 
 <!--=== Start Video Section ===-->
 <section class="video-section ptb-100">
@@ -427,13 +214,13 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="video-content wow fadeInLeft delay-0-2s">
-                    <span class="up-title">Our Watch Video</span>
-                    <h2>We Have Calculations This Man Helped Succeed Service!</h2>
-                    <p>Louasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores...</p>
+                    <span class="up-title" style="color: #fff">solutions sur mesure </span>
+                    <h2>Votre partenaire pour des solutions sur mesure.</h2>
+                    <p>Chez FROIDIS, nous sommes spécialisés dans la conception et la réalisation de solutions sur mesure pour répondre aux besoins spécifiques de chaque client, grâce à notre équipe d'experts en froid industriel.</p>
 
-                    <button class="main-btn">
-                        <span>
-                            Get a Quote
+                    <button class="main-btn" style="background-color: #fff">
+                        <span style="color: #173a7a">
+                            Lire plus 
                             <i class="icofont-arrow-right"></i>
                         </span>
                     </button>
@@ -465,13 +252,58 @@
             <div class="row">
                 <div class="col-lg-6 wow fadeInLeft delay-0-2s">
                     <div class="main-section-title left-title">
-                        <span class="up-title">Our Largest Blog</span>
-                        <h2>This Best Largest Blog Membar Of Helped Succee</h2>
+                        <span class="up-title">certification</span>
+                        <h2>FROIDIS est fière d'être certifiée ISO 9001 version 2015,</h2>
+                        <p>une preuve de notre engagement envers la qualité et la satisfaction de nos clients</p>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeInRight delay-0-2s">
-                    <p>Louasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam.</p>
+                <div class="col-lg-6 wow fadeInRight delay-0-2s d-flex justify-content-end">
+                    <img src="{{asset('front/assets/images/iso-9001.jpg')}}" alt="Image">
+                    
                 </div>
+            </div>
+        </div>
+
+       
+    </div>
+</section>
+<!--=== End Blog Section ===-->
+
+
+<!--=== Start Services Section ===-->
+<section class="services-section  pt-100 pb-70" style="background-color: #173a7a;">
+    <div class="container">
+        <div class="main-section-title wow fadeInUp delay-0-2s">
+            <span class="up-title" style="color: #fff">nos partenaires </span>
+            <h2 style="color: #fff">leaders internationaux du secteur du froid</h2>
+        </div>
+
+        <div class="services-slider owl-carousel owl-theme">
+            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" > 
+                <img src="{{asset('front/assets/images/p1.png')}}" alt="Image">
+            </div>
+            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" > 
+                <img src="{{asset('front/assets/images/p2.png')}}" alt="Image">
+            </div>
+            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" > 
+                <img src="{{asset('front/assets/images/p3.png')}}" alt="Image">
+            </div>
+       
+        </div>
+    </div>
+
+    <img src="{{asset('front/assets/images/services-bg-shape.png')}}" class="services-bg-shape" alt="Image">
+</section>
+<!--=== End Services Section ===-->
+
+
+<!--=== Start Blog Section ===-->
+<section class="blog-section pt-100 pb-70">
+    <div class="container">
+        <div class="main-section-title-wrap">
+            <div class="main-section-title wow fadeInUp delay-0-2s">
+                <span class="up-title">Projets</span>
+                <h2 >Projets réalisés avec succès </h2>
             </div>
         </div>
 
@@ -479,83 +311,64 @@
             <div class="col-lg-4 col-md-6">
                 <div class="main-blog-item wow fadeInUp delay-0-2s">
                     <a href="blog-details.html" class="blog-img">
-                        <img src="assets/images/blog/blog-1.jpg" alt="Image">
+                        <img src="{{asset('front/assets/images/blog/blog-1.jpg')}}" alt="Image">
                     </a>
 
                     <div class="blog-content hover-style">
                         <div class="inner-border">
-                            <ul>
-                                <li>April 12, 2020</li>
-                                <li>
-                                    <a href="blog-details.html">Comments (03)</a>
-                                </li>
-                            </ul>
                             <h3>
-                                <a href="blog-details.html">Presentation Buldint of Bulding Avoid Construcation Blog.</a>
+                                <a href="blog-details.html">Projet froidis 1 </a>
                             </h3>
-                            <p>Louasi architecto beatae vitae dicta sunt Nemo enim ipsam quia voluptas sit aut odit aut fugit this to...</p>
+                            <p>Description pour le profjet froidis N°1</p>
                             <a href="blog-details.html" class="main-detail-btn">
-                                Read More
+                                Lire plus
                                 <i class="icofont-plus"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-4 col-md-6">
-                <div class="main-blog-item wow fadeInUp delay-0-4s">
+                <div class="main-blog-item wow fadeInUp delay-0-2s">
                     <a href="blog-details.html" class="blog-img">
-                        <img src="assets/images/blog/blog-2.jpg" alt="Image">
+                        <img src="{{asset('front/assets/images/blog/blog-2.jpg')}}" alt="Image">
                     </a>
 
                     <div class="blog-content hover-style">
                         <div class="inner-border">
-                            <ul>
-                                <li>April 12, 2020</li>
-                                <li>
-                                    <a href="blog-details.html">Comments (03)</a>
-                                </li>
-                            </ul>
                             <h3>
-                                <a href="blog-details.html">Presentation Buldint of Bulding Avoid Construcation Blog.</a>
+                                <a href="blog-details.html">Projet froidis 2 </a>
                             </h3>
-                            <p>Louasi architecto beatae vitae dicta sunt Nemo enim ipsam quia voluptas sit aut odit aut fugit this to...</p>
+                            <p>Description pour le profjet froidis N°2</p>
                             <a href="blog-details.html" class="main-detail-btn">
-                                Read More
+                                Lire plus
                                 <i class="icofont-plus"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-4 col-md-6">
-                <div class="main-blog-item wow fadeInUp delay-0-6s">
+                <div class="main-blog-item wow fadeInUp delay-0-2s">
                     <a href="blog-details.html" class="blog-img">
-                        <img src="assets/images/blog/blog-3.jpg" alt="Image">
+                        <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
                     </a>
 
                     <div class="blog-content hover-style">
                         <div class="inner-border">
-                            <ul>
-                                <li>April 12, 2020</li>
-                                <li>
-                                    <a href="blog-details.html">Comments (03)</a>
-                                </li>
-                            </ul>
                             <h3>
-                                <a href="blog-details.html">Presentation Buldint of Bulding Avoid Construcation Blog.</a>
+                                <a href="blog-details.html">Projet froidis 3 </a>
                             </h3>
-                            <p>Louasi architecto beatae vitae dicta sunt Nemo enim ipsam quia voluptas sit aut odit aut fugit this to...</p>
+                            <p>Description pour le profjet froidis N°3</p>
                             <a href="blog-details.html" class="main-detail-btn">
-                                Read More
+                                Lire plus
                                 <i class="icofont-plus"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </section>

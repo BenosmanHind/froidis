@@ -34,6 +34,11 @@ Route::get('/register-pro', function () {
     return view('auth.register-pro',compact('wilayas'));
 });
 
+Route::get('/sign-in', function () {
+    $wilayas = Wilaya::all();
+    return view('auth.sign-in',compact('wilayas'));
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

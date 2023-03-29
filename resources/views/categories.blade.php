@@ -9,7 +9,7 @@
                 <li>
                     <a href="index.html">Accueil</a>
                 </li>
-                <li>
+                <li style="color: #ffff">
                     Evaporateurs
                 </li>
             </ul>
@@ -72,7 +72,7 @@
                             </li>
                         </ul>
 
-                        <a href="cart.html" class="main-btn">
+                        <a href="{{asset('/detail-product')}}" class="main-btn">
                             <span class="btn-style">Voir</span>
                         </a>
                     </div>
@@ -111,7 +111,7 @@
                             </li>
                         </ul>
 
-                        <a href="cart.html" class="main-btn">
+                        <a href="{{asset('/detail-product')}}" class="main-btn">
                             <span class="btn-style">Voir</span>
                         </a>
                     </div>
@@ -148,7 +148,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <a href="cart.html" class="main-btn">
+                        <a href="{{asset('/detail-product')}}" class="main-btn">
                             <span class="btn-style">Voir</span>
                         </a>
                     </div>
@@ -187,7 +187,7 @@
                             </li>
                         </ul>
 
-                        <a href="cart.html" class="main-btn">
+                        <a href="{{asset('/detail-product')}}" class="main-btn">
                             <span class="btn-style">Voir</span>
                         </a>
                     </div>
@@ -226,7 +226,7 @@
                             </li>
                         </ul>
 
-                        <a href="cart.html" class="main-btn">
+                        <a href="{{asset('/detail-product')}}" class="main-btn">
                             <span class="btn-style">Voir</span>
                         </a>
                     </div>
@@ -264,7 +264,7 @@
                             </li>
                         </ul>
 
-                        <a href="cart.html" class="main-btn">
+                        <a href="{{asset('/detail-product')}}" class="main-btn">
                             <span class="btn-style">Voir</span>
                         </a>
                     </div>
