@@ -7,7 +7,7 @@
             <h2>Evaporateurs</h2>
             <ul>
                 <li>
-                    <a href="index.html">Accueil</a>
+                    <a href="{{ asset('/') }}">Accueil</a>
                 </li>
                 <li style="color: #ffff">
                     Evaporateurs
@@ -41,9 +41,9 @@
                         <div class="col-lg-6">
                             <select class="form-select form-control" aria-label="Filtrer par">
                                 <option selected>Filtrer par</option>
-                                <option value="1">Bp Machine</option>
-                                <option value="2">Hand Sanitizer</option>
-                                <option value="3">Medicine</option>
+                                <option value="1">cubique</option>
+                                <option value="2">centrifuge</option>
+                                <option value="3">Double flux</option>
                             </select>
                         </div>
                     </div>
@@ -55,18 +55,18 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="main-product-item">
                     <div class="product-img">
-                        <a href="#">
+                        <a href="{{asset('/detail-product')}}">
                             <img src="{{ asset('front/assets/images/products/product-1.png') }}" alt="Image">
                         </a>
 
                         <ul>
                             <li>
-                                <a href="wishlist.html">
+                                <a style="cursor: pointer">
                                     <i class="icofont-heart-alt"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a style="cursor: pointer">
                                     <i class="icofont-eye-alt"></i>
                                 </a>
                             </li>
@@ -80,7 +80,7 @@
                     <div class="main-product-content d-flex">
                         <div>
                            <h3>
-                                <a href="#">
+                                <a style="cursor: pointer">
                                     Evaporateurs cubique
                                 </a>
                             </h3>
@@ -94,24 +94,24 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="main-product-item">
                     <div class="product-img">
-                        <a href="#">
+                        <a style="cursor: pointer">
                             <img src="{{ asset('front/assets/images/products/product-2.png') }}" alt="Image">
                         </a>
 
                         <ul>
                             <li>
-                                <a href="wishlist.html">
+                                <a style="cursor: pointer">
                                     <i class="icofont-heart-alt"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a style="cursor: pointer">
                                     <i class="icofont-eye-alt"></i>
                                 </a>
                             </li>
                         </ul>
 
-                        <a href="{{asset('/detail-product')}}" class="main-btn">
+                        <a style="cursor: pointer" class="main-btn">
                             <span class="btn-style">Voir</span>
                         </a>
                     </div>
@@ -119,7 +119,7 @@
                     <div class="main-product-content d-flex">
                         <div>
                             <h3>
-                                <a href="#">
+                                <a style="cursor: pointer">
                                     Evaporateurs cubique
                                 </a>
                             </h3>
@@ -132,23 +132,23 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="main-product-item">
                     <div class="product-img">
-                        <a href="product-details.html">
+                        <a style="cursor: pointer">
                             <img src="{{ asset('front/assets/images/products/product-3.png') }}" alt="Image">
                         </a>
 
                         <ul>
                             <li>
-                                <a href="wishlist.html">
+                                <a style="cursor: pointer">
                                     <i class="icofont-heart-alt"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a style="cursor: pointer">
                                     <i class="icofont-eye-alt"></i>
                                 </a>
                             </li>
                         </ul>
-                        <a href="{{asset('/detail-product')}}" class="main-btn">
+                        <a style="cursor: pointer" class="main-btn">
                             <span class="btn-style">Voir</span>
                         </a>
                     </div>
@@ -156,7 +156,7 @@
                     <div class="main-product-content d-flex">
                         <div>
                             <h3>
-                                <a href="product-details.html">
+                                <a style="cursor: pointer">
                                     Evaporateurs sur pieds
                                 </a>
                             </h3>
@@ -170,24 +170,24 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="main-product-item">
                     <div class="product-img">
-                        <a href="product-details.html">
+                        <a style="cursor: pointer">
                             <img src="{{ asset('front/assets/images/products/product-4.png') }}" alt="Image">
                         </a>
 
                         <ul>
                             <li>
-                                <a href="wishlist.html">
+                                <a style="cursor: pointer">
                                     <i class="icofont-heart-alt"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a style="cursor: pointer">
                                     <i class="icofont-eye-alt"></i>
                                 </a>
                             </li>
                         </ul>
 
-                        <a href="{{asset('/detail-product')}}" class="main-btn">
+                        <a style="cursor: pointer" class="main-btn">
                             <span class="btn-style">Voir</span>
                         </a>
                     </div>
@@ -196,7 +196,7 @@
                         <div>
 
                             <h3>
-                                <a href="product-details.html">
+                                <a style="cursor: pointer">
                                     Evaporateurs centrifuge
                                 </a>
                             </h3>
@@ -209,24 +209,24 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="main-product-item">
                     <div class="product-img">
-                        <a href="product-details.html">
+                        <a style="cursor: pointer">
                             <img src="{{ asset('front/assets/images/products/product-5.png') }}" alt="Image">
                         </a>
 
                         <ul>
                             <li>
-                                <a href="wishlist.html">
+                                <a style="cursor: pointer">
                                     <i class="icofont-heart-alt"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a style="cursor: pointer">
                                     <i class="icofont-eye-alt"></i>
                                 </a>
                             </li>
                         </ul>
 
-                        <a href="{{asset('/detail-product')}}" class="main-btn">
+                        <a style="cursor: pointer" class="main-btn">
                             <span class="btn-style">Voir</span>
                         </a>
                     </div>
@@ -234,7 +234,7 @@
                     <div class="main-product-content d-flex">
                         <div>
                             <h3>
-                                <a href="product-details.html">
+                                <a style="cursor: pointer">
                                     Evaporateurs Double flux
                                 </a>
                             </h3>
@@ -247,24 +247,24 @@
             <div class="col-lg-4 col-sm-6">
                 <div class="main-product-item">
                     <div class="product-img">
-                        <a href="product-details.html">
+                        <a style="cursor: pointer">
                             <img src="{{ asset('front/assets/images/products/product-6.png') }}" alt="Image">
                         </a>
 
                         <ul>
                             <li>
-                                <a href="wishlist.html">
+                                <a style="cursor: pointer">
                                     <i class="icofont-heart-alt"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a style="cursor: pointer">
                                     <i class="icofont-eye-alt"></i>
                                 </a>
                             </li>
                         </ul>
 
-                        <a href="{{asset('/detail-product')}}" class="main-btn">
+                        <a style="cursor: pointer" class="main-btn">
                             <span class="btn-style">Voir</span>
                         </a>
                     </div>
@@ -273,7 +273,7 @@
                         <div>
 
                             <h3>
-                                <a href="product-details.html">
+                                <a style="cursor: pointer">
                                     Evaporateurs sur pieds
                                 </a>
                             </h3>

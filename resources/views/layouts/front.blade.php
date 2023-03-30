@@ -71,21 +71,23 @@
 
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a style="cursor: pointer" class="nav-link">About</a>
+										<a style="cursor: pointer" class="nav-link">Évaporateur</a>
 									</li>
 
-									<li class="nav-item">
-										<a style="cursor: pointer" class="nav-link dropdown-toggles">Projects</a>
-
-										<ul class="sub-menu-sub">
-											<li class="nav-item">
-												<a style="cursor: pointer" class="nav-link">Projects Page</a>
-											</li>
-
-											<li class="nav-item">
-												<a style="cursor: pointer" class="nav-link">Project Details Page</a>
-											</li>
-										</ul>
+                                    <li class="nav-item">
+										<a style="cursor: pointer" class="nav-link">Groupes de condensations</a>
+									</li>
+                                    <li class="nav-item">
+										<a style="cursor: pointer" class="nav-link">Compresseurs frigorifiques </a>
+									</li>
+                                    <li class="nav-item">
+										<a style="cursor: pointer" class="nav-link">Moto-réducteurs et Moteurs ventilateurs</a>
+									</li>
+                                    <li class="nav-item">
+										<a style="cursor: pointer" class="nav-link">Régulation et contrôle le industriel</a>
+									</li>
+                                    <li class="nav-item">
+										<a style="cursor: pointer" class="nav-link">Centrales</a>
 									</li>
 								</ul>
 							</li>
