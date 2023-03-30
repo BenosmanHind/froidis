@@ -97,11 +97,14 @@
 
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a style="cursor: pointer" class="nav-link">Services Page</a>
+										<a style="cursor: pointer" class="nav-link">Experts Froid</a>
 									</li>
 
 									<li class="nav-item">
-										<a style="cursor: pointer" class="nav-link">Services Details Page</a>
+										<a style="cursor: pointer" class="nav-link">Materiels</a>
+									</li>
+									<li class="nav-item">
+										<a style="cursor: pointer" class="nav-link">Chambre froid builder</a>
 									</li>
 								</ul>
 							</li>
@@ -115,9 +118,10 @@
 
 						<div class="menu-right-options">
                             @auth
+							
                             <a style="cursor: pointer" class="main-btn">
 								<span>
-									Dashboard
+									{{Auth::user()->name}}
 									<i class="icofont-arrow-right"></i>
 								</span>
 							</a>
@@ -137,7 +141,7 @@
 		</header>
 		<!--=== End Header Section ===-->
 
-		<!--=== Start Menu Slide Bar ===-->
+	{{--	<!--=== Start Menu Slide Bar ===-->
 		<aside class="menu-slide-bar">
 			<div class="close-mobile-menu">
 				<div class="mobile-logo">
@@ -326,7 +330,7 @@
 			</nav>
 		</aside>
 		<div class="body-overlay"></div>
-		<!--=== End Menu Slide Bar ===-->
+		<!--=== End Menu Slide Bar ===-->--}}
         @yield('content')
         <!--=== Start Footer Section ===-->
 		<section class="footer-section pt-100 pb-70">
