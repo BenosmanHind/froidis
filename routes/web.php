@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use TheHocineSaad\LaravelAlgereography\Models\Wilaya;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,6 +43,7 @@ Route::get('/sign-in', function () {
 
 //admin route
 Route::resource('/admin/categories',CategoryController::class);
+Route::resource('/admin/products',ProductController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

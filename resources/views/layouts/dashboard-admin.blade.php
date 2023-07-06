@@ -436,6 +436,6 @@
 
 </script>
 
-
+@stack('add-document-scripts')
 </body>
 </html>
