@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use TheHocineSaad\LaravelAlgereography\Models\Wilaya;
-
+use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,6 +39,9 @@ Route::get('/sign-in', function () {
     return view('auth.sign-in',compact('wilayas'));
 });
 
+
+//admin route
+Route::resource('/admin/categories',CategoryController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
