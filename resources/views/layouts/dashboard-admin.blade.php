@@ -311,7 +311,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © <a href="#" target="_blank">Cosmekarn</a> 2022</p>
+                <p>Copyright © <a href="#" target="_blank">Froidis</a> 2023</p>
             </div>
         </div>
         <!--**********************************
