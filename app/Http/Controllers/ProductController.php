@@ -61,6 +61,7 @@ class ProductController extends Controller
             $document->product_id = $product->id;
             $document->save();
         }
+        return redirect('admin/products');
     }
     public function index(){
         $products = Product::all();
@@ -113,15 +114,17 @@ class ProductController extends Controller
             }
         }
         $documents = $request->documents;
-
-        for($i=0 ; $i<count($request->documents) ; $i++){
-            $document = new Document();
-            $file = $request->file('documents.' . $i);
-            $filename = $file->getClientOriginalName();
-            $document->document = $filename;
-            Storage::disk('public')->putFileAs('', $file, $filename);
-            $document->product_id = $product->id;
-            $document->save();
+        if($documents){
+            for($i=0 ; $i<count($request->documents) ; $i++){
+                $document = new Document();
+                $file = $request->file('documents.' . $i);
+                $filename = $file->getClientOriginalName();
+                $document->document = $filename;
+                Storage::disk('public')->putFileAs('', $file, $filename);
+                $document->product_id = $product->id;
+                $document->save();
+            }
         }
+       return redirect('admin/products');
     }
 }

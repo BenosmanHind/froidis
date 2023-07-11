@@ -19,9 +19,9 @@
             </div>
         </div>
 
-        <form action="{{url('admin/products')}}" method="POST" id="addProduct" enctype="multipart/form-data">
-        @csrf
-
+        <form action="{{url('admin/products/'.$product->id)}}" method="POST" id="addProduct" enctype="multipart/form-data">
+            <input type="hidden" name="_method" value="PUT">
+            @csrf
         <div class="row ">
             <div class="col-xl-12 col-lg-12">
                 <div class="card">

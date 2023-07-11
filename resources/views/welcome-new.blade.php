@@ -103,14 +103,14 @@
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-2s">
-                    <a href="{{asset('/categories')}}" class="projects-img">
+                    <a href="{{asset('/products/evaporateur')}}" class="projects-img">
                         <img src="{{asset('front/assets/images/projects/projects-1.jpg')}}" alt="Image">
                     </a>
 
                     <div class="project-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a href="{{asset('/categories')}}">ÉVAPORATEURS</a>
+                                <a href="{{asset('/products/evaporateur')}}">ÉVAPORATEURS</a>
                             </h3>
                             <p>"MASTERKIT Réfrigération" produits adaptés à vos exigences.</p>
                         </div>
