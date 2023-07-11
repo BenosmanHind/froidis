@@ -56,7 +56,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="main-product-item">
                         <div class="product-img">
-                            <a href="{{asset('/detail-product')}}">
+                            <a href="{{asset('product/'.$product->slug)}}">
                                 <img src="{{ asset('storage/images/products/'.$product->images[0]->lien) }}" alt="Image">
                             </a>
 
@@ -73,7 +73,7 @@
                                 </li>
                             </ul>
 
-                            <a href="{{asset('/detail-product')}}" class="main-btn">
+                            <a href="{{asset('product/'.$product->slug)}}" class="main-btn">
                                 <span class="btn-style">Voir</span>
                             </a>
                         </div>

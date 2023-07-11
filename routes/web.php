@@ -47,6 +47,8 @@ Route::resource('/admin/products',ProductController::class);
 
 //front routes
 Route::get('/products/{slug}', [App\Http\Controllers\AccueilController::class, 'categoryProducts']);
+Route::get('/product/{slug}', [App\Http\Controllers\AccueilController::class, 'detailProduct']);
+Route::get('/telecharger-pdf/{document}', [App\Http\Controllers\AccueilController::class, 'telechargerPDF']);
 
 Auth::routes();
 

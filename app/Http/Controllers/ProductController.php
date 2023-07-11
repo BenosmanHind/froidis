@@ -7,6 +7,7 @@ use App\Models\Document;
 use App\Models\Image;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
@@ -22,6 +23,7 @@ class ProductController extends Controller
         $product->designation = $request->designation;
         $product->seconde_designation = $request->seconde_designation;
         $product->marque = $request->marque;
+        $product->slug = str::slug($request->seconde_designation);
         $product->price = $request->price;
         $product->short_description = $request->short_description;
         $product->long_description = $request->long_description;

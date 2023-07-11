@@ -21,6 +21,13 @@
 		<!--=== Title ===-->
 		<title>Froidis - Solutions Pour Le froid Industriel</title>
     </head>
+    <style>
+        .owl-carousel{
+            display: flex !important;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
 
     <body>
 
@@ -118,7 +125,7 @@
 
 						<div class="menu-right-options">
                             @auth
-							
+
                             <a style="cursor: pointer" class="main-btn">
 								<span>
 									{{Auth::user()->name}}
@@ -430,5 +437,33 @@
         <script src="{{ asset('front/assets/js/waypoints.min.js') }}"></script>
         <script src="{{ asset('front/assets/js/countdown.min.js') }}"></script>
 		<script src="{{ asset('front/assets/js/main.js') }}"></script>
+        <script>
+
+			$('.article-carousel').owlCarousel({
+				loop:true,
+				margin:10,
+				autoplay: true,
+				dots:true,
+				autoplayTimeout: 3000,
+				smartSpeed: 2000,
+				nav:true,
+				autoplayHoverPause: true,
+				responsive:{
+					0:{
+						items:1
+					},
+					600:{
+						items:1
+					},
+					1000:{
+						items:1
+					}
+				}
+			});
+
+
+
+
+	    </script>
     </body>
 </html>
