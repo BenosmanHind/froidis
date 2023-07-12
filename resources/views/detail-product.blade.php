@@ -63,7 +63,7 @@
 <section class="page-banner-section bg-6">
     <div class="container">
         <div class="page-banner-content">
-            <h2>Evaporateurs cubique</h2>
+            <h2>{{ $product->category->designation }}</h2>
             <ul>
                 <li>
                     <a href="index.html">Accueil</a>
@@ -90,16 +90,9 @@
                     @endforeach
             </div>
             </div>
-
             <div class="col-lg-6">
-
-
                 <div class="product-details-main-content">
-
-
-                    <h3>{{ $product->seconde_designation }}</h3>
-
-
+                    <h3>@if($product->seconde_designation) {{ $product->seconde_designation }} @else {{ $product->designation }} @endif </h3>
                     <div class="client-review">
                         <div class="rating">
                             <i class="icofont-star"></i>
@@ -134,9 +127,11 @@
             <div class="col-lg-12 col-md-12">
                 <div class="tab product-details-tab pt-100">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        @if($product->long_description)
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Description</button>
                         </li>
+                        @endif
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="additional-tab" data-bs-toggle="tab" data-bs-target="#additional" type="button" role="tab" aria-controls="additional" aria-selected="true">Models</button>
                         </li>
@@ -151,52 +146,49 @@
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
                             <div class="product-details-description-content">
-                                <p><strong>Batterie</strong></p>
-
-<ul>
-	<li>-Ailettes en aluminium &agrave; profil gaufr&eacute; pour augmenter l&rsquo;&eacute;change.</li>
-	<li>-Echange maximal avec une dimension compacte.</li>
-	<li>-Tube en cuivre rainur&eacute; &agrave; haut rendement, diam&egrave;tre 9,52 mm.</li>
-	<li>-Distributeur venturi pour une alimentation optimale.</li>
-	<li>-Ecartement des ailettes selon l&rsquo;application : 4,2 - 6,3mm.</li>
-</ul>
-
-<p><strong>Ventilateurs</strong></p>
-
-<ul>
-	<li>-Moteur Shaded-pole Class B IP42 c&acirc;bl&eacute;s &agrave; une bo&icirc;te interne &eacute;tanche.</li>
-	<li>-H&eacute;lice en aluminium et grille de protection conformes aux normes.</li>
-	<li>-&Oslash; 230-300 : 220V-1Ph-50Hz.</li>
-</ul>
-
-<p><strong>Carrosserie</strong></p>
-
-<ul>
-	<li>-Hauteur faible et design compact pour mieux exploiter les espaces.</li>
-	<li>-Surfaces lisses et plis arrondis conformes aux directives HACCP</li>
-</ul>
-
-<p><strong>Alimentaires.</strong></p>
-
-<ul>
-	<li>-T&ocirc;le en acier galvanis&eacute;e et peinture en poudre polyester RAL9010.</li>
-	<li>-Panneaux et bac principal rabattables avec charni&egrave;res.</li>
-	<li>-Contre bac pour &eacute;viter l&rsquo;effet de la condensation.</li>
-	<li>-Installation facile, maintenance et nettoyage simplifi&eacute;.</li>
-	<li>D&eacute;givrage</li>
-	<li>-Electrique en standard, pour des temp&eacute;ratures inf&eacute;rieures &agrave; +2&deg;C,</li>
-	<li>avec un temps de d&eacute;givrage tr&egrave;s rapide et une temp&eacute;rature</li>
-	<li>de surface tr&egrave;s basse.</li>
-	<li>-El&eacute;ments chauffants en acier inoxydable batterie et contre bac.</li>
-	<li>-Raccordement des r&eacute;sistances &agrave; une bo&icirc;te &eacute;tanche.</li>
-</ul>
+                                {!! $product->long_description !!}
 
                             </div>
                         </div>
 
                         <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="additional-tab">
                             <div class="product-additional-info">
-                                <table class="table table-striped table-bordered"><tr><td>Modéles</td><td>Kw</td><td>A230-1</td><td>A 400-3</td><td>Nb Ω</td><td>L</td><td>H</td><td>P</td><td>X</td><td>Y</td><td>R</td><td>In</td><td>Out</td><td>Ø GAS</td><td>Kg</td></tr><tr><td>EVS 02L 1F</td><td style="text-align: right">0,3</td><td style="text-align: right">1,4</td><td>_</td><td style="text-align: right">2+0</td><td style="text-align: right">590</td><td style="text-align: right">225</td><td style="text-align: right">515</td><td style="text-align: right">420</td><td style="text-align: right">545</td><td style="text-align: right">85</td><td style="text-align: right">9,5</td><td style="text-align: right">9,5</td><td>1''</td><td style="text-align: right">20</td></tr><tr><td>EVS 03L 1F</td><td style="text-align: right">0,3</td><td style="text-align: right">1,4</td><td>_</td><td style="text-align: right">2+0</td><td style="text-align: right">590</td><td style="text-align: right">225</td><td style="text-align: right">515</td><td style="text-align: right">420</td><td style="text-align: right">545</td><td style="text-align: right">85</td><td style="text-align: right">9,5</td><td style="text-align: right">9,5</td><td>1''</td><td style="text-align: right">20</td></tr><tr><td>EVS 04L 1F</td><td style="text-align: right">0,5</td><td style="text-align: right">2,1</td><td>_</td><td style="text-align: right">2+0</td><td style="text-align: right">790</td><td style="text-align: right">225</td><td style="text-align: right">515</td><td style="text-align: right">620</td><td style="text-align: right">545</td><td style="text-align: right">85</td><td style="text-align: right">9,5</td><td style="text-align: right">9,5</td><td>1''</td><td style="text-align: right">23</td></tr><tr><td>EVS 05L 2F</td><td style="text-align: right">0,7</td><td style="text-align: right">3,2</td><td>_</td><td style="text-align: right">2+0</td><td style="text-align: right">1170</td><td style="text-align: right">225</td><td style="text-align: right">515</td><td style="text-align: right">920</td><td style="text-align: right">545</td><td style="text-align: right">125</td><td style="text-align: right">12,7</td><td style="text-align: right">16</td><td>1''</td><td style="text-align: right">30</td></tr><tr><td>EVS 07L 3F</td><td style="text-align: right">0,9</td><td style="text-align: right">4,3</td><td>_</td><td style="text-align: right">2+0</td><td style="text-align: right">1470</td><td style="text-align: right">225</td><td style="text-align: right">515</td><td style="text-align: right">1220</td><td style="text-align: right">545</td><td style="text-align: right">125</td><td style="text-align: right">12,7</td><td style="text-align: right">16</td><td>1''</td><td style="text-align: right">40</td></tr><tr><td>EVS 05L 1F</td><td style="text-align: right">1,2</td><td style="text-align: right">5,5</td><td>_</td><td style="text-align: right">1+1</td><td style="text-align: right">870</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">620</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">12,7</td><td style="text-align: right">16</td><td>1''</td><td style="text-align: right">23</td></tr><tr><td>EVS 07L 1F</td><td style="text-align: right">1,2</td><td style="text-align: right">5,5</td><td>_</td><td style="text-align: right">1+1</td><td style="text-align: right">1070</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">820</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">12,7</td><td style="text-align: right">16</td><td>1''</td><td style="text-align: right">26</td></tr><tr><td>EVS 10L 2F</td><td style="text-align: right">2,2</td><td style="text-align: right">10</td><td>_</td><td style="text-align: right">1+1</td><td style="text-align: right">1470</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">1220</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">12,7</td><td style="text-align: right">19</td><td>1''</td><td style="text-align: right">38</td></tr><tr><td>EVS 15L 2F</td><td style="text-align: right">2</td><td style="text-align: right">9,1</td><td>_</td><td style="text-align: right">1+1</td><td style="text-align: right">1620</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">1370</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">12,7</td><td style="text-align: right">19</td><td>1''</td><td style="text-align: right">42</td></tr><tr><td>EVS 20L 3F</td><td style="text-align: right">3,2</td><td>_</td><td style="text-align: right">6,9</td><td style="text-align: right">1+1</td><td style="text-align: right">2070</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">1820</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">16</td><td style="text-align: right">22</td><td>1''</td><td style="text-align: right">54</td></tr><tr><td>EVS 25L 3F</td><td style="text-align: right">3,6</td><td>_</td><td style="text-align: right">7,8</td><td style="text-align: right">1+1</td><td style="text-align: right">2295</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">2045</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">16</td><td style="text-align: right">22</td><td>1''</td><td style="text-align: right">62</td></tr><tr><td>EVS 30L 4F</td><td style="text-align: right">4,2</td><td>_</td><td style="text-align: right">9,1</td><td style="text-align: right">1+1</td><td style="text-align: right">2670</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">2420</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">16</td><td style="text-align: right">22</td><td>1''</td><td style="text-align: right">72</td></tr></table>
+                                <table class="table table-striped table-bordered">
+                                    <tr>
+                                        <td>Modéles</td>
+                                        <td>Kw</td>
+                                        <td>A230-1</td>
+                                        <td>A 400-3</td>
+                                        <td>Nb Ω</td><td>L</td>
+                                        <td>H</td>
+                                        <td>P</td>
+                                        <td>X</td>
+                                        <td>Y</td>
+                                        <td>R</td>
+                                        <td>In</td>
+                                        <td>Out</td>
+                                        <td>Ø GAS</td>
+                                        <td>Kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>EVS 02L 1F</td>
+                                        <td style="text-align: right">0,3</td>
+                                        <td style="text-align: right">1,4</td>
+                                        <td>_</td>
+                                        <td style="text-align: right">2+0</td>
+                                        <td style="text-align: right">590</td>
+                                        <td style="text-align: right">225</td>
+                                        <td style="text-align: right">515</td>
+                                        <td style="text-align: right">420</td>
+                                        <td style="text-align: right">545</td>
+                                        <td style="text-align: right">85</td>
+                                        <td style="text-align: right">9,5</td>
+                                        <td style="text-align: right">9,5</td>
+                                        <td>1''</td>
+                                        <td style="text-align: right">20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>EVS 03L 1F</td><td style="text-align: right">0,3</td><td style="text-align: right">1,4</td><td>_</td><td style="text-align: right">2+0</td><td style="text-align: right">590</td><td style="text-align: right">225</td><td style="text-align: right">515</td><td style="text-align: right">420</td><td style="text-align: right">545</td><td style="text-align: right">85</td><td style="text-align: right">9,5</td><td style="text-align: right">9,5</td><td>1''</td><td style="text-align: right">20</td></tr><tr><td>EVS 04L 1F</td><td style="text-align: right">0,5</td><td style="text-align: right">2,1</td><td>_</td><td style="text-align: right">2+0</td><td style="text-align: right">790</td><td style="text-align: right">225</td><td style="text-align: right">515</td><td style="text-align: right">620</td><td style="text-align: right">545</td><td style="text-align: right">85</td><td style="text-align: right">9,5</td><td style="text-align: right">9,5</td><td>1''</td><td style="text-align: right">23</td></tr><tr><td>EVS 05L 2F</td><td style="text-align: right">0,7</td><td style="text-align: right">3,2</td><td>_</td><td style="text-align: right">2+0</td><td style="text-align: right">1170</td><td style="text-align: right">225</td><td style="text-align: right">515</td><td style="text-align: right">920</td><td style="text-align: right">545</td><td style="text-align: right">125</td><td style="text-align: right">12,7</td><td style="text-align: right">16</td><td>1''</td><td style="text-align: right">30</td></tr><tr><td>EVS 07L 3F</td><td style="text-align: right">0,9</td><td style="text-align: right">4,3</td><td>_</td><td style="text-align: right">2+0</td><td style="text-align: right">1470</td><td style="text-align: right">225</td><td style="text-align: right">515</td><td style="text-align: right">1220</td><td style="text-align: right">545</td><td style="text-align: right">125</td><td style="text-align: right">12,7</td><td style="text-align: right">16</td><td>1''</td><td style="text-align: right">40</td></tr><tr><td>EVS 05L 1F</td><td style="text-align: right">1,2</td><td style="text-align: right">5,5</td><td>_</td><td style="text-align: right">1+1</td><td style="text-align: right">870</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">620</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">12,7</td><td style="text-align: right">16</td><td>1''</td><td style="text-align: right">23</td></tr><tr><td>EVS 07L 1F</td><td style="text-align: right">1,2</td><td style="text-align: right">5,5</td><td>_</td><td style="text-align: right">1+1</td><td style="text-align: right">1070</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">820</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">12,7</td><td style="text-align: right">16</td><td>1''</td><td style="text-align: right">26</td></tr><tr><td>EVS 10L 2F</td><td style="text-align: right">2,2</td><td style="text-align: right">10</td><td>_</td><td style="text-align: right">1+1</td><td style="text-align: right">1470</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">1220</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">12,7</td><td style="text-align: right">19</td><td>1''</td><td style="text-align: right">38</td></tr><tr><td>EVS 15L 2F</td><td style="text-align: right">2</td><td style="text-align: right">9,1</td><td>_</td><td style="text-align: right">1+1</td><td style="text-align: right">1620</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">1370</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">12,7</td><td style="text-align: right">19</td><td>1''</td><td style="text-align: right">42</td></tr><tr><td>EVS 20L 3F</td><td style="text-align: right">3,2</td><td>_</td><td style="text-align: right">6,9</td><td style="text-align: right">1+1</td><td style="text-align: right">2070</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">1820</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">16</td><td style="text-align: right">22</td><td>1''</td><td style="text-align: right">54</td></tr><tr><td>EVS 25L 3F</td><td style="text-align: right">3,6</td><td>_</td><td style="text-align: right">7,8</td><td style="text-align: right">1+1</td><td style="text-align: right">2295</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">2045</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">16</td><td style="text-align: right">22</td><td>1''</td><td style="text-align: right">62</td></tr><tr><td>EVS 30L 4F</td><td style="text-align: right">4,2</td><td>_</td><td style="text-align: right">9,1</td><td style="text-align: right">1+1</td><td style="text-align: right">2670</td><td style="text-align: right">250</td><td style="text-align: right">545</td><td style="text-align: right">2420</td><td style="text-align: right">570</td><td style="text-align: right">125</td><td style="text-align: right">16</td><td style="text-align: right">22</td><td>1''</td><td style="text-align: right">72</td></tr></table>
 
 
                             </div>
@@ -208,7 +200,7 @@
                                     Cliquez sur le lien pour télécharger la fiche technique :
                                      @foreach($product->documents as $document)
                                         <li class="mt-4">
-                                            <a href="{{ asset('telecharger-pdf/'.$document->document) }}"> {{ $product->seconde_designation }}</a>
+                                            <a href="{{ asset('telecharger-pdf/'.$document->document) }}"> @if($product->seconde_designation){{ $product->seconde_designation }} @else {{ $product->designation }} @endif</a>
                                         </li>
                                      @endforeach
                                 </ul>

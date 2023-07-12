@@ -120,14 +120,14 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="main-projects-item wow fadeInUp delay-0-4s">
-                    <a style="cursor: pointer" class="projects-img">
+                    <a href="{{ asset('/products/groupes-de-condensation') }}" class="projects-img">
                         <img src="{{asset('front/assets/images/projects/projects-2.jpg')}}" alt="Image">
                     </a>
 
                     <div class="project-content hover-style">
                         <div class="inner-border">
                             <h3>
-                                <a style="cursor: pointer">GROUPES DE CONDENSATION</a>
+                                <a href="{{ asset('/products/groupes-de-condensation') }}">GROUPES DE CONDENSATION</a>
                             </h3>
                             <p>Des groupes de condensation commerciaux et Industriels. </p>
                         </div>
