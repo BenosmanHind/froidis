@@ -40,6 +40,10 @@ Route::get('/sign-in', function () {
     return view('auth.sign-in',compact('wilayas'));
 });
 
+Route::get('/demande-devis', function () {
+    $wilayas = Wilaya::all();
+    return view('demande-devis',compact('wilayas'));
+});
 
 //admin route
 Route::resource('/admin/categories',CategoryController::class);
