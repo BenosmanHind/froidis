@@ -125,13 +125,22 @@
 
 						<div class="menu-right-options">
                             @auth
+                                @if(Auth::user()->status == 0)
+                                    <a href="{{ asset('/warning') }}" class="main-btn">
+                                        <span>
+                                            {{Auth::user()->name}}
+                                            <i class="icofont-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                @else
+                                    <a href="{{ asset('/professional') }}" class="main-btn">
+                                        <span>
+                                            {{Auth::user()->name}}
+                                            <i class="icofont-arrow-right"></i>
+                                        </span>
+                                    </a>
+                            @endif
 
-                            <a style="cursor: pointer" class="main-btn">
-								<span>
-									{{Auth::user()->name}}
-									<i class="icofont-arrow-right"></i>
-								</span>
-							</a>
                             @else
                             <a href="{{asset('/register-pro')}}" class="main-btn">
 								<span>
