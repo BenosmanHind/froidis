@@ -64,6 +64,14 @@ Route::get('/professional', function () {
 
     return view('professional.dashboard-professional');
 });
+Route::get('/professional/demande-devis', function () {
+
+    return view('professional.demande-devis');
+});
+Route::get('/professional/my-informations', function () {
+
+    return view('professional.informations');
+});
 //front routes
 Route::get('/products/{slug}', [App\Http\Controllers\AccueilController::class, 'categoryProducts']);
 Route::get('/product/{slug}', [App\Http\Controllers\AccueilController::class, 'detailProduct']);
