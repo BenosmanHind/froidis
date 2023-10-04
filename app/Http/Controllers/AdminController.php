@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProfessionalController extends Controller
+class AdminController extends Controller
 {
     //
     public function __construct()
@@ -12,6 +12,6 @@ class ProfessionalController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        return view('professional.dashboard-professional');
+        return view('admin.dashboard-admin');
     }
 }

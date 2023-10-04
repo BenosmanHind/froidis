@@ -139,8 +139,7 @@
                                             <i class="icofont-arrow-right"></i>
                                         </span>
                                     </a>
-                            @endif
-
+                                @endif
                             @else
                             <a href="{{asset('/register-pro')}}" class="main-btn">
 								<span>
