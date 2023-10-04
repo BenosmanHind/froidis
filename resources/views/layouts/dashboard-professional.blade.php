@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{{asset('dashboard/vendor/toastr/css/toastr.min.css')}}">
         <link href="{{asset('dashboard/vendor/summernote/summernote.css')}}" rel="stylesheet">
-
+        <link href="{{ asset('dashboard/vendor/dropzone/dist/dropzone.css') }}" rel="stylesheet">
 
 
 
@@ -162,7 +162,7 @@
             <div class="deznav-scroll">
 				<ul class="metismenu" id="menu">
 				<li class="nav-label first">Main Menu</li>
-						<li><a href="{{url('/admin')}}" class="ai-icon" aria-expanded="false">
+						<li><a href="{{url('/professional')}}" class="ai-icon" aria-expanded="false">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <rect x="0" y="0" width="24" height="24"/>
@@ -197,7 +197,7 @@
 							<span class="nav-text">Documents téléchargeable</span>
 						</a>
                     </li>
-                    <li><a class=" ai-icon" href="{{asset('professional/documents')}}" aria-expanded="false">
+                    <li><a class=" ai-icon" href="{{asset('/professional/contact-froidis')}}" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <rect x="0" y="0" width="24" height="24"/>
@@ -208,7 +208,7 @@
 							<span class="nav-text">Contacter froidis</span>
 						</a>
                     </li>
-                    <li><a class=" ai-icon" href="{{asset('professional/documents')}}" aria-expanded="false">
+                    <li><a class=" ai-icon" href="{{asset('/professional/inbox')}}" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <rect x="0" y="0" width="24" height="24"/>
@@ -219,7 +219,7 @@
 							<span class="nav-text">Messagerie</span>
 						</a>
                     </li>
-                    <li><a class=" ai-icon" href="{{asset('professional/documents')}}" aria-expanded="false">
+                    <li><a class=" ai-icon" href="{{asset('/professional/my-informations')}}" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <rect x="0" y="0" width="24" height="24"/>
@@ -303,7 +303,7 @@
 
     <!-- Toastr -->
     <script src="{{asset('dashboard/vendor/toastr/js/toastr.min.js')}}"></script>
-
+    <script src="{{ asset('dashboard/vendor/dropzone/dist/dropzone.js') }}"></script>
 
 	<script>
 	(function($) {

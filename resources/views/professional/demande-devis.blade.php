@@ -27,16 +27,14 @@
                     <div class="card-body">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label>Type de demande* :</label>
-                                    <select class="form-control select-type" id="sel1"  class="selectpicker" data-live-search="true" name="type" required>
-                                        <option value="" disabled selected>Selectionner...</option>
-                                    </select>
+                                    <label>Objet* :</label>
+                                    <input type="text" class="form-control input-default control-number " placeholder="Objet" name="object">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label>Remarque :</label>
-                                    <textarea type="date" class="form-control input-default control-number"  name="remarque" ></textarea>
+                                    <label>Message :</label>
+                                    <textarea type="date" class="form-control input-default control-number" placeholder="....."  name="message" ></textarea>
                                 </div>
                             </div>
                              <button type="submit"  class="btn btn-primary mt-3">Envoyer</button>

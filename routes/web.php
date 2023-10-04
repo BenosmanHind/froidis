@@ -62,6 +62,14 @@ Route::get('/professional/my-informations', function () {
 
     return view('professional.informations');
 });
+Route::get('/professional/contact-froidis', function () {
+
+    return view('professional.contact-froidis');
+});
+Route::get('/professional/inbox', function () {
+
+    return view('professional.inbox');
+});
 Route::resource('/professional',ProfessionalController::class);
 
 //front routes
