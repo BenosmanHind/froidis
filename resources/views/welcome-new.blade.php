@@ -4,15 +4,15 @@
 <style>
     .partenaire-services::before{
         content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 100%;
-  background-color: #2063C6;
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-  z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        background-color: #2063C6;
+        -webkit-transition: all ease 0.5s;
+        transition: all ease 0.5s;
+        z-index: -1;
 
     }
     .brightness:hover {
