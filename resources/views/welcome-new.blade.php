@@ -15,6 +15,9 @@
   z-index: -1;
 
     }
+    .brightness:hover {
+        -webkit-filter: brightness(150%);
+         }
 </style>
 <!--=== Start Banner Section ===-->
 <section class="banner-section bg-1">
@@ -42,41 +45,32 @@
         </div>
 
         <div class="row">
-            <div  class="col-md-3">
+            <div  class="col-md-4">
                 <div class="main-services-item style-two wow fadeInUp delay-0-2s">
                     <i class="icofont-tree-alt"></i>
                     <h3>
-                        <a style="cursor: pointer">Agriculture</a>
+                        <a style="cursor: pointer" href="{{asset('/agriculture')}}">Agriculture<br> <span style="font-size: 20px; font-weight:300"> Chambre froide</span></a> 
                     </h3>
 
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="main-services-item style-two wow fadeInUp delay-0-4s">
-                    <i class="icofont-fix-tools"></i>
-                    <h3>
-                        <a style="cursor: pointer">professionnels</a>
-                    </h3>
-                </div>
-            </div>
-
-            <div  class="col-md-3">
-                <div class="main-services-item style-two wow fadeInUp delay-0-6s">
-                    <i class="icofont-industries"></i>
-                    <h3>
-                        <a style="cursor: pointer">industrie</a>
-                    </h3>
-                </div>
-            </div>
-
-            <div  class="col-md-3">
+            <div  class="col-md-4">
                 <div class="main-services-item style-two wow fadeInUp delay-0-6s">
                     <i class="icofont-snow-alt"></i>
                     <h3>
-                        <a style="cursor: pointer">chambre froide</a>
+                        <a style="cursor: pointer">Entrepot frigorifique<br> <span style="font-size: 20px; font-weight:300">Traitement d'air</span></a> 
                     </h3>
 
+                </div>
+            </div>
+
+            <div  class="col-md-4">
+                <div class="main-services-item style-two wow fadeInUp delay-0-6s">
+                    <i class="icofont-industries"></i>
+                    <h3>
+                        <a style="cursor: pointer">Industerie<br> <span style="font-size: 20px; font-weight:300">solutions froid</span></a> 
+                    </h3>
                 </div>
             </div>
 
@@ -87,6 +81,53 @@
     <img src="{{asset('front/assets/images/services-bg-shape.png')}}" class="services-bg-shape" alt="Image">
 </section>
 <!--=== End Services Section ===-->
+
+
+
+<!--=== Start Services Section ===-->
+<section class="services-section  pt-100 pb-70" style="background-color: #f7f7f7;">
+    <div class="container">
+        <div class="main-section-title wow fadeInUp delay-0-2s">
+            <span class="up-title" style="color: #173a7a">Denrées Alimentaires</span>
+            <h2 style="color: #173a7a">Stay Fresh !</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+              <div class="col-sm text-center">
+                <a href="{{asset('/froidis')}}"><img src="{{asset('/banana.jpg')}}"  class="brightness" alt="" srcset=""></a>  <br>
+                <span class="up-title" style="color: #173a7a">Les Bananes</span>
+              </div>
+              <div class="col-sm text-center">
+                <a href="{{asset('/froidis')}}"><img src="{{asset('/poulet.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
+                <span class="up-title" style="color: #173a7a">Le poulet</span>
+              </div>
+              <div class="col-sm text-center">
+                <a href="{{asset('/froidis')}}"><img src="{{asset('/viande.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
+                <span class="up-title" style="color: #173a7a">La viande</span>
+              </div>
+              <div class="col-sm text-center">
+                <a href="{{asset('/froidis')}}"><img src="{{asset('/pomme.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
+                <span class="up-title" style="color: #173a7a">La pomme</span>
+              </div>
+              <div class="col-sm text-center">
+                <a href="{{asset('/froidis')}}"><img src="{{asset('/poisson.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
+                <span class="up-title" style="color: #173a7a">Le poisson</span>
+              </div>
+              <div class="col-sm text-center">
+                <a href="{{asset('/oignon')}}"><img src="{{asset('/oignon.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
+                <span class="up-title" style="color: #173a7a">L'oignon</span>
+              </div>
+              <div class="col-sm text-center">
+                <a href="{{asset('/froidis')}}"><img src="{{asset('/boisson.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
+                <span class="up-title" style="color: #173a7a">les Boissons</span>
+              </div>
+            </div>
+        </div>
+</section>
+<!--=== End Services Section ===-->
+
+
 
 
 
