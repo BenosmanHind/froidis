@@ -27,7 +27,7 @@
                 <div class="sign-up-form">
                         <h2>Demandez dès maintenant votre devi !</h2>
                         <p>Demandez dès maintenant votre devis pour les services de froid. Notre équipe expérimentée vous propose des solutions sur mesure pour la réfrigération,afin de répondre à vos besoins spécifiques.</p>
-                        <form class="form-wrap" method="POST" action="{{ route('register') }}">
+                        <form class="form-wrap" method="POST" action="{{ asset('demande-devis') }}">
                             @csrf
                             <div class="card">
                                 <div class="card-header">
@@ -198,7 +198,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-floating form-group">
                                                 <div class="form-floating">
-                                                    <textarea name="summary" id="summary" cols="30" rows="7" class="form-control textarea" placeholder="remarque..."></textarea>
+                                                    <textarea name="note" id="summary" cols="30" rows="7" class="form-control textarea" placeholder="remarque..."></textarea>
                                                     <label for="summary" class="form-label">...........</label>
                                                 </div>
                                             </div>

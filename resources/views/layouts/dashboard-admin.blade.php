@@ -22,23 +22,26 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{{asset('dashboard/vendor/toastr/css/toastr.min.css')}}">
         <link href="{{asset('dashboard/vendor/summernote/summernote.css')}}" rel="stylesheet">
-
-
-
-
-        <style>
-            .text-cosmekarn{
-                color: #6c2d6e;
-            }
-
-            .error {
-                color: red;
-            }
-        </style>
-
     </head>
 
 
+    <style>
+    .temp-body {
+            filter: blur(3px);
+            }
+            .temp-body:before {
+            content: "";
+              position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(22, 180, 183, 0.2);
+            z-index: 999;
+            pointer-events: none;/* This will do all the magic !*/
+            }
+
+    </style>
 
 <body>
 
@@ -123,7 +126,7 @@
                                 <a class="nav-link" href="#" role="button" data-toggle="dropdown">
                                     <img src="{{ asset('dashboard/images/profile/pic1.jpg') }}" width="20" alt=""/>
 									<div class="header-info">
-										<span>Hi, <strong>Admin</strong></span>
+										<span>Hi, <strong>{{ Auth::user()->name }}</strong></span>
 										<small>Administrateur</small>
 									</div>
                                 </a>
@@ -175,7 +178,7 @@
 							<span class="nav-text">Dashboard</span>
 						</a></li>
 
-                    <li><a class="ai-icon" href="{{ asset('/admin/customers') }}" aria-expanded="false">
+                    <li><a class="ai-icon" href="{{ asset('/admin/professionals') }}" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <rect x="0" y="0" width="24" height="24"/>

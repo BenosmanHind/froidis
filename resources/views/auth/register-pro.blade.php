@@ -129,7 +129,7 @@
                             </button>
                         </div>
 
-                        <p class="already">Vous avez déja un compte? <a href="{{asset('/sign-in')}}">Connectez-vous</a></p>
+                        <p class="already">Vous avez déja un compte? <a href="{{asset('/login')}}">Connectez-vous</a></p>
 
                         <span class="or">Réseaux sociaux</span>
 

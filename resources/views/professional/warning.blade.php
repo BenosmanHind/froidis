@@ -139,15 +139,13 @@
         <div class="content-body">
             <div class="container-fluid">
                 <div class="row page-titles mx-0">
-                    <div class="col-sm-6 p-md-0">
-                        <div class="welcome-text">
-                            <h4>Bonjour, Binvenue!</h4>
-                            <h6 class="mb-0 mt-2">Votre compte n'est pas encore validé. Veuillez patienter pendant que nous traitons votre demande.</h6>
+                    <div class="col-lg-12">
+                        <div class="text-center"   role="alert">
+                            <p class="mt-3" style="font-size: 15px;"> Votre compte n'est pas encore validé. Veuillez patienter pendant que nous traitons votre demande. </p>
+                            <a  href="{{url('/')}}" type="button" style="margin-top:20px;" class="btn btn-primary">Page d'acceuil</a>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
 

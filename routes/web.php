@@ -31,9 +31,9 @@ Route::get('/register-pro', function () {
     return view('auth.register-pro',compact('wilayas'));
 });
 
-Route::get('/sign-in', function () {
+Route::get('/login', function () {
     $wilayas = Wilaya::all();
-    return view('auth.sign-in',compact('wilayas'));
+    return view('auth.login',compact('wilayas'));
 });
 
 Route::get('/demande-devis', function () {
@@ -76,7 +76,11 @@ Route::resource('/professional',ProfessionalController::class);
 Route::get('/products/{slug}', [App\Http\Controllers\AccueilController::class, 'categoryProducts']);
 Route::get('/product/{slug}', [App\Http\Controllers\AccueilController::class, 'detailProduct']);
 Route::get('/telecharger-pdf/{document}', [App\Http\Controllers\AccueilController::class, 'telechargerPDF']);
+Route::post('/demande-devis', [App\Http\Controllers\DevisController::class, 'store']);
+Route::get('/success-mail', function () {
 
+    return view('success-mail');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
