@@ -4,9 +4,12 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use TheHocineSaad\LaravelAlgereography\Models\Wilaya;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfessionalAdminController;
 use App\Http\Controllers\ProfessionalController;
+use App\Http\Controllers\ProfessionalDevisController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -54,18 +57,13 @@ Route::get('/warning', function () {
 
     return view('professional.warning');
 });
-Route::get('/professional/demande-devis', function () {
-
-    return view('professional.demande-devis');
-});
+Route::resource('/professional/demande-devis',ProfessionalDevisController::class);
+Route::resource('/professional/contact-froidis',MessageController::class);
 Route::get('/professional/my-informations', function () {
 
     return view('professional.informations');
 });
-Route::get('/professional/contact-froidis', function () {
 
-    return view('professional.contact-froidis');
-});
 Route::get('/professional/inbox', function () {
 
     return view('professional.inbox');

@@ -26,7 +26,7 @@
                             <div class="card-body">
                                 <div class="email-left-box px-0 mb-3">
                                     <div class="mail-list mt-4">
-                                        <a href="{{ asset('/professional/contact-froidis') }}" class="list-group-item active"><i
+                                        <a href="{{ asset('/professional/contact-froidis/create') }}" class="list-group-item active"><i
                                             class="mdi mdi-file-document-box font-18 align-middle mr-2"></i> Contacter froidis</a>
                                         <a href="{{ asset('/professional/inbox') }}" class="list-group-item "><i
                                                 class="fa fa-inbox font-18 align-middle mr-2"></i> Messages reçus <span
@@ -38,12 +38,13 @@
                                 </div>
                                 <div class="email-right-box ml-0 ml-sm-4 ml-sm-0">
                                     <div class="compose-content">
-                                        <form action="#">
+                                        <form action="{{ asset('/professional/contact-froidis/create') }}" method="POST" enctype="multipart/form-data">
+                                            @csrf
                                            <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent" placeholder=" Sujet:">
+                                                <input type="text" class="form-control bg-transparent" placeholder=" Sujet:" name="subject" required>
                                             </div>
                                             <div class="form-group">
-                                                <textarea id="email-compose-editor" class="textarea_editor form-control bg-transparent" rows="15" placeholder="Entrer le message ..."></textarea>
+                                                <textarea id="email-compose-editor" class="textarea_editor form-control bg-transparent" rows="15" placeholder="Entrer le message ..." name="message" required></textarea>
                                             </div>
                                         </form>
                                         <h5 class="mb-4"><i class="fa fa-paperclip"></i> Pièce jointe</h5>
@@ -54,7 +55,7 @@
 										</form>
                                     </div>
                                     <div class="text-left mt-4 mb-5">
-                                        <button class="btn btn-primary btn-sl-sm mr-2" type="button"><span class="mr-2"><i class="fa fa-paper-plane"></i></span>Envoyer</button>
+                                        <button class="btn btn-primary btn-sl-sm mr-2" type="submit"><span class="mr-2"><i class="fa fa-paper-plane"></i></span>Envoyer</button>
                                     </div>
                                 </div>
                             </div>

@@ -5,7 +5,7 @@
 <section class="page-banner-section bg-6">
     <div class="container">
         <div class="page-banner-content">
-            <h2>Inscription</h2>
+            <h2>Connexion</h2>
             <ul>
                 <li>
                     <a href="{{ asset('/') }}">Accueil</a>
