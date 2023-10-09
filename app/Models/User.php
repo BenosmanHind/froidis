@@ -46,4 +46,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(Professional::class);
     }
+    public function message(){
+        return $this->hasOne(Message::class);
+    }
+
 }

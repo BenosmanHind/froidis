@@ -31,26 +31,26 @@
                                         <a href="{{ asset('/professional/inbox') }}" class="list-group-item "><i
                                                 class="fa fa-inbox font-18 align-middle mr-2"></i> Messages reçus <span
                                                 class="badge badge-primary badge-sm float-right">20</span> </a>
-                                        <a href="javascript:void()" class="list-group-item"><i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Messages envoyés</a>
+                                        <a href="{{ asset('/professional/contact-froidis') }}" class="list-group-item"><i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Messages envoyés</a>
                                     </div>
 
 
                                 </div>
+                                <form action="{{ asset('/professional/contact-froidis') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
                                 <div class="email-right-box ml-0 ml-sm-4 ml-sm-0">
                                     <div class="compose-content">
-                                        <form action="{{ asset('/professional/contact-froidis/create') }}" method="POST" enctype="multipart/form-data">
-                                            @csrf
-                                           <div class="form-group">
+                                            <div class="form-group">
                                                 <input type="text" class="form-control bg-transparent" placeholder=" Sujet:" name="subject" required>
                                             </div>
                                             <div class="form-group">
                                                 <textarea id="email-compose-editor" class="textarea_editor form-control bg-transparent" rows="15" placeholder="Entrer le message ..." name="message" required></textarea>
                                             </div>
-                                        </form>
+
                                         <h5 class="mb-4"><i class="fa fa-paperclip"></i> Pièce jointe</h5>
 										<form action="#" class="dropzone">
 											<div class="fallback">
-												<input name="file" type="file" multiple />
+												<input name="files[]" type="file" multiple />
 											</div>
 										</form>
                                     </div>
@@ -58,6 +58,7 @@
                                         <button class="btn btn-primary btn-sl-sm mr-2" type="submit"><span class="mr-2"><i class="fa fa-paper-plane"></i></span>Envoyer</button>
                                     </div>
                                 </div>
+                                </form>
                             </div>
                         </div>
                     </div>

@@ -59,6 +59,7 @@ Route::get('/warning', function () {
 });
 Route::resource('/professional/demande-devis',ProfessionalDevisController::class);
 Route::resource('/professional/contact-froidis',MessageController::class);
+Route::get('/professional/messages-read/{id}', [MessageController::class,'readMessage']);
 Route::get('/professional/my-informations', function () {
 
     return view('professional.informations');

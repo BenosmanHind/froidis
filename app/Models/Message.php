@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Message extends Model
 {
     use HasFactory;
-    public function message(){
-        return $this->belongsTo(Message::class);
+    public function files(){
+        return $this->hasMany(Messagefile::class);
+    }
+    public function sender(){
+        return $this->belongsTo(User::class,'sender_id');
     }
 }

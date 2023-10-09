@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('messagefiles', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('message_id')->unsigned();
+            $table->string('file');
             $table->foreign('message_id')->references('id')->on('messages')->onDelete('cascade');
             $table->timestamps();
         });

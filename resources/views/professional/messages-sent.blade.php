@@ -24,12 +24,12 @@
             <div class="card-body">
                 <div class="email-left-box px-0 mb-3">
                     <div class="mail-list mt-4">
-                        <a href="{{ asset('/professional/contact-froidis') }}" class="list-group-item "><i
+                        <a href="{{ asset('/professional/contact-froidis/create') }}" class="list-group-item "><i
                             class="mdi mdi-file-document-box font-18 align-middle mr-2"></i> Contacter froidis</a>
                         <a href="{{ asset('/professional/inbox') }}" class="list-group-item "><i
                                 class="fa fa-inbox font-18 align-middle mr-2"></i> Messages reçus <span
                                 class="badge badge-primary badge-sm float-right">11</span> </a>
-                        <a href="javascript:void()" class="list-group-item active"><i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Messages envoyés</a>
+                        <a href="{{ asset('/professional/contact-froidis') }}" class="list-group-item active"><i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Messages envoyés</a>
                     </div>
                 </div>
                 <div class="email-right-box ml-0 ml-sm-4 ml-sm-0">
@@ -49,7 +49,7 @@
                                                 class="fa fa-star" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
-                                <a href="email-read.html" class="col-mail col-mail-2">
+                                <a href="{{ asset('/professional/messages-read/'.$message->id) }}" class="col-mail col-mail-2">
                                     <div class="subject">{{ $message->message }}</div>
                                     <div class="date">{{ $message->created_at->format('H:m') }}</div>
                                 </a>
