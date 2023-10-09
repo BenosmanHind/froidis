@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use TheHocineSaad\LaravelAlgereography\Models\Wilaya;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\MessageAdminController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfessionalAdminController;
@@ -48,6 +49,8 @@ Route::get('/demande-devis', function () {
 Route::resource('/admin/categories',CategoryController::class);
 Route::resource('/admin/products',ProductController::class);
 Route::resource('/admin/professionals',ProfessionalAdminController::class);
+Route::resource('/admin/inbox',MessageAdminController::class);
+Route::get('/admin/messages-read/{id}', [MessageAdminController::class,'readMessage']);
 Route::get('/admin/edit-status/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'showModal']);
 Route::put('/admin/update-status/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'updateStatus']);
 Route::resource('/admin',AdminController::class);
