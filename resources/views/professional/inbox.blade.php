@@ -29,7 +29,7 @@
                         <a href="{{ asset('/professional/inbox') }}" class="list-group-item active"><i
                                 class="fa fa-inbox font-18 align-middle mr-2"></i> Messages reçus <span
                                 class="badge badge-primary badge-sm float-right">11</span> </a>
-                        <a href="javascript:void()" class="list-group-item"><i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Messages envoyés</a>
+                        <a href="{{ asset('/professional/contact-froidis') }}" class="list-group-item"><i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Messages envoyés</a>
                     </div>
                 </div>
                 <div class="email-right-box ml-0 ml-sm-4 ml-sm-0">

@@ -22,23 +22,26 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{{asset('dashboard/vendor/toastr/css/toastr.min.css')}}">
         <link href="{{asset('dashboard/vendor/summernote/summernote.css')}}" rel="stylesheet">
-
-
-
-
-        <style>
-            .text-cosmekarn{
-                color: #6c2d6e;
-            }
-
-            .error {
-                color: red;
-            }
-        </style>
-
     </head>
 
 
+    <style>
+    .temp-body {
+            filter: blur(3px);
+            }
+            .temp-body:before {
+            content: "";
+              position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(22, 180, 183, 0.2);
+            z-index: 999;
+            pointer-events: none;/* This will do all the magic !*/
+            }
+
+    </style>
 
 <body>
 
@@ -123,7 +126,7 @@
                                 <a class="nav-link" href="#" role="button" data-toggle="dropdown">
                                     <img src="{{ asset('dashboard/images/profile/pic1.jpg') }}" width="20" alt=""/>
 									<div class="header-info">
-										<span>Hi, <strong>Admin</strong></span>
+										<span>Hi, <strong>{{ Auth::user()->name }}</strong></span>
 										<small>Administrateur</small>
 									</div>
                                 </a>
@@ -175,7 +178,7 @@
 							<span class="nav-text">Dashboard</span>
 						</a></li>
 
-                    <li><a class="ai-icon" href="{{ asset('/admin/customers') }}" aria-expanded="false">
+                    <li><a class="ai-icon" href="{{ asset('/admin/professionals') }}" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <rect x="0" y="0" width="24" height="24"/>
@@ -210,6 +213,16 @@
                             <li><a href="{{asset('admin/products/create')}}">Ajouter</a></li>
                             <li><a href="{{asset('admin/products')}}">Tous</a></li>
                         </ul>
+                    </li>
+                    <li><a class=" ai-icon" href="{{asset('admin/inbox')}}" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <path d="M17,12 L18.5,12 C19.3284271,12 20,12.6715729 20,13.5 C20,14.3284271 19.3284271,15 18.5,15 L5.5,15 C4.67157288,15 4,14.3284271 4,13.5 C4,12.6715729 4.67157288,12 5.5,12 L7,12 L7.5582739,6.97553494 C7.80974924,4.71225688 9.72279394,3 12,3 C14.2772061,3 16.1902508,4.71225688 16.4417261,6.97553494 L17,12 Z" fill="#000000"/>
+                                <rect fill="#000000" opacity="0.3" x="10" y="16" width="4" height="4" rx="2"/>
+                            </g>
+                        </svg>
+							<span class="nav-text">Messagerie</span>
+						</a>
                     </li>
                 </ul>
             </div>

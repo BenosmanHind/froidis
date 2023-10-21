@@ -26,5 +26,6 @@ class DevisController extends Controller
         ]
     );
         Mail::to('benosmanhind@gmail.com')->send(new Devis($request));
+        return view('success-mail');
     }
 }

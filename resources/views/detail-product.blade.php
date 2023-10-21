@@ -114,9 +114,9 @@
                         </div>
                     <ul class="quantity-add-wish d-flex align-items-center">
                        <li>
-                            <button type="submit" class="main-btn">
+                            <a href="{{ asset('/demande-devis') }}" class="main-btn">
                                 <span>Demander un devis</span>
-                            </button>
+                            </a>
                         </li>
                     </ul>
 

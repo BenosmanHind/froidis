@@ -16,7 +16,7 @@
                 </ol>
             </div>
         </div>
-        <form action="{{url('admin/cart-promo')}}" method="POST" id="addProduct" enctype="multipart/form-data">
+        <form action="{{url('professional/demande-devis')}}" method="POST" id="addProduct" enctype="multipart/form-data">
         @csrf
         <div class="row ">
             <div class="col-xl-9 col-lg-9">
