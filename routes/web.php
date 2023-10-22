@@ -26,6 +26,14 @@ use App\Http\Controllers\ProfessionalDevisController;
 Route::get('/', function () {
     return view('welcome-new');
 });
+
+
+Route::get('/agriculture', function () {
+    return view('agriculture');
+});
+Route::get('/oignon', function () {
+    return view('oignon');
+});
 Route::get('/detail-product', function () {
     return view('detail-product');
 });
