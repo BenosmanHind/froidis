@@ -113,7 +113,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-lg-12">
+                                        <div class="col-lg-6">
                                             <div class=" form-group">
                                                 <label for="youName" class="form-label">Avez vous déja une chambre froide ?</label>
                                                   <div class="form-check form-check-inline">
@@ -124,6 +124,12 @@
                                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="0">
                                                     <label class="form-check-label" for="inlineRadio1" style="font-size: 14px">Non</label>
                                                   </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 marque">
+                                           <div class="form-floating form-group">
+                                            <input type="text" class="form-control" placeholder="Le groupe et évaporateur de quelle marque " name="volume" value="{{ old('volume') }}" >
+                                            <label class="form-label">Le groupe et évaporateur de quelle marque ?</label>
                                             </div>
                                         </div>
                                     </div>
@@ -223,3 +229,29 @@
 </section>
 <!--=== End Sign Up Section ===-->
 @endsection
+@push('hide-marque-script')
+<script>
+    $(document).ready(function() {
+      // Sélectionnez l'élément de case à cocher "Non"
+      var nonCheckbox = $('#inlineRadio1');
+      // Sélectionnez le div que vous voulez masquer
+      var marqueDiv = $('.marque');
+
+      // Cachez initialement le div si "Non" est coché au chargement de la page
+      if (nonCheckbox.is(':checked')) {
+        marqueDiv.hide();
+      }
+
+      // Écoutez les changements d'état de la case à cocher "Non"
+      nonCheckbox.change(function() {
+        if (nonCheckbox.is(':checked')) {
+          // Si "Non" est coché, cachez le div
+          marqueDiv.hide();
+        } else {
+          // Sinon, affichez le div
+          marqueDiv.show();
+        }
+      });
+    });
+    </script>
+@endpush
