@@ -134,7 +134,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-4">
                                             <div class="form-floating form-group">
                                                 <input type="text" class="form-control @error('volume') is-invalid @enderror" placeholder="Volume (m³)" name="volume" value="{{ old('volume') }}" required>
                                                 <label class="form-label">Volume (m³)</label>
@@ -145,18 +145,7 @@
                                                     @enderror
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
-                                            <div class="form-floating form-group">
-                                                <input type="text" class="form-control @error('dimension') is-invalid @enderror" placeholder="Dimension (m)" name="dimension" value="{{ old('dimension') }}" required>
-                                                <label class="form-label">Dimension (m)</label>
-                                                    @error('dimension')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                    @enderror
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-4">
                                             <div class="form-floating form-group">
                                                 <input type="text" class="form-control @error('nbr_chambre') is-invalid @enderror" placeholder="Nombre de chambres" name="nbr_chambre" value="{{ old('nbr_chambre') }}" required>
                                                 <label class="form-label">Nombre de chambres</label>
@@ -167,7 +156,7 @@
                                                     @enderror
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-4">
                                             <div class="form-floating form-group">
                                                 <input type="text" class="form-control @error('temperature') is-invalid @enderror" placeholder="Température voulus" name="temperature" value="{{ old('temperature') }}" required>
                                                 <label class="form-label">Température voulus</label>
@@ -180,18 +169,52 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="form-floating  form-group">
-                                                <input type="text" class="form-control @error('type_denre') is-invalid @enderror" placeholder="Type de denrés " name="type_denre" value="{{ old('type_denre') }}" required>
-                                                <label class="form-label">Type de denrés</label>
-                                                    @error('type_denre')
+                                        <div class="col-lg-4">
+                                            <div class="form-floating form-group">
+                                                <input type="text" class="form-control @error('longeur') is-invalid @enderror" placeholder="Longueur (m)" name="longueur" value="{{ old('longueur') }}" required>
+                                                <label class="form-label">Longueur (m)</label>
+                                                    @error('longueur')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                     @enderror
                                             </div>
                                         </div>
-
+                                        <div class="col-lg-4">
+                                            <div class="form-floating form-group">
+                                                <input type="text" class="form-control @error('largeur') is-invalid @enderror" placeholder="Largeur (m)" name="largeur" value="{{ old('largeur') }}" required>
+                                                <label class="form-label">Largeur (m)</label>
+                                                    @error('largeur')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                    @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating form-group">
+                                                <input type="text" class="form-control @error('hauteur') is-invalid @enderror" placeholder="Hauteur (m)" name="hauteur" value="{{ old('hauteur') }}" required>
+                                                <label class="form-label">Hauteur (m)</label>
+                                                    @error('hauteur')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                    @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-floating form-group">
+                                                <select  class="form-control"  name="type_denre" required>
+                                                <option value="Fruits et légumes">Fruits et légumes</option>
+                                                <option value="Viandes et poissons">Viandes et poissons</option>
+                                                <option value="Produits laitiers">Produits laitiers</option>
+                                                <option value="Boissons">Boissons</option>
+                                                <option value="Autres">Autres</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -232,15 +255,11 @@
 @push('hide-marque-script')
 <script>
     $(document).ready(function() {
-      // Sélectionnez l'élément de case à cocher "Non"
+      // Sélectionnez les éléments de case à cocher "Oui" et "Non"
+      var ouiCheckbox = $('#inlineRadio2');
       var nonCheckbox = $('#inlineRadio1');
       // Sélectionnez le div que vous voulez masquer
       var marqueDiv = $('.marque');
-
-      // Cachez initialement le div si "Non" est coché au chargement de la page
-      if (nonCheckbox.is(':checked')) {
-        marqueDiv.hide();
-      }
 
       // Écoutez les changements d'état de la case à cocher "Non"
       nonCheckbox.change(function() {
@@ -249,6 +268,14 @@
           marqueDiv.hide();
         } else {
           // Sinon, affichez le div
+          marqueDiv.show();
+        }
+      });
+
+      // Écoutez les changements d'état de la case à cocher "Oui"
+      ouiCheckbox.change(function() {
+        if (ouiCheckbox.is(':checked')) {
+          // Si "Oui" est coché, affichez le div
           marqueDiv.show();
         }
       });

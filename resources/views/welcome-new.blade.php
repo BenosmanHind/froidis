@@ -49,7 +49,7 @@
                 <div class="main-services-item style-two wow fadeInUp delay-0-2s">
                     <i class="icofont-tree-alt"></i>
                     <h3>
-                        <a style="cursor: pointer" href="{{asset('/agriculture')}}">Agriculture<br> <span style="font-size: 20px; font-weight:300"> Chambre froide</span></a> 
+                        <a style="cursor: pointer" href="{{asset('/agriculture')}}">Agriculture<br> <span style="font-size: 20px; font-weight:300"> Chambre froide</span></a>
                     </h3>
 
                 </div>
@@ -59,7 +59,7 @@
                 <div class="main-services-item style-two wow fadeInUp delay-0-6s">
                     <i class="icofont-snow-alt"></i>
                     <h3>
-                        <a style="cursor: pointer">Entrepot frigorifique<br> <span style="font-size: 20px; font-weight:300">Traitement d'air</span></a> 
+                        <a style="cursor: pointer">Entrepot frigorifique<br> <span style="font-size: 20px; font-weight:300">Traitement d'air</span></a>
                     </h3>
 
                 </div>
@@ -69,7 +69,7 @@
                 <div class="main-services-item style-two wow fadeInUp delay-0-6s">
                     <i class="icofont-industries"></i>
                     <h3>
-                        <a style="cursor: pointer">Industerie<br> <span style="font-size: 20px; font-weight:300">solutions froid</span></a> 
+                        <a style="cursor: pointer">Industerie<br> <span style="font-size: 20px; font-weight:300">solutions froid</span></a>
                     </h3>
                 </div>
             </div>

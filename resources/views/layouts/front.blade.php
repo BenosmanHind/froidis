@@ -482,5 +482,6 @@
 
 
 	    </script>
+        @stack('hide-marque-script')
     </body>
 </html>

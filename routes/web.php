@@ -58,6 +58,7 @@ Route::resource('/admin/categories',CategoryController::class);
 Route::resource('/admin/products',ProductController::class);
 Route::resource('/admin/professionals',ProfessionalAdminController::class);
 Route::resource('/admin/inbox',MessageAdminController::class);
+Route::get('/admin/messages-sent', [MessageAdminController::class,'sentMessage']);
 Route::get('/admin/messages-read/{id}', [MessageAdminController::class,'readMessage']);
 Route::get('/admin/edit-status/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'showModal']);
 Route::put('/admin/update-status/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'updateStatus']);
@@ -71,15 +72,12 @@ Route::get('/warning', function () {
 Route::resource('/professional/demande-devis',ProfessionalDevisController::class);
 Route::resource('/professional/contact-froidis',MessageController::class);
 Route::get('/professional/messages-read/{id}', [MessageController::class,'readMessage']);
+Route::get('/professional/inbox', [MessageController::class,'inbox']);
 Route::get('/professional/my-informations', function () {
 
     return view('professional.informations');
 });
 
-Route::get('/professional/inbox', function () {
-
-    return view('professional.inbox');
-});
 Route::resource('/professional',ProfessionalController::class);
 
 //front routes

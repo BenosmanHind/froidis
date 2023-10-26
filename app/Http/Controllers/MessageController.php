@@ -47,4 +47,8 @@ class MessageController extends Controller
         $message = Message::find($id);
         return view('professional.message-read',compact('message'));
     }
+    public function inbox(){
+    $messages = Message::where('recipient_id',Auth::user()->id)->get();
+    return view('professional.inbox',compact('messages'));
+    }
 }
