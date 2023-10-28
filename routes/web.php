@@ -10,6 +10,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfessionalAdminController;
 use App\Http\Controllers\ProfessionalController;
 use App\Http\Controllers\ProfessionalDevisController;
+use App\Http\Controllers\ProjectController;
 
 
 /*
@@ -65,6 +66,7 @@ Route::get('/demande-devis', function () {
 //admin route
 Route::resource('/admin/categories',CategoryController::class);
 Route::resource('/admin/products',ProductController::class);
+Route::resource('/admin/projects',ProjectController::class);
 Route::resource('/admin/professionals',ProfessionalAdminController::class);
 Route::resource('/admin/inbox',MessageAdminController::class);
 Route::get('/admin/messages-sent', [MessageAdminController::class,'sentMessage']);
