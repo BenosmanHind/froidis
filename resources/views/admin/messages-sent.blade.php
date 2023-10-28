@@ -26,7 +26,7 @@
                         <a href="{{ asset('/admin/inbox') }}" class="list-group-item "><i
                                 class="fa fa-inbox font-18 align-middle mr-2"></i> Messages reçus <span
                                 class="badge badge-primary badge-sm float-right">11</span> </a>
-                        <a href="{{ asset('/admin/messages-send') }}" class="list-group-item active"><i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Messages envoyés</a>
+                        <a href="{{ asset('/admin/messages-sent') }}" class="list-group-item active"><i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Messages envoyés</a>
                     </div>
                 </div>
                 <div class="email-right-box ml-0 ml-sm-4 ml-sm-0">
@@ -46,7 +46,7 @@
                                                     class="fa fa-star" aria-hidden="true"></i></button>
                                         </div>
                                     </div>
-                                    <a href="{{ asset('/admin/messages-read/'.$message->id) }}" class="col-mail col-mail-2">
+                                    <a href="{{ asset('/admin/messages-read-sent/'.$message->id) }}" class="col-mail col-mail-2">
                                         <div class="subject">{{ $message->message }}</div>
                                         <div class="date">{{ $message->created_at->format('d M') }}</div>
                                     </a>

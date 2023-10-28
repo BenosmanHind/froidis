@@ -30,10 +30,9 @@ class MessageController extends Controller
         $message->message = $request->message;
         $message->save();
         $hasFile = $request->hasFile('files');
-
         if($hasFile){
             foreach($request->file('files') as $file){
-                $destination = 'punlic/messages/files';
+                $destination = 'public/messages/files';
                 $storageName = md5(uniqid() . time()) . '.' . $file->getClientOriginalExtension();
                 $path = $file->storeAs($destination, $storageName);
                 $message_file = new Messagefile();
@@ -51,4 +50,11 @@ class MessageController extends Controller
     $messages = Message::where('recipient_id',Auth::user()->id)->get();
     return view('professional.inbox',compact('messages'));
     }
+
+    public function readMessageInbox($id){
+        $message = Message::find($id);
+        return view('professional.message-read-inbox',compact('message'));
+    }
+
+
 }

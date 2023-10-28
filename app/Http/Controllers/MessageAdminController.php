@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Response;
 class MessageAdminController extends Controller
 {
     //
@@ -33,5 +33,18 @@ class MessageAdminController extends Controller
     public function sentMessage(){
         $messages = Message::where('sender_id',Auth::user()->id)->get();
         return view('admin.messages-sent',compact('messages'));
+    }
+    public function readMessageSent($id){
+        $message = Message::find($id);
+        return view('admin.message-read-sent',compact('message'));
+    }
+    public function downloadFile($file){
+        $chemin_file = storage_path('app/public/messages/files/'.$file);
+
+        if (file_exists($chemin_file)) {
+            return Response::download($chemin_file, $file);
+        } else {
+            return response()->json(['message' => 'Fichier non trouvé'], 404);
+        }
     }
 }

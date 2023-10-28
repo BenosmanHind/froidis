@@ -48,7 +48,7 @@
                                                     class="fa fa-star" aria-hidden="true"></i></button>
                                         </div>
                                     </div>
-                                    <a href="email-read.html" class="col-mail col-mail-2">
+                                    <a href="{{ asset('/professional/messages-read-inbox/'.$message->id) }}" class="col-mail col-mail-2">
                                         <div class="subject">{{ $message->message }}</div>
                                         <div class="date">{{ $message->created_at->format('H:m') }}</div>
                                     </a>
