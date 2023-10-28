@@ -95,31 +95,19 @@
         <div class="container">
             <div class="row">
               <div class="col-sm text-center">
-                <a href="{{asset('/froidis')}}"><img src="{{asset('/banana.jpg')}}"  class="brightness" alt="" srcset=""></a>  <br>
-                <span class="up-title" style="color: #173a7a">Les Bananes</span>
+                <a href="{{asset('/fruit-et-legume')}}"><img src="{{asset('/banana.jpg')}}"  class="brightness" alt="" srcset=""></a>  <br>
+                <span class="up-title" style="color: #173a7a">Fruits et légumes</span>
               </div>
               <div class="col-sm text-center">
-                <a href="{{asset('/froidis')}}"><img src="{{asset('/poulet.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
-                <span class="up-title" style="color: #173a7a">Le poulet</span>
+                <a href="{{asset('/viandes-et-poissons')}}"><img src="{{asset('/poulet.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
+                <span class="up-title" style="color: #173a7a">Viandes et poissons</span>
               </div>
               <div class="col-sm text-center">
-                <a href="{{asset('/froidis')}}"><img src="{{asset('/viande.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
-                <span class="up-title" style="color: #173a7a">La viande</span>
+                <a href="{{asset('/produits-laitiers')}}"><img src="{{asset('/viande.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
+                <span class="up-title" style="color: #173a7a">Produits laitiers</span>
               </div>
               <div class="col-sm text-center">
-                <a href="{{asset('/froidis')}}"><img src="{{asset('/pomme.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
-                <span class="up-title" style="color: #173a7a">La pomme</span>
-              </div>
-              <div class="col-sm text-center">
-                <a href="{{asset('/froidis')}}"><img src="{{asset('/poisson.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
-                <span class="up-title" style="color: #173a7a">Le poisson</span>
-              </div>
-              <div class="col-sm text-center">
-                <a href="{{asset('/oignon')}}"><img src="{{asset('/oignon.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
-                <span class="up-title" style="color: #173a7a">L'oignon</span>
-              </div>
-              <div class="col-sm text-center">
-                <a href="{{asset('/froidis')}}"><img src="{{asset('/boisson.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
+                <a href="{{asset('/boissons')}}"><img src="{{asset('/boisson.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
                 <span class="up-title" style="color: #173a7a">les Boissons</span>
               </div>
             </div>

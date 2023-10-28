@@ -31,8 +31,17 @@ Route::get('/', function () {
 Route::get('/agriculture', function () {
     return view('agriculture');
 });
-Route::get('/oignon', function () {
-    return view('oignon');
+Route::get('/fruit-et-legume', function () {
+    return view('fruit-et-legume');
+});
+Route::get('/viandes-et-poissons', function () {
+    return view('viandes-et-poissons');
+});
+Route::get('/produits-laitiers', function () {
+    return view('produits-laitiers');
+});
+Route::get('/boissons', function () {
+    return view('boissons');
 });
 Route::get('/detail-product', function () {
     return view('detail-product');

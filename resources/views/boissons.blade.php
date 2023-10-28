@@ -66,13 +66,13 @@
 <section class="page-banner-section bg-6">
     <div class="container">
         <div class="page-banner-content">
-            <h2>Le Froid : Gardien de la Fraîcheur des Oignons</h2>
+            <h2>Le Froid : Gardien de la Fraîcheur des Boissons !</h2>
             <ul>
                 <li>
-                    <a href="index.html">Accueil</a>
+                    <a href="{{ asset('/') }}">Accueil</a>
                 </li>
                 <li>
-                    <a href="index.html">Oignons</a>
+                    <a href="javascript:void(0)">Boissons</a>
                 </li>
             </ul>
         </div>
@@ -112,12 +112,10 @@
         </div>
 
         <div class="project-details-cntent ptb-50">
-            <h3>Le Froid : Gardien de la Fraîcheur des Oignons !</h3>
-            <p>Les oignons, ces trésors de saveurs et de nutriments, ont toujours trouvé leur place au cœur de notre cuisine. Pourtant, leur longévité et leur qualité dépendent en grande partie d'une chose essentielle : le froid.
-
-                Les oignons fraîchement récoltés sont sujets à la déshydratation et à la pourriture s'ils ne sont pas stockés correctement. C'est là que le froid entre en jeu. Grâce aux avancées de la technologie de conservation, les oignons peuvent être gardés en parfait état pendant de longues périodes.</p>
-            <p><b>Le Savoir-Faire de la Conservation au Froid :</b>  La conservation des oignons repose sur la maîtrise précise de la température et de l'humidité. Une chambre froide spécialement conçue pour les oignons permet de maintenir une température stable et un niveau d'humidité adéquat. Cela empêche la croissance de moisissures et de germes, préservant ainsi la fraîcheur des oignons.</p>
-            <p>Chez FROIDIS, nous sommes fiers d'offrir des solutions innovantes pour préserver la fraîcheur inégalée des oignons à chaque étape de leur conservation. Découvrez comment notre expertise en matière de froid garantit que chaque oignon reste aussi croquant et savoureux que le jour de la récolte.</p>
+            <h3>Le Froid : Gardien de la Fraîcheur des Boissons !</h3>
+            <p>Les boissons, qu'elles soient rafraîchissantes ou revigorantes, sont des incontournables de notre quotidien. Cependant, leur qualité et leur goût dépendent en grande partie d'un élément essentiel : le froid. Les boissons fraîches, qu'il s'agisse de jus de fruits, de sodas ou d'autres breuvages, demandent une attention particulière pour maintenir leur fraîcheur et prolonger leur durée de vie. C'est là que la technologie de conservation à basse température entre en jeu, garantissant la préservation de la qualité de ces délices liquides sur le long terme.</p>
+            <p><b>La Science de la Conservation au Froid :</b>  La préservation des boissons exige une gestion précise de la température et de l'humidité. Des équipements de réfrigération spécialement conçus sont essentiels pour maintenir des conditions optimales, évitant ainsi la détérioration, la perte de pétillant et la préservation de la saveur.</p>
+            <p>Chez FROIDIS, notre expertise dans l'art de la maîtrise du froid garantit la préservation inégalée de la fraîcheur de vos boissons. Découvrez comment nos solutions innovantes veillent sur ces précieux liquides à chaque étape de leur conservation. Notre engagement est de maintenir la qualité et la fraîcheur de vos boissons, contribuant ainsi à une expérience de dégustation rafraîchissante et savoureuse pour tous.</p>
         </div>
 
        <div class="row  mb-4 d-flex justify-content-center" style="margin-bottom:20px; padding: 20px; background-color:#CFE3FF">
@@ -125,9 +123,9 @@
                 <p style="font-size: 20px;color:#174587">Remplissez le formulaire pour nous faire part de  <b> vos besoins spécifiques !</b></p>
             </div>
             <div class="col-md-2">
-                <button type="submit" class="main-btn">
+                <a href="{{ asset('/demande-devis') }}"  class="main-btn">
                     <span>Obtenir une offre</span>
-                </button>
+                </a>
             </div>
        </div>
     </div>

@@ -117,11 +117,11 @@
                                             <div class=" form-group">
                                                 <label for="youName" class="form-label">Avez vous déja une chambre froide ?</label>
                                                   <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="1" checked>
+                                                    <input class="form-check-input" type="radio" name="chambre_froide" id="inlineRadio2" value="1" checked>
                                                     <label class="form-check-label" for="inlineRadio2" style="font-size: 14px">Oui</label>
                                                   </div>
                                                   <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="0">
+                                                    <input class="form-check-input" type="radio" name="chambre_froide" id="inlineRadio1" value="0">
                                                     <label class="form-check-label" for="inlineRadio1" style="font-size: 14px">Non</label>
                                                   </div>
                                             </div>
@@ -130,6 +130,21 @@
                                            <div class="form-floating form-group">
                                             <input type="text" class="form-control" placeholder="Le groupe et évaporateur de quelle marque " name="volume" value="{{ old('volume') }}" >
                                             <label class="form-label">Le groupe et évaporateur de quelle marque ?</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class=" form-group">
+                                                <label for="youName" class="form-label">est-ce que vous avez un technicien ?</label>
+                                                  <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="technicien" id="inlineRadio2" value="1" checked>
+                                                    <label class="form-check-label" for="inlineRadio2" style="font-size: 14px">Oui</label>
+                                                  </div>
+                                                  <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="technicien" id="inlineRadio1" value="0">
+                                                    <label class="form-check-label" for="inlineRadio1" style="font-size: 14px">Non</label>
+                                                  </div>
                                             </div>
                                         </div>
                                     </div>
