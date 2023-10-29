@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 class ProfessionalAdminController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(){
       $users = User::where('type','professional')->get();
       return view('admin.professionals',compact('users'));

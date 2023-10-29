@@ -52,6 +52,7 @@ class MessageController extends Controller
     }
 
     public function readMessageInbox($id){
+        app()->setLocale('fr');
         $message = Message::find($id);
         return view('professional.message-read-inbox',compact('message'));
     }

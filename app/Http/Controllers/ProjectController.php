@@ -8,6 +8,10 @@ use Illuminate\Support\Str;
 class ProjectController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function create(){
         return view('admin.add-project');
     }

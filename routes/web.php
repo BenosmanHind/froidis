@@ -64,34 +64,35 @@ Route::get('/demande-devis', function () {
 });
 
 //admin route
-Route::resource('/admin/categories',CategoryController::class);
-Route::resource('/admin/products',ProductController::class);
-Route::resource('/admin/projects',ProjectController::class);
-Route::resource('/admin/professionals',ProfessionalAdminController::class);
-Route::resource('/admin/inbox',MessageAdminController::class);
-Route::get('/admin/messages-sent', [MessageAdminController::class,'sentMessage']);
-Route::get('/admin/messages-read/{id}', [MessageAdminController::class,'readMessage']);
-Route::get('/admin/messages-read-sent/{id}', [MessageAdminController::class,'readMessageSent']);
-Route::get('/admin/edit-status/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'showModal']);
-Route::put('/admin/update-status/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'updateStatus']);
-Route::resource('/admin',AdminController::class);
+Route::resource('/admin/categories',CategoryController::class)->middleware('can:admin');;
+Route::resource('/admin/products',ProductController::class)->middleware('can:admin');;
+Route::resource('/admin/projects',ProjectController::class)->middleware('can:admin');;
+Route::resource('/admin/professionals',ProfessionalAdminController::class)->middleware('can:admin');;
+Route::resource('/admin/inbox',MessageAdminController::class)->middleware('can:admin');;
+Route::get('/admin/messages-sent', [MessageAdminController::class,'sentMessage'])->middleware('can:admin');;
+Route::get('/admin/messages-read/{id}', [MessageAdminController::class,'readMessage'])->middleware('can:admin');;
+Route::get('/admin/messages-read-sent/{id}', [MessageAdminController::class,'readMessageSent'])->middleware('can:admin');;
+Route::get('/admin/edit-status/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'showModal'])->middleware('can:admin');;
+Route::put('/admin/update-status/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'updateStatus'])->middleware('can:admin');;
+Route::resource('/admin',AdminController::class)->middleware('can:admin');;
 Route::get('/download-file/{file}',  [MessageAdminController::class,'downloadFile']);
+
 //professional route
 Route::get('/warning', function () {
 
     return view('professional.warning');
 });
-Route::resource('/professional/demande-devis',ProfessionalDevisController::class);
-Route::resource('/professional/contact-froidis',MessageController::class);
-Route::get('/professional/messages-read/{id}', [MessageController::class,'readMessage']);
-Route::get('/professional/messages-read-inbox/{id}', [MessageController::class,'readMessageInbox']);
-Route::get('/professional/inbox', [MessageController::class,'inbox']);
+Route::resource('/professional/demande-devis',ProfessionalDevisController::class)->middleware('can:professional');
+Route::resource('/professional/contact-froidis',MessageController::class)->middleware('can:professional');
+Route::get('/professional/messages-read/{id}', [MessageController::class,'readMessage'])->middleware('can:professional');
+Route::get('/professional/messages-read-inbox/{id}', [MessageController::class,'readMessageInbox'])->middleware('can:professional');
+Route::get('/professional/inbox', [MessageController::class,'inbox'])->middleware('can:professional');
 Route::get('/professional/my-informations', function () {
 
     return view('professional.informations');
 });
 
-Route::resource('/professional',ProfessionalController::class);
+Route::resource('/professional',ProfessionalController::class)->middleware('can:professional');
 
 //front routes
 Route::get('/products/{slug}', [App\Http\Controllers\AccueilController::class, 'categoryProducts']);
@@ -101,6 +102,10 @@ Route::post('/demande-devis', [App\Http\Controllers\DevisController::class, 'sto
 Route::get('/success-mail', function () {
 
     return view('success-mail');
+});
+Route::get('/detail-project', function () {
+
+    return view('detail-project');
 });
 Auth::routes();
 

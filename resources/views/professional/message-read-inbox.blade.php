@@ -41,7 +41,7 @@
                                                 <img class="mr-2 rounded" width="50" alt="image" src="{{ asset('dashboard/images/avatar/1.jpg') }}">
                                                 <div class="media-body">
                                                     <h5 class="text-primary mb-0 mt-1">Froidis</h5>
-                                                    <p class="mb-0">{{ $message->created_at->format('D, H:m') }}</p>
+                                                    <p class="mb-0">{{ $message->created_at->formatLocalized('%A, %H:%M') }}</p>
                                                 </div>
                                             </div>
                                             <hr>
