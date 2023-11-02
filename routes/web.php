@@ -64,17 +64,18 @@ Route::get('/demande-devis', function () {
 });
 
 //admin route
-Route::resource('/admin/categories',CategoryController::class)->middleware('can:admin');;
-Route::resource('/admin/products',ProductController::class)->middleware('can:admin');;
-Route::resource('/admin/projects',ProjectController::class)->middleware('can:admin');;
-Route::resource('/admin/professionals',ProfessionalAdminController::class)->middleware('can:admin');;
+Route::resource('/admin/categories',CategoryController::class)->middleware('can:admin');
+Route::resource('/admin/products',ProductController::class)->middleware('can:admin');
+Route::resource('/admin/projects',ProjectController::class)->middleware('can:admin');
+Route::resource('/admin/professionals',ProfessionalAdminController::class)->middleware('can:admin');
 Route::resource('/admin/inbox',MessageAdminController::class)->middleware('can:admin');;
-Route::get('/admin/messages-sent', [MessageAdminController::class,'sentMessage'])->middleware('can:admin');;
-Route::get('/admin/messages-read/{id}', [MessageAdminController::class,'readMessage'])->middleware('can:admin');;
-Route::get('/admin/messages-read-sent/{id}', [MessageAdminController::class,'readMessageSent'])->middleware('can:admin');;
-Route::get('/admin/edit-status/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'showModal'])->middleware('can:admin');;
-Route::put('/admin/update-status/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'updateStatus'])->middleware('can:admin');;
-Route::resource('/admin',AdminController::class)->middleware('can:admin');;
+Route::get('/admin/messages-sent', [MessageAdminController::class,'sentMessage'])->middleware('can:admin');
+Route::get('/admin/messages-read/{id}', [MessageAdminController::class,'readMessage'])->middleware('can:admin');
+Route::get('/admin/messages-read-sent/{id}', [MessageAdminController::class,'readMessageSent'])->middleware('can:admin');
+Route::get('/admin/edit-status/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'showModal'])->middleware('can:admin');
+Route::get('/admin/detail-professional/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'detailPro'])->middleware('can:admin');
+Route::put('/admin/update-status/{id}', [App\Http\Controllers\ProfessionalAdminController::class, 'updateStatus'])->middleware('can:admin');
+Route::resource('/admin',AdminController::class)->middleware('can:admin');
 Route::get('/download-file/{file}',  [MessageAdminController::class,'downloadFile']);
 
 //professional route

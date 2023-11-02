@@ -53,6 +53,7 @@
                                         <td>
                                             <div class="d-flex">
                                                 <a href="#" class="btn btn-warning shadow btn-xs sharp mr-1 edit-status" data-id="{{ $user->id }}"><i class="fas fa-pencil-alt"></i></a>
+                                                <a href="{{ asset('admin/detail-professional/'.$user->id) }}" class="btn btn-success shadow btn-xs sharp mr-1 edit-status"><i class="fas fa-eye"></i></a>
                                                <button class="btn btn-danger shadow btn-xs sharp" ><i class="fa fa-trash"></i></button>
                                             </div>
                                         </td>

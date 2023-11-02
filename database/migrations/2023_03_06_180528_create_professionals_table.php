@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('fax')->nullable();
             $table->string('wilaya')->nullable();
+            $table->string('carte')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

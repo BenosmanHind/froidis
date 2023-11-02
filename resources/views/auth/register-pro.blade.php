@@ -27,7 +27,7 @@
                 <div class="sign-up-form">
                     <h2>Professionnels, inscrivez-vous dès maintenant !</h2>
                     <p>Rejoignez notre plateforme dès maintenant pour bénéficier d'un accès exclusif à des produits de qualité, des services personnalisés et des conseils d'experts en froid industriel.</p>
-                    <form class="form-wrap" method="POST" action="{{ route('register') }}">
+                    <form class="form-wrap" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-lg-6">
@@ -121,6 +121,19 @@
                                     <input type="text" class="form-control @error('RC') is-invalid @enderror"  placeholder="RC" name="RC" value="{{ old('RC') }}" required>
                                     <label  class="form-label">RC</label>
                                         @error('RC')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-floating form-group">
+                                    <input type="file" class="form-control @error('carte') is-invalid @enderror" name="carte" required>
+                                    <label  class="form-label">Carte artisanale ou registre de commerce </label>
+                                        @error('carte')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

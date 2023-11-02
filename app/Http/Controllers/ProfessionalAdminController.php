@@ -28,4 +28,8 @@ class ProfessionalAdminController extends Controller
         $user->save();
         return $user;
     }
+    public function detailPro($id){
+        $user = User::find($id);
+        return view('admin.detail-professional',compact('user'));
+    }
 }

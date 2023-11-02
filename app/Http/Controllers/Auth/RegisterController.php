@@ -58,8 +58,9 @@ class RegisterController extends Controller
             'RC' => ['required', 'string', 'max:255'],
             'wilaya' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'string', 'max:255'],
-             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'carte' => ['required'],
         ],
         [
             'password.min' => 'minimum 8 caractères',
@@ -77,6 +78,7 @@ class RegisterController extends Controller
             'name.required' => 'nom est obligatoire',
             'email.required' => 'e-mail est obligatoire',
             'phone.required' => 'telephone est obligatoire',
+            'carte.required' => 'la carte artisanale ou registre de commerce est obligatoire',
         ]);
     }
 
@@ -104,6 +106,12 @@ class RegisterController extends Controller
         $professional->wilaya = $data['wilaya'];
         $professional->RC = $data['RC'];
         $professional->NIF = $data['NIF'];
+        if ($data['carte'] !== null && $data['carte']->isValid()) {
+            $destination = 'public/professional/cartes';
+            $storageName = md5(uniqid() . time()) . '.' . $data['carte']->getClientOriginalExtension();
+            $path = $data['carte']->storeAs($destination, $storageName);
+            $professional->carte = $storageName;
+        }
         $user->professional()->save($professional);
         return $user;
 
