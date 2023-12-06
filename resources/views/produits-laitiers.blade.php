@@ -88,7 +88,7 @@
             <div class="col-lg-8">
                 <div class="article-carousel owl-carousel owl-theme">
                     <div class="item">
-                        <img src="{{ asset('/oignon-1.jpg')}}" alt="Image">
+                        <img src="{{ asset('/produit-laitiers-bg.jpg')}}" alt="Image">
                     </div>
                 </div>
             </div>

@@ -92,24 +92,24 @@
             <h2 style="color: #173a7a">Stay Fresh !</h2>
         </div>
 
-        <div class="container">
-            <div class="row">
-              <div class="col-sm text-center">
-                <a href="{{asset('/fruit-et-legume')}}"><img src="{{asset('/banana.jpg')}}"  class="brightness" alt="" srcset=""></a>  <br>
-                <span class="up-title" style="color: #173a7a">Fruits et légumes</span>
-              </div>
-              <div class="col-sm text-center">
-                <a href="{{asset('/viandes-et-poissons')}}"><img src="{{asset('/poulet.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
-                <span class="up-title" style="color: #173a7a">Viandes et poissons</span>
-              </div>
-              <div class="col-sm text-center">
-                <a href="{{asset('/produits-laitiers')}}"><img src="{{asset('/viande.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
-                <span class="up-title" style="color: #173a7a">Produits laitiers</span>
-              </div>
-              <div class="col-sm text-center">
-                <a href="{{asset('/boissons')}}"><img src="{{asset('/boisson.jpg')}}"  class="brightness" alt="" srcset=""></a> <br>
-                <span class="up-title" style="color: #173a7a">les Boissons</span>
-              </div>
+        <div class="container d-flex justify-content-center">
+            <div class="row col-md-8 ">
+                    <div class="col-md-3 text-center">
+                        <a href="{{asset('/fruit-et-legume')}}"><img src="{{asset('/fruits.png')}}"  class="brightness" alt="" srcset=""></a>  <br>
+                        <span class="up-title" style="color: #173a7a">Fruits et légumes</span>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <a href="{{asset('/viandes-et-poissons')}}"><img src="{{asset('/viande-poisson.png')}}"  class="brightness" alt="" srcset=""></a> <br>
+                        <span class="up-title" style="color: #173a7a">Viandes et poissons</span>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <a href="{{asset('/produits-laitiers')}}"><img src="{{asset('/produit-laitiers.png')}}"  class="brightness" alt="" srcset=""></a> <br>
+                        <span class="up-title" style="color: #173a7a">Produits laitiers</span>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <a href="{{asset('/boissons')}}"><img src="{{asset('/boissons.png')}}"  class="brightness" alt="" srcset=""></a> <br>
+                        <span class="up-title" style="color: #173a7a">Boissons</span>
+                    </div>
             </div>
         </div>
 </section>
@@ -331,8 +331,8 @@
     <div class="container">
         <div class="main-section-title-wrap">
             <div class="main-section-title wow fadeInUp delay-0-2s">
-                <span class="up-title">Projets</span>
-                <h2 >Projets réalisés avec succès </h2>
+                <span class="up-title">Medias</span>
+                <h2 >Notre Métier en Images</h2>
             </div>
         </div>
 
