@@ -69,7 +69,7 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-            <a href="index.html" class="brand-logo">
+            <a href="{{ asset('/admin') }}" class="brand-logo">
                 <img src="{{asset('front/assets/images/froidis-white.png')}}" alt="Image">
             </a>
 
@@ -214,7 +214,8 @@
                             <li><a href="{{asset('admin/products')}}">Tous</a></li>
                         </ul>
                     </li>
-                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    {{--
+                        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <polygon points="0 0 24 0 24 24 0 24"/>
@@ -227,7 +228,8 @@
                             <li><a href="{{asset('admin/projects/create')}}">Ajouter</a></li>
                             <li><a href="{{asset('admin/projects')}}">Tous</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
+
                     <li><a class=" ai-icon" href="{{asset('admin/inbox')}}" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

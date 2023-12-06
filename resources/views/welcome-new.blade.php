@@ -18,6 +18,65 @@
     .brightness:hover {
         -webkit-filter: brightness(150%);
          }
+         .owl-carousel  {
+    position: relative;
+}
+    .owl-carousel .owl-nav {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel .owl-nav button.owl-next {
+    font-size: 20px;
+    background-color: #035479;
+        width: 2rem;
+        height: 2rem;
+        color: #ffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.5;
+    }
+    .owl-carousel .owl-nav button.owl-prev:hover,
+    .owl-carousel .owl-nav button.owl-next:hover {
+    opacity: 1;
+    transition: 0.5s;
+    }
+
+
+    .owl-carousel .owl-nav button.owl-prev {
+    position: relative;
+    left: -5px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+    position: relative;
+    right: -5px;
+    }
+
+    .owl-carousel .owl-item.fadeOut {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    }
+
+    .owl-carousel .owl-item.fadeIn {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    }
+
+    .overflow-section{
+        line-height: 1.5 !important;
+        height: 4.5em !important;
+        overflow: hidden !important;
+    }
+
+    .controller{
+        display: none;
+    }
 </style>
 <!--=== Start Banner Section ===-->
 <section class="banner-section bg-1">
@@ -337,67 +396,43 @@
         </div>
 
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="main-blog-item wow fadeInUp delay-0-2s">
-                    <a style="cursor: pointer" class="blog-img">
-                        <img src="{{asset('front/assets/images/blog/blog-1.jpg')}}" alt="Image">
-                    </a>
-
-                    <div class="blog-content hover-style">
-                        <div class="inner-border">
-                            <h3>
-                                <a style="cursor: pointer">Projet froidis 1 </a>
-                            </h3>
-                            <p>Description pour le profjet froidis N°1</p>
-                            <a style="cursor: pointer" class="main-detail-btn">
-                                Lire plus
-                                <i class="icofont-plus"></i>
-                            </a>
-                        </div>
-                    </div>
+            <div class="medias-carousel owl-carousel ">
+                <div class="col-md-3" style="width:100%;">
+                    <div class="main-team-item fadeInUp delay-0-2s">
+                        <a href="{{asset('/produit-a-la-commande/ateliers-hangar-en-charpente-legere-bungalow')}}" class="team-img">
+                            <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
+                        </a>
+                   </div>
+                </div>
+                <div class="col-md-3" style="width:100%;">
+                    <div class="main-team-item fadeInUp delay-0-2s">
+                        <a href="{{asset('/produit-a-la-commande/ateliers-hangar-en-charpente-legere-bungalow')}}" class="team-img">
+                            <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
+                        </a>
+                   </div>
+                </div>
+                <div class="col-md-3" style="width:100%;">
+                    <div class="main-team-item fadeInUp delay-0-2s">
+                        <a href="{{asset('/produit-a-la-commande/ateliers-hangar-en-charpente-legere-bungalow')}}" class="team-img">
+                            <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
+                        </a>
+                   </div>
+                </div>
+                <div class="col-md-3" style="width:100%;">
+                    <div class="main-team-item fadeInUp delay-0-2s">
+                        <a href="{{asset('/produit-a-la-commande/ateliers-hangar-en-charpente-legere-bungalow')}}" class="team-img">
+                            <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
+                        </a>
+                   </div>
+                </div>
+                <div class="col-md-3" style="width:100%;">
+                    <div class="main-team-item fadeInUp delay-0-2s">
+                        <a href="{{asset('/produit-a-la-commande/ateliers-hangar-en-charpente-legere-bungalow')}}" class="team-img">
+                            <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
+                        </a>
+                   </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="main-blog-item wow fadeInUp delay-0-2s">
-                    <a style="cursor: pointer" class="blog-img">
-                        <img src="{{asset('front/assets/images/blog/blog-2.jpg')}}" alt="Image">
-                    </a>
-
-                    <div class="blog-content hover-style">
-                        <div class="inner-border">
-                            <h3>
-                                <a style="cursor: pointer">Projet froidis 2 </a>
-                            </h3>
-                            <p>Description pour le profjet froidis N°2</p>
-                            <a style="cursor: pointer"class="main-detail-btn">
-                                Lire plus
-                                <i class="icofont-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="main-blog-item wow fadeInUp delay-0-2s">
-                    <a style="cursor: pointer" class="blog-img">
-                        <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
-                    </a>
-
-                    <div class="blog-content hover-style">
-                        <div class="inner-border">
-                            <h3>
-                                <a style="cursor: pointer">Projet froidis 3 </a>
-                            </h3>
-                            <p>Description pour le profjet froidis N°3</p>
-                            <a style="cursor: pointer" class="main-detail-btn">
-                                Lire plus
-                                <i class="icofont-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </section>
