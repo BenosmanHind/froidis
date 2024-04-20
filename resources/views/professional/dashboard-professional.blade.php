@@ -9,7 +9,7 @@
              <span style="font-size: 15px;"> Vous voulez activer votre compte, <a href="{{url('/professional/my-informations')}}" class="alert-link">cliquez-ici ! </a></span>
             </div>
             @endif
-            @if(Auth::user()->status == 1)
+             @if(Auth::user()->status == 1)
             <div class="alert alert-warning" role="alert">
              <span style="font-size: 15px;">Veuillez attendre la validation de votre compte !</span>
             </div>

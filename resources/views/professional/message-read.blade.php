@@ -27,7 +27,7 @@
                                     class="mdi mdi-file-document-box font-18 align-middle mr-2"></i> Contacter froidis</a>
                                 <a href="{{ asset('/professional/inbox') }}" class="list-group-item "><i
                                         class="fa fa-inbox font-18 align-middle mr-2"></i> Messages reçus <span
-                                        class="badge badge-primary badge-sm float-right">11</span> </a>
+                                        class="badge badge-primary badge-sm float-right">1</span> </a>
                                 <a href="{{ asset('/professional/contact-froidis') }}" class="list-group-item active"><i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Messages envoyés</a>
                             </div>
                         </div>

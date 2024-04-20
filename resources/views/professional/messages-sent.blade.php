@@ -28,7 +28,7 @@
                             class="mdi mdi-file-document-box font-18 align-middle mr-2"></i> Contacter froidis</a>
                         <a href="{{ asset('/professional/inbox') }}" class="list-group-item "><i
                                 class="fa fa-inbox font-18 align-middle mr-2"></i> Messages reçus <span
-                                class="badge badge-primary badge-sm float-right">11</span> </a>
+                                class="badge badge-primary badge-sm float-right">1</span> </a>
                         <a href="{{ asset('/professional/contact-froidis') }}" class="list-group-item active"><i class="fa fa-paper-plane font-18 align-middle mr-2"></i>Messages envoyés</a>
                     </div>
                 </div>
@@ -58,20 +58,7 @@
                         @endforeach
                     </div>
                     <!-- panel -->
-                    <div class="row mt-4">
-                        <div class="col-12 pl-3">
-                            <nav>
-                                <ul class="pagination pagination-gutter pagination-primary pagination-sm no-bg">
-                                    <li class="page-item page-indicator"><a class="page-link" href="javascript:void()"><i class="la la-angle-left"></i></a></li>
-                                    <li class="page-item active"><a class="page-link" href="javascript:void()">1</a></li>
-                                    <li class="page-item "><a class="page-link" href="javascript:void()">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="javascript:void()">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="javascript:void()">4</a></li>
-                                    <li class="page-item page-indicator"><a class="page-link" href="javascript:void()"><i class="la la-angle-right"></i></a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>

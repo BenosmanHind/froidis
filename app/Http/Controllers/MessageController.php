@@ -25,7 +25,7 @@ class MessageController extends Controller
     public function store(Request $request){
         $message = new Message();
         $message->sender_id = Auth::user()->id;
-        $message->recipient_id = 2;
+        $message->recipient_id = 3;
         $message->subject = $request->subject;
         $message->message = $request->message;
         $message->save();
