@@ -151,6 +151,7 @@
                 </nav>
             </div>
         </div>
+
         <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
@@ -175,7 +176,8 @@
 							<span class="nav-text">Dashboard</span>
 						</a></li>
 
-                    <li><a class="ai-icon" href="{{ asset('/professional/demande-devis/create') }}" aria-expanded="false">
+                    <li>
+                        <a class="ai-icon lien-protege" href="{{ asset('/professional/demande-devis/create') }}" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <rect x="0" y="0" width="24" height="24"/>
@@ -187,7 +189,7 @@
 							<span class="nav-text">Demander un devis</span>
 						</a>
                     </li>
-                    <li><a class=" ai-icon" href="#" aria-expanded="false">
+                    <li><a class="ai-icon lien-protege" href="#" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <polygon points="0 0 24 0 24 24 0 24"/>
@@ -367,7 +369,61 @@
     });
 
 </script>
+<script>
+    $(document).ready(function() {
+        // Détecter le clic sur les liens avec la classe commune
+        $('.lien-protege').click(function(e) {
+           e.preventDefault();
+            var status = {{ auth()->check() ? auth()->user()->status : -1 }};
+            if(status == 0){
+                toastr.warning("Veuillez envoyer vos informations pour accéder à cette page", "warning", {
+                    timeOut: 5e3,
+                    closeButton: !0,
+                    debug: !1,
+                    newestOnTop: !0,
+                    progressBar: !0,
+                    positionClass: "toast-top-right",
+                    preventDuplicates: !0,
+                    onclick: null,
+                    showDuration: "300",
+                    hideDuration: "1000",
+                    extendedTimeOut: "1000",
+                    showEasing: "swing",
+                    hideEasing: "linear",
+                    showMethod: "fadeIn",
+                    hideMethod: "fadeOut",
+                    tapToDismiss: !1
 
+            })
+          }
+          else if(status == 1){
+            toastr.warning("Votre compte est en attente d'approbation par l'administrateur", "warning", {
+                    timeOut: 5e3,
+                    closeButton: !0,
+                    debug: !1,
+                    newestOnTop: !0,
+                    progressBar: !0,
+                    positionClass: "toast-top-right",
+                    preventDuplicates: !0,
+                    onclick: null,
+                    showDuration: "300",
+                    hideDuration: "1000",
+                    extendedTimeOut: "1000",
+                    showEasing: "swing",
+                    hideEasing: "linear",
+                    showMethod: "fadeIn",
+                    hideMethod: "fadeOut",
+                    tapToDismiss: !1
+
+            })
+         }
+        else{
+            window.location.href = $(this).attr('href');
+        }
+
+        });
+    });
+</script>
 @stack('add-document-scripts')
 @stack('modal-edit-status-scripts')
 </body>

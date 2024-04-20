@@ -82,7 +82,7 @@
                                 <div class="form-floating form-group">
                                     <select  class="form-control @error('wilaya') is-invalid @enderror"  name="wilaya" required>
                                         @foreach($wilayas as $wilaya)
-                                        <option>{{ $wilaya->name }}</option>
+                                        <option value="{{ $wilaya->name }}">{{ $wilaya->name }}</option>
                                         @endforeach
                                     </select>
                                     @error('wilaya')
@@ -97,43 +97,6 @@
                                     <input type="text" class="form-control @error('address') is-invalid @enderror" placeholder="Adresse " name="address" value="{{ old('address') }}" required>
                                     <label class="form-label">Adresse</label>
                                         @error('address')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-floating form-group">
-                                    <input type="text" class="form-control @error('NIF') is-invalid @enderror"  placeholder="NIF" name="NIF" value="{{ old('NIF') }}" required>
-                                    <label  class="form-label">NIF</label>
-                                        @error('NIF')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-floating form-group">
-                                    <input type="text" class="form-control @error('RC') is-invalid @enderror"  placeholder="RC" name="RC" value="{{ old('RC') }}" required>
-                                    <label  class="form-label">RC</label>
-                                        @error('RC')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-floating form-group">
-                                    <input type="file" class="form-control @error('carte') is-invalid @enderror" name="carte" required>
-                                    <label  class="form-label">Carte artisanale ou registre de commerce </label>
-                                        @error('carte')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>

@@ -18,8 +18,9 @@
                                 <label> Statut* :</label>
                                 <select  class="form-control " id="status"  class="selectpicker " data-live-search="true">
                                  <option value="0" @if($user->status == 0) selected @endif >En attente</option>
-                                 <option value="1" @if($user->status == 1)selected @endif >Validé</option>
-                                 <option value="2" @if($user->status == 2)selected @endif >Annuler</option>
+                                 <option value="1" @if($user->status == 1)selected @endif >En attente de validation</option>
+                                 <option value="2" @if($user->status == 2)selected @endif >Validé</option>
+                                 <option value="3" @if($user->status == 3)selected @endif >Annuler</option>
                                 </select>
                             </div>
                             <input class="form-control" id="user" type="hidden" value="{{ $user->id }}">

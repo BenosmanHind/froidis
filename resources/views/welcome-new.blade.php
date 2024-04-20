@@ -399,36 +399,29 @@
             <div class="medias-carousel owl-carousel ">
                 <div class="col-md-3" style="width:100%;">
                     <div class="main-team-item fadeInUp delay-0-2s">
-                        <a href="{{asset('/produit-a-la-commande/ateliers-hangar-en-charpente-legere-bungalow')}}" class="team-img">
-                            <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
+                        <a href="#" class="team-img">
+                            <img src="{{asset('front/assets/images/media-1.jpg')}}" alt="Image">
                         </a>
                    </div>
                 </div>
                 <div class="col-md-3" style="width:100%;">
                     <div class="main-team-item fadeInUp delay-0-2s">
-                        <a href="{{asset('/produit-a-la-commande/ateliers-hangar-en-charpente-legere-bungalow')}}" class="team-img">
-                            <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
+                        <a href="#" class="team-img">
+                            <img src="{{asset('front/assets/images/media-2.jpg')}}" alt="Image">
                         </a>
                    </div>
                 </div>
                 <div class="col-md-3" style="width:100%;">
                     <div class="main-team-item fadeInUp delay-0-2s">
-                        <a href="{{asset('/produit-a-la-commande/ateliers-hangar-en-charpente-legere-bungalow')}}" class="team-img">
-                            <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
+                        <a href="#" class="team-img">
+                            <img src="{{asset('front/assets/images/media-3.jpg')}}" alt="Image">
                         </a>
                    </div>
                 </div>
                 <div class="col-md-3" style="width:100%;">
                     <div class="main-team-item fadeInUp delay-0-2s">
-                        <a href="{{asset('/produit-a-la-commande/ateliers-hangar-en-charpente-legere-bungalow')}}" class="team-img">
-                            <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
-                        </a>
-                   </div>
-                </div>
-                <div class="col-md-3" style="width:100%;">
-                    <div class="main-team-item fadeInUp delay-0-2s">
-                        <a href="{{asset('/produit-a-la-commande/ateliers-hangar-en-charpente-legere-bungalow')}}" class="team-img">
-                            <img src="{{asset('front/assets/images/blog/blog-3.jpg')}}" alt="Image">
+                        <a href="#" class="team-img">
+                            <img src="{{asset('front/assets/images/media-4.jpg')}}" alt="Image">
                         </a>
                    </div>
                 </div>

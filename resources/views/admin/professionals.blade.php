@@ -46,6 +46,8 @@
                                         @if($user->status == 0)
                                         <td id="td-status-{{$user->id}}"><span class="badge badge-warning">En attente</span></td>
                                         @elseif($user->status == 1)
+                                        <td id="td-status-{{$user->id}}"><span class="badge badge-primary">En attente de validation</span></td>
+                                        @elseif($user->status == 2)
                                         <td id="td-status-{{$user->id}}"><span class="badge badge-success">Validé</span></td>
                                         @else
                                         <td id="td-status-{{$user->id}}"><span class="badge badge-danger">Annuler</span></td>
@@ -144,6 +146,9 @@ $("body").on('click','.edit-status',function() {
               $("#td-status-"+id).html('<span class="badge badge-warning">'+'En Attente'+'</span>');
             }
             else if(status == 1){
+              $("#td-status-"+id).html('<span class="badge badge-primary">'+'En Attente de validation'+'</span>');
+            }
+            else if(status == 2){
               $("#td-status-"+id).html('<span class="badge badge-success">'+'Validé'+'</span>');
             }
             else{

@@ -126,21 +126,12 @@
 						<div class="menu-right-options">
                             @auth
                                 @if(Auth::user()->type == 'professional')
-                                    @if(Auth::user()->status == 0)
-                                        <a href="{{ asset('/warning') }}" class="main-btn">
-                                            <span>
-                                                {{Auth::user()->name}}
-                                                <i class="icofont-arrow-right"></i>
-                                            </span>
-                                        </a>
-                                    @else
-                                        <a href="{{ asset('/professional') }}" class="main-btn">
-                                            <span>
-                                                {{Auth::user()->name}}
-                                                <i class="icofont-arrow-right"></i>
-                                            </span>
-                                        </a>
-                                    @endif
+                                <a href="{{ asset('/professional') }}" class="main-btn">
+                                    <span>
+                                        {{Auth::user()->name}}
+                                        <i class="icofont-arrow-right"></i>
+                                    </span>
+                                </a>
                                 @else
                                 <a href="{{ asset('/admin') }}" class="main-btn">
                                     <span>

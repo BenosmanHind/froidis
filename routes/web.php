@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use TheHocineSaad\LaravelAlgereography\Models\Wilaya;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\InformationController;
 use App\Http\Controllers\MessageAdminController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProductController;
@@ -83,16 +84,13 @@ Route::get('/warning', function () {
 
     return view('professional.warning');
 });
+
 Route::resource('/professional/demande-devis',ProfessionalDevisController::class)->middleware('can:professional');
 Route::resource('/professional/contact-froidis',MessageController::class)->middleware('can:professional');
 Route::get('/professional/messages-read/{id}', [MessageController::class,'readMessage'])->middleware('can:professional');
 Route::get('/professional/messages-read-inbox/{id}', [MessageController::class,'readMessageInbox'])->middleware('can:professional');
 Route::get('/professional/inbox', [MessageController::class,'inbox'])->middleware('can:professional');
-Route::get('/professional/my-informations', function () {
-
-    return view('professional.informations');
-});
-
+Route::resource('/professional/my-informations',InformationController::class)->middleware('can:professional');
 Route::resource('/professional',ProfessionalController::class)->middleware('can:professional');
 
 //front routes

@@ -3,7 +3,23 @@
 <div class="content-body">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-3 col-lg-6 col-sm-6">
+            <div class="col-12">
+            @if(Auth::user()->status == 0)
+            <div class="alert alert-warning" role="alert">
+             <span style="font-size: 15px;"> Vous voulez activer votre compte, <a href="{{url('/professional/my-informations')}}" class="alert-link">cliquez-ici ! </a></span>
+            </div>
+            @endif
+            @if(Auth::user()->status == 1)
+            <div class="alert alert-warning" role="alert">
+             <span style="font-size: 15px;">Veuillez attendre la validation de votre compte !</span>
+            </div>
+            @endif
+            </div>
+            <div id="info-message" class="alert alert-warning" style="display:none;"></div>
+        </div>
+        @include('flash-message')
+        <div class="row">
+           <div class="col-xl-3 col-lg-6 col-sm-6">
                 <div class="widget-stat card">
                     <div class="card-body  p-4">
                         <div class="media ai-icon mt-2">
