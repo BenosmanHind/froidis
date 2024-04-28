@@ -106,6 +106,14 @@ Route::get('/detail-project', function () {
 
     return view('detail-project');
 });
+
+
+//catalogue : 
+Route::get('/catalogue', function () {
+
+    return view('catalogue');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
