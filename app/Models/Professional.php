@@ -12,7 +12,7 @@ class Professional extends Model
         'entreprise',
         'RC',
         'NIF',
-        'Carte',
+        'carte',
         'wilaya',
         'address',
         'phone',

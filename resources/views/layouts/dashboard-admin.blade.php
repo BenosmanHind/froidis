@@ -175,7 +175,7 @@
                                     <rect fill="#000000" opacity="0.3" x="7" y="11" width="3" height="6" rx="1.5"/>
                                 </g>
                             </svg>
-							<span class="nav-text">Dashboard</span>
+							<span class="nav-text">Tableau de bord</span>
 						</a></li>
 
                     <li><a class="ai-icon" href="{{ asset('/admin/professionals') }}" aria-expanded="false">

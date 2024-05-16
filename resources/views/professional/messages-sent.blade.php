@@ -1,21 +1,32 @@
 @extends('layouts.dashboard-professional')
 @section('content')
-
+<style>
+    .message-box {
+    background-color: #f2f2f2; /* Couleur de fond gris */
+     /* Bordure grise */
+    padding: 20px; /* Espacement intérieur */
+    text-align: center; /* Centrer le contenu */
+    margin: 0 auto; /* Centrer horizontalement */
+    max-width: 1000px; /* Largeur maximale du cadre */
+}
+</style>
+</style>
 <div class="content-body">
     <div class="container-fluid">
-        <div class="row page-titles mx-0">
-            <div class="col-sm-6 p-md-0">
-                <div class="welcome-text">
-                    <h4>Bonjour, Bienvenue!</h4>
-                    <span>Messagerie</span>
-                </div>
+        <div class="row">
+            <div class="col-12">
+            @if(Auth::user()->status == 0)
+            <div class="alert alert-warning" role="alert">
+             <span style="font-size: 15px;"> Vous voulez activer votre compte, <a href="{{url('/professional/my-informations')}}" class="alert-link">cliquez-ici ! </a></span>
             </div>
-            <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ asset('/professional') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item active"><a href="javascript:void(0)">Messagerie</a></li>
-                </ol>
+            @endif
+             @if(Auth::user()->status == 1)
+            <div class="alert alert-warning" role="alert">
+             <span style="font-size: 15px;">Veuillez attendre la validation de votre compte !</span>
             </div>
+            @endif
+            </div>
+            <div id="info-message" class="alert alert-warning" style="display:none;"></div>
         </div>
  <!-- row -->
  <div class="row">
@@ -34,6 +45,11 @@
                 </div>
                 <div class="email-right-box ml-0 ml-sm-4 ml-sm-0">
                     <div class="email-list mt-3">
+                        @if($messages->count() === 0)
+                        <div class="message-box mt-4">
+                        <h6>Vous n'avez envoyé aucun message jusqu'à présent.</h6>
+                        </div>
+                        @endif
                         @foreach($messages as $message)
                         <div class="message">
                             <div>
@@ -58,13 +74,31 @@
                         @endforeach
                     </div>
                     <!-- panel -->
-                    
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+    </div>
+</div>
+<div class="modal fade" id="warning-modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Important !</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Fermer</button>
+                <a href="{{ asset('/professional/my-informations') }}" type="button" class="btn btn-primary btn-activer">Activer</a>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

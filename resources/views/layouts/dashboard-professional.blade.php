@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="{{asset('dashboard/vendor/toastr/css/toastr.min.css')}}">
         <link href="{{asset('dashboard/vendor/summernote/summernote.css')}}" rel="stylesheet">
         <link href="{{ asset('dashboard/vendor/dropzone/dist/dropzone.css') }}" rel="stylesheet">
-
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css" rel="stylesheet" />
 
 
         <style>
@@ -124,7 +124,7 @@
                                     <img src="{{ asset('dashboard/images/profile/pic1.jpg') }}" width="20" alt=""/>
 									<div class="header-info">
 										<span>Hi, <strong>{{ Auth::user()->name }}</strong></span>
-										<small>Dashboard</small>
+										<small>Tableau de bord</small>
 									</div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -173,7 +173,7 @@
                                     <rect fill="#000000" opacity="0.3" x="7" y="11" width="3" height="6" rx="1.5"/>
                                 </g>
                             </svg>
-							<span class="nav-text">Dashboard</span>
+							<span class="nav-text">Tableau de bord</span>
 						</a></li>
 
                     <li>
@@ -200,21 +200,12 @@
 							<span class="nav-text">Documents téléchargeable</span>
 						</a>
                     </li>
+
                     <li><a class=" ai-icon" href="{{asset('/professional/contact-froidis/create')}}" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <rect x="0" y="0" width="24" height="24"/>
                                 <path d="M5,6 L19,6 C20.1045695,6 21,6.8954305 21,8 L21,17 C21,18.1045695 20.1045695,19 19,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,8 C3,6.8954305 3.8954305,6 5,6 Z M18.1444251,7.83964668 L12,11.1481833 L5.85557487,7.83964668 C5.4908718,7.6432681 5.03602525,7.77972206 4.83964668,8.14442513 C4.6432681,8.5091282 4.77972206,8.96397475 5.14442513,9.16035332 L11.6444251,12.6603533 C11.8664074,12.7798822 12.1335926,12.7798822 12.3555749,12.6603533 L18.8555749,9.16035332 C19.2202779,8.96397475 19.3567319,8.5091282 19.1603533,8.14442513 C18.9639747,7.77972206 18.5091282,7.6432681 18.1444251,7.83964668 Z" fill="#000000"/>
-                            </g>
-                        </svg>
-							<span class="nav-text">Nous contacter</span>
-						</a>
-                    </li>
-                    <li><a class=" ai-icon" href="{{asset('/professional/inbox')}}" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <path d="M17,12 L18.5,12 C19.3284271,12 20,12.6715729 20,13.5 C20,14.3284271 19.3284271,15 18.5,15 L5.5,15 C4.67157288,15 4,14.3284271 4,13.5 C4,12.6715729 4.67157288,12 5.5,12 L7,12 L7.5582739,6.97553494 C7.80974924,4.71225688 9.72279394,3 12,3 C14.2772061,3 16.1902508,4.71225688 16.4417261,6.97553494 L17,12 Z" fill="#000000"/>
-                                <rect fill="#000000" opacity="0.3" x="10" y="16" width="4" height="4" rx="2"/>
                             </g>
                         </svg>
 							<span class="nav-text">Messagerie</span>
@@ -287,6 +278,7 @@
 	<!-- Datatable -->
 	<script src="{{asset('dashboard/vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
 	<script src="{{asset('dashboard/js/plugins-init/datatables.init.js')}}"></script>
+
 	<!-- Dashboard 1 -->
 	<script src="{{asset('dashboard/js/dashboard/dashboard-1.js')}}"></script>
 	<!-- Svganimation scripts -->
@@ -304,7 +296,19 @@
     <!-- Toastr -->
     <script src="{{asset('dashboard/vendor/toastr/js/toastr.min.js')}}"></script>
     <script src="{{ asset('dashboard/vendor/dropzone/dist/dropzone.js') }}"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"></script>
+    <script>
+    $('#myDropify').dropify(
+        {
+            messages: {
+            'default': 'Glissez-déposez un fichier ici ou cliquez pour le sélectionner',
+            'replace': 'Glissez-déposez un fichier ou cliquez pour le remplacer',
+            'remove':  'Supprimer',
+            'error':   'Oups, une erreur s\'est produite.'
+        }
+        }
+    );
+    </script>
 	<script>
 	(function($) {
 		"use strict"
@@ -376,54 +380,24 @@
            e.preventDefault();
             var status = {{ auth()->check() ? auth()->user()->status : -1 }};
             if(status == 0){
-                toastr.warning("Veuillez envoyer vos informations pour accéder à cette page", "warning", {
-                    timeOut: 5e3,
-                    closeButton: !0,
-                    debug: !1,
-                    newestOnTop: !0,
-                    progressBar: !0,
-                    positionClass: "toast-top-right",
-                    preventDuplicates: !0,
-                    onclick: null,
-                    showDuration: "300",
-                    hideDuration: "1000",
-                    extendedTimeOut: "1000",
-                    showEasing: "swing",
-                    hideEasing: "linear",
-                    showMethod: "fadeIn",
-                    hideMethod: "fadeOut",
-                    tapToDismiss: !1
-
-            })
+                $("#warning-modal").modal('show');
+                $("#warning-modal .modal-body p").html("<b>Veuillez envoyer vos informations pour accéder à cette page.</b>");
+                $("#warning-modal .btn-activer").show();
           }
           else if(status == 1){
-            toastr.warning("Votre compte est en attente d'approbation par l'administrateur", "warning", {
-                    timeOut: 5e3,
-                    closeButton: !0,
-                    debug: !1,
-                    newestOnTop: !0,
-                    progressBar: !0,
-                    positionClass: "toast-top-right",
-                    preventDuplicates: !0,
-                    onclick: null,
-                    showDuration: "300",
-                    hideDuration: "1000",
-                    extendedTimeOut: "1000",
-                    showEasing: "swing",
-                    hideEasing: "linear",
-                    showMethod: "fadeIn",
-                    hideMethod: "fadeOut",
-                    tapToDismiss: !1
-
-            })
+            $("#warning-modal").modal('show');
+            $("#warning-modal .modal-body p").html("<b>Votre compte est en attente d'approbation par l'administrateur.</b>");
+            $("#warning-modal .btn-activer").hide();
          }
         else{
             window.location.href = $(this).attr('href');
+
         }
 
         });
     });
 </script>
+
 @stack('add-document-scripts')
 @stack('modal-edit-status-scripts')
 </body>

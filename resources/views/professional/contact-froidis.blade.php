@@ -5,19 +5,20 @@
         ***********************************-->
         <div class="content-body">
             <div class="container-fluid">
-                <div class="row page-titles mx-0">
-                    <div class="col-sm-6 p-md-0">
-                        <div class="welcome-text">
-                            <h4>Bonjour, Bienvenue!</h4>
-                            <span>Contact</span>
-                        </div>
+                <div class="row">
+                    <div class="col-12">
+                    @if(Auth::user()->status == 0)
+                    <div class="alert alert-warning" role="alert">
+                     <span style="font-size: 15px;"> Vous voulez activer votre compte, <a href="{{url('/professional/my-informations')}}" class="alert-link">cliquez-ici ! </a></span>
                     </div>
-                    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ asset('/professional') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Contact</a></li>
-                        </ol>
+                    @endif
+                     @if(Auth::user()->status == 1)
+                    <div class="alert alert-warning" role="alert">
+                     <span style="font-size: 15px;">Veuillez attendre la validation de votre compte !</span>
                     </div>
+                    @endif
+                    </div>
+                    <div id="info-message" class="alert alert-warning" style="display:none;"></div>
                 </div>
                 <!-- row -->
                 <div class="row">
@@ -69,4 +70,22 @@
         <!--**********************************
             Content body end
         ***********************************-->
+        <div class="modal fade" id="warning-modal">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Important !</h5>
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger light" data-dismiss="modal">Fermer</button>
+                        <a href="{{ asset('/professional/my-informations') }}" type="button" class="btn btn-primary btn-activer">Activer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 @endsection
