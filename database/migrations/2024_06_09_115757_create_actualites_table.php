@@ -11,14 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('images', function (Blueprint $table) {
+        Schema::create('actualites', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('actualite_id')->unsigned()->nullable();
-            $table->string('link');
-            $table->integer('type');
+            $table->string('title');
+            $table->longText('description')->nullable();
+            $table->string('short_description')->nullable();
+            $table->string('date');
+            $table->string('creator')->nullable();
+            $table->string('link')->nullable();
             $table->string('slug')->nullable();
+            $table->string('function')->nullable();
             $table->tinyInteger('flag')->nullable();
-            $table->foreign('actualite_id')->references('id')->on('actualites')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('images');
+        Schema::dropIfExists('actualites');
     }
 };

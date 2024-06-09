@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use TheHocineSaad\LaravelAlgereography\Models\Wilaya;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\MessageAdminController;
 use App\Http\Controllers\MessageController;
@@ -25,10 +27,8 @@ use App\Http\Controllers\ProjectController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome-new');
-});
 
+Route::resource('/',HomeController::class);
 
 Route::get('/agriculture', function () {
     return view('agriculture');
@@ -79,9 +79,12 @@ Route::get('/demande-devis', function () {
     return view('demande-devis',compact('wilayas'));
 });
 
+Route::get('/actualite/{slug}',[App\Http\Controllers\FrontController::class, 'detailActualite']);
+Route::get('/actualites',[App\Http\Controllers\FrontController::class, 'actualites']);
 //admin route
 Route::resource('/admin/categories',CategoryController::class)->middleware('can:admin');
 Route::resource('/admin/products',ProductController::class)->middleware('can:admin');
+Route::resource('/admin/actualites',ActualiteController::class)->middleware('can:admin');
 Route::resource('/admin/projects',ProjectController::class)->middleware('can:admin');
 Route::resource('/admin/professionals',ProfessionalAdminController::class)->middleware('can:admin');
 Route::resource('/admin/inbox',MessageAdminController::class)->middleware('can:admin');;
@@ -123,7 +126,7 @@ Route::get('/detail-project', function () {
 });
 
 
-//catalogue : 
+//catalogue :
 Route::get('/catalogue', function () {
 
     return view('catalogue');
