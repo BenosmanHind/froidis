@@ -100,26 +100,29 @@
 							</li>
 
 							<li class="nav-item">
-								<a style="cursor: pointer" class="nav-link dropdown-toggles">Services</a>
+								<a style="cursor: pointer" class="nav-link dropdown-toggles">Savoir-faire</a>
 
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a style="cursor: pointer" class="nav-link">Experts Froid</a>
+										<a style="cursor: pointer" class="nav-link" href="{{asset('/agriculture')}}">Agriculture</a>
 									</li>
 
 									<li class="nav-item">
-										<a style="cursor: pointer" class="nav-link">Materiels</a>
+										<a style="cursor: pointer" class="nav-link" href="{{asset('/entrepot')}}">Entrepôt Frigorifique</a>
 									</li>
 									<li class="nav-item">
-										<a style="cursor: pointer" class="nav-link">Chambre froid builder</a>
+										<a style="cursor: pointer" class="nav-link" href="{{asset('/industrie')}}">Industrie</a>
+									</li>
+									<li class="nav-item">
+										<a style="cursor: pointer" class="nav-link" href="{{asset('/professionnels')}}">Professionnels</a>
 									</li>
 								</ul>
 							</li>
                             <li class="nav-item">
-								<a style="cursor: pointer" class="nav-link">Qualité</a>
+								<a style="cursor: pointer" class="nav-link" href="{{asset('/catalogue')}}">Catalogue</a>
 							</li>
 							<li class="nav-item">
-								<a style="cursor: pointer" class="nav-link">Contact</a>
+								<a style="cursor: pointer" class="nav-link" href="{{asset('/demande-devis')}}">Contact</a>
 							</li>
 						</ul>
 

@@ -82,7 +82,7 @@
 <section class="banner-section bg-1">
     <div class="container">
         <div class="banner-content text-center" style="max-width: 100%">
-            <h1 class="wow fadeInUp delay-0-2s" style="font-size: 71px;">Leader Algérien du Froid <br> commercial et industriel</h1>
+            <h1 class="wow fadeInUp delay-0-2s" style="font-size: 71px;">Votre partenaire en froid <br> commercial et industriel en Algérie</h1>
             <p class="wow fadeInUp delay-0-4s" style="max-width: 100%">Nous offrons des solutions innovantes pour répondre à vos besoins  <br> en matière de froid industriel.</p>
             <a style="cursor: pointer" class="main-btn wow fadeInUp delay-0-8s">
                 <span>
@@ -104,31 +104,40 @@
         </div>
 
         <div class="row">
-            <div  class="col-md-4">
+            <div  class="col-md-3">
                 <div class="main-services-item style-two wow fadeInUp delay-0-2s">
                     <i class="icofont-tree-alt"></i>
                     <h3>
-                        <a style="cursor: pointer" href="{{asset('/agriculture')}}">Agriculture<br> <span style="font-size: 20px; font-weight:300"> Chambre froide</span></a>
+                        <a style="cursor: pointer" href="{{asset('/agriculture')}}">Agriculture </a>
                     </h3>
 
                 </div>
             </div>
 
-            <div  class="col-md-4">
+            <div  class="col-md-3">
                 <div class="main-services-item style-two wow fadeInUp delay-0-6s">
                     <i class="icofont-snow-alt"></i>
                     <h3>
-                        <a style="cursor: pointer">Entrepot frigorifique<br> <span style="font-size: 20px; font-weight:300">Traitement d'air</span></a>
+                        <a style="cursor: pointer" href="{{asset('/entrepot-frigorifique')}}">Entrepot frigorifique </a>
                     </h3>
 
                 </div>
             </div>
 
-            <div  class="col-md-4">
+            <div  class="col-md-3">
                 <div class="main-services-item style-two wow fadeInUp delay-0-6s">
                     <i class="icofont-industries"></i>
                     <h3>
-                        <a style="cursor: pointer">Industerie<br> <span style="font-size: 20px; font-weight:300">solutions froid</span></a>
+                        <a style="cursor: pointer" href="{{asset('/industrie')}}">Industrie </a>
+                    </h3>
+                </div>
+            </div>
+
+            <div  class="col-md-3">
+                <div class="main-services-item style-two wow fadeInUp delay-0-6s">
+                    <i class="icofont-workers-group"></i>
+                    <h3>
+                        <a style="cursor: pointer" href="{{asset('/professionnels')}}">Professionnels</a>
                     </h3>
                 </div>
             </div>
@@ -302,30 +311,16 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="video-content wow fadeInLeft delay-0-2s">
-                    <span class="up-title" style="color: #fff">solutions sur mesure </span>
-                    <h2>Votre partenaire pour des solutions sur mesure.</h2>
-                    <p>Chez FROIDIS, nous sommes spécialisés dans la conception et la réalisation de solutions sur mesure pour répondre aux besoins spécifiques de chaque client, grâce à notre équipe d'experts en froid industriel.</p>
+                    <span class="up-title" style="color: #fff">communauté des techniciens</span>
+                    <h2>Vous êtes technicien du froid ?</h2>
+                    <p>Vous êtes technicien du froid et souhaitez bénéficier d’un accompagnement personnalisé, d’offres spéciales et d’un accès exclusif à des fonctionnalités avancées sur notre plateforme ? Rejoignez dès aujourd'hui la communauté Froidis et profitez de nombreux avantages !</p>
 
-                    <button class="main-btn" style="background-color: #fff">
+                    <a href="{{asset('/register-pro')}}" class="main-btn" style="background-color: #fff">
                         <span style="color: #173a7a">
-                            Lire plus
+                            inscription
                             <i class="icofont-arrow-right"></i>
                         </span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="text-center wow fadeInRight delay-0-2s">
-                    <div class="video-btn">
-                        <a href="https://www.youtube.com/watch?v=qEp9p85TFHM&ab_channel=TechFreeze" class="popup-youtube">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <i class="icofont-play-alt-2"></i>
-                        </a>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -375,6 +370,18 @@
             </div>
             <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" >
                 <img src="{{asset('front/assets/images/p3.png')}}" alt="Image">
+            </div>
+            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" >
+                <img src="{{asset('front/assets/images/p4.png')}}" alt="Image">
+            </div>
+            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" >
+                <img src="{{asset('front/assets/images/p5.png')}}" alt="Image">
+            </div>
+            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" >
+                <img src="{{asset('front/assets/images/p6.png')}}" alt="Image">
+            </div>
+            <div class="main-services-item wow partenaire-services fadeInUp delay-0-2s" >
+                <img src="{{asset('front/assets/images/p7.png')}}" alt="Image">
             </div>
 
         </div>

@@ -66,13 +66,13 @@
 <section class="page-banner-section bg-6">
     <div class="container">
         <div class="page-banner-content">
-            <h2>Agriculture</h2>
+            <h2>Professionnels</h2>
             <ul>
                 <li>
                     <a href="#">Accueil</a>
                 </li>
                 <li>
-                    <a href="#">Agriculture</a>
+                    <a href="#">Professionnels</a>
                 </li>
             </ul>
         </div>
@@ -88,7 +88,7 @@
             <div class="col-lg-6">
                 <div class="article-carousel owl-carousel owl-theme">
                     <div class="item">
-                        <img src="{{ asset('/agriculture.jpg')}}" alt="Image">
+                        <img src="{{ asset('/professionnels.jpg')}}" alt="Image">
                     </div>
                    
                     
@@ -96,8 +96,8 @@
             </div>
 
             <div class="col-lg-6">
-                <h3>Bienvenue dans le monde de l'agriculture connectée au froid avec FROIDIS !</h3>
-                <p>Nous garantissons un environnement optimal pour la conservation de vos fruits et légumes, produits laitiers, viandes et autres denrées alimentaires, gardant ainsi leur fraîcheur et leur qualité.</p>
+                <h3>Professionnels</h3>
+                <p>Nous offrons des produits de haute qualité pour les techniciens de froid, et nous établissons des partenariats solides pour garantir la satisfaction et la fidélisation de nos clients professionnels.</p>
 
                 <div class=" mt-4 mb-4 d-flex justify-content-center" style="margin-bottom:20px; padding: 20px; background-color:#CFE3FF">
                         <p style="font-size: 20px;color:#174587">Remplissez le formulaire pour nous faire part de  <b> vos besoins spécifiques !</b></p> <br>

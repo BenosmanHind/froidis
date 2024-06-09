@@ -33,6 +33,21 @@ Route::get('/', function () {
 Route::get('/agriculture', function () {
     return view('agriculture');
 });
+Route::get('/entrepot-frigorifique', function () {
+    return view('entrepot');
+});
+Route::get('/industrie', function () {
+    return view('industrie');
+});
+Route::get('/professionnels', function () {
+    return view('professionnels');
+});
+
+
+
+
+
+
 Route::get('/fruit-et-legume', function () {
     return view('fruit-et-legume');
 });
