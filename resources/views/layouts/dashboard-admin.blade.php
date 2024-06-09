@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{{asset('dashboard/vendor/toastr/css/toastr.min.css')}}">
         <link href="{{asset('dashboard/vendor/summernote/summernote.css')}}" rel="stylesheet">
+
     </head>
 
 
@@ -31,7 +32,7 @@
             }
             .temp-body:before {
             content: "";
-              position: fixed;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
@@ -40,6 +41,7 @@
             z-index: 999;
             pointer-events: none;/* This will do all the magic !*/
             }
+
 
     </style>
 
@@ -313,8 +315,7 @@
     <!-- Toastr -->
     <script src="{{asset('dashboard/vendor/toastr/js/toastr.min.js')}}"></script>
 
-
-	<script>
+    <script>
 	(function($) {
 		"use strict"
 

@@ -116,6 +116,9 @@
 								</ul>
 							</li>
                             <li class="nav-item">
+								<a href="{{asset('/actualites')}}" class="nav-link @yield('actualites-active')">Actualités</a>
+							</li>
+                            <li class="nav-item">
 								<a style="cursor: pointer" class="nav-link">Qualité</a>
 							</li>
 							<li class="nav-item">

@@ -178,122 +178,58 @@
 
 
 
-<!--=== Start Projects Section ===-->
-<section class="projects-section pt-100 pb-70">
+<!--=== Start Blog Section ===-->
+<section class="blog-section pt-100 pb-70">
     <div class="container">
         <div class="main-section-title-wrap">
-            <div class="main-section-title wow fadeInUp delay-0-2s">
-                <span class="up-title">Produits</span>
-                <h2> Des produits certifiés aux normes internationales </h2>
+            <div class="row">
+                <div class="col-lg-6 wow fadeInLeft delay-0-2s">
+                    <div class="main-section-title left-title">
+                        <span class="up-title">Section Actualités</span>
+                        <h2>Les dernières actualités </h2>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="main-projects-item wow fadeInUp delay-0-2s">
-                    <a href="{{asset('/products/evaporateur')}}" class="projects-img">
-                        <img src="{{asset('front/assets/images/projects/projects-1.jpg')}}" alt="Image">
-                    </a>
 
-                    <div class="project-content hover-style">
-                        <div class="inner-border">
-                            <h3>
-                                <a href="{{asset('/products/evaporateur')}}">ÉVAPORATEURS</a>
-                            </h3>
-                            <p>"MASTERKIT Réfrigération" produits adaptés à vos exigences.</p>
+            @foreach ($actualites as $actualite)
+                <div class="col-lg-4 col-md-6">
+                    <div class="main-blog-item wow fadeInUp delay-0-2s">
+                        <a href="{{asset('actualite/'.$actualite->slug)}}" class="blog-img">
+                            <img src="{{asset('storage/images/actualites/'.$actualite->images[0]->link)}}" alt="Image">
+                        </a>
+
+                        <div class="blog-content hover-style">
+                            <div class="inner-border">
+                                <ul>
+                                    <li>{{ $actualite->date }}</li>
+                                </ul>
+                                <h3>
+                                    <a href="{{asset('actualite/'.$actualite->slug)}}">{{$actualite->title}}</a>
+                                </h3>
+                                <p class="overflow-section"> {{
+                                    preg_match_all('/(.*?[.!?])\s/', $actualite->description, $matches)
+                                    ? implode(' ', array_slice($matches[0], 0, 3)) . '...'
+                                    : $actualite->description
+                                }}</p>
+                                <a href="{{asset('actualite/'.$actualite->slug)}}" class="main-detail-btn">
+                                    Lire plus
+                                    <i class="icofont-plus"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-lg-4 col-md-6">
-                <div class="main-projects-item wow fadeInUp delay-0-4s">
-                    <a href="{{ asset('/products/groupes-de-condensation') }}" class="projects-img">
-                        <img src="{{asset('front/assets/images/projects/projects-2.jpg')}}" alt="Image">
-                    </a>
+            @endforeach
 
-                    <div class="project-content hover-style">
-                        <div class="inner-border">
-                            <h3>
-                                <a href="{{ asset('/products/groupes-de-condensation') }}">GROUPES DE CONDENSATION</a>
-                            </h3>
-                            <p>Des groupes de condensation commerciaux et Industriels. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="main-projects-item wow fadeInUp delay-0-6s">
-                    <a style="cursor: pointer" class="projects-img">
-                        <img src="{{asset('front/assets/images/projects/projects-3.jpg')}}" alt="Image">
-                    </a>
-
-                    <div class="project-content hover-style">
-                        <div class="inner-border">
-                            <h3>
-                                <a style="cursor: pointer">COMPRESSEURS FRIGORIFIQUES</a>
-                            </h3>
-                            <p>Hermétiques en MANEUROP, DANFOSS et COPELAND et Semi-hermétique </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="main-projects-item wow fadeInUp delay-0-2s">
-                    <a style="cursor: pointer" class="projects-img">
-                        <img src="{{asset('front/assets/images/projects/projects-4.jpg')}}" alt="Image">
-                    </a>
-
-                    <div class="project-content hover-style">
-                        <div class="inner-border">
-                            <h3>
-                                <a style="cursor: pointer">CENTRALES FRIGORIFIQUES</a>
-                            </h3>
-                            <p>conçues pour le marché du froid industriel </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="main-projects-item wow fadeInUp delay-0-4s">
-                    <a style="cursor: pointer" class="projects-img">
-                        <img src="{{asset('front/assets/images/projects/projects-5.jpg')}}" alt="Image">
-                    </a>
-
-                    <div class="project-content hover-style">
-                        <div class="inner-border">
-                            <h3>
-                                <a style="cursor: pointer">CONDENSEURS A AIR</a>
-                            </h3>
-                            <p>de la marque Masterkit Réfrigération</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="main-projects-item wow fadeInUp delay-0-6s">
-                    <a style="cursor: pointer" class="projects-img">
-                        <img src="{{asset('front/assets/images/projects/projects-6.jpg')}}" alt="Image">
-                    </a>
-
-                    <div class="project-content hover-style">
-                        <div class="inner-border">
-                            <h3>
-                                <a style="cursor: pointer">RÉGULATION ET CONTRÔLE</a>
-                            </h3>
-                            <p>Une large gamme certifiée et adaptée à tous vos besoins</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
-<!--=== End Projects Section ===-->
+<!--=== End Blog Section ===-->
 
 
 <!--=== Start Video Section ===-->

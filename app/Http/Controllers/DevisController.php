@@ -25,7 +25,7 @@ class DevisController extends Controller
         'address.required' => 'ce champ est obligatoire.',
         ]
     );
-        Mail::to('contact@froidis.com')->send(new Devis($request));
+        Mail::to('benosmanhind@gmail.com')->send(new Devis($request));
         return view('success-mail');
     }
 }
