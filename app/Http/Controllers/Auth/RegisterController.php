@@ -56,6 +56,7 @@ class RegisterController extends Controller
             'address' => ['required', 'string', 'max:255'],
             'wilaya' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'string', 'max:255'],
+            'connaissance' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
 
@@ -74,6 +75,7 @@ class RegisterController extends Controller
             'name.required' => 'nom est obligatoire',
             'email.required' => 'e-mail est obligatoire',
             'phone.required' => 'telephone est obligatoire',
+            'connaissance.required' => 'ce champ est obligatoire',
 
         ]);
     }
@@ -100,6 +102,7 @@ class RegisterController extends Controller
         $professional->address = $data['address'];
         $professional->phone = $data['phone'];
         $professional->wilaya = $data['wilaya'];
+        $professional->connaissance = $data['connaissance'];
         $user->professional()->save($professional);
         return $user;
 

@@ -1,6 +1,13 @@
 @extends('layouts.front')
 @section('content')
 
+
+<style>
+    .invalid-feedback{
+
+    }
+    </style>
+
 <!--=== Start Page Banner Section ===-->
 <section class="page-banner-section bg-6">
     <div class="container">
@@ -46,9 +53,9 @@
                                     <input type="text" class="form-control @error('email') is-invalid @enderror"  placeholder="Votre email" name="email" value="{{ old('email') }}" required autocomplete="email">
                                     <label  class="form-label">Votre email</label>
                                         @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
                                         @enderror
                                 </div>
                             </div>
@@ -89,7 +96,7 @@
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
-                                        @enderror
+                                    @enderror
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -107,9 +114,30 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-floating form-group">
+                                    <select  class="form-control @error('connaissance') is-invalid @enderror"style="padding-top: 0px !important ;padding-bottom : 0px !important;"   name="connaissance" required>
+                                        <option disabled selected>Comment avez-vous entendu parler de nous ?</option>
+                                        <option value="Moteur de recherche">Moteur de recherche</option>
+                                        <option value="Réseaux sociaux">Réseaux sociaux</option>
+                                        <option value="Bouche à oreille">Bouche à oreille</option>
+                                        <option value="Conférence/Événement">Conférence/Événement</option>
+                                        <option value="Email/Newsletter">Email/Newsletter</option>
+                                        <option value="Affichage publicitaire">Affichage publicitaire</option>
+                                    </select>
+                                    @error('connaissance')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-floating form-group">
                                     <input type="password" class="form-control @error('password') is-invalid @enderror" id="password-field1" placeholder="Your Password"name="password" value=""required autocomplete="new-password">
                                     <label for="password-field1" class="form-label">Mot de passe</label>
-                                    <span toggle="#password-field1" class="icofont-eye-alt field-icon toggle-password"></span>
+                                    <span toggle="#password-field1" class="icofont-eye-alt field-icon toggle-password" style="top: 22px !important; right:20px !important;"></span>
                                         @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -121,7 +149,7 @@
                                 <div class="form-floating form-group">
                                     <input type="password" class="form-control" id="password-confirm" name="password_confirmation" placeholder="Your Password" value="" required autocomplete="new-password">
                                     <label for="password-field" class="form-label">Confirmer le mot de passe</label>
-                                    <span toggle="#password-field" class="icofont-eye-alt field-icon toggle-password"></span>
+                                    <span toggle="#password-field" class="icofont-eye-alt field-icon toggle-password" style="top: 22px !important; right:20px !important;"></span>
                                 </div>
                             </div>
                         </div>

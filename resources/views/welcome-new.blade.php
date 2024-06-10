@@ -84,9 +84,9 @@
         <div class="banner-content text-center" style="max-width: 100%">
             <h1 class="wow fadeInUp delay-0-2s" style="font-size: 71px;">Votre partenaire en froid <br> commercial et industriel en Algérie</h1>
             <p class="wow fadeInUp delay-0-4s" style="max-width: 100%">Nous offrons des solutions innovantes pour répondre à vos besoins  <br> en matière de froid industriel.</p>
-            <a style="cursor: pointer" class="main-btn wow fadeInUp delay-0-8s">
+            <a href="{{ asset('/project-talk') }}" class="main-btn wow fadeInUp delay-0-8s">
                 <span>
-                    A propos de nous
+                   Obtenir une offre
                     <i class="icofont-arrow-right"></i>
                 </span>
             </a>

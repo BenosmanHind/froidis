@@ -1,9 +1,11 @@
 <p> <b>{{$data['name']}} </b> , a envoyé  un message depuis Froidis</p>
 <p>email : {{$data['email']}}</p>
 <p>Numéro : {{$data['phone']}}</p>
-<p>Société : <b>{{$data['company']}}</b></p>
+<p>Entreprise : <b>{{$data['company']}}</b></p>
 <p>Adresse : {{$data['address']}}</p>
+<p> Secteur d'activité : {{$data['type']}}</p>
 <p>------------------------------------------</p>
+<!--
 <table style="border-collapse: collapse; width: 100%;">
     <thead>
       <tr>
@@ -31,8 +33,8 @@
       </tr>
     </tbody>
 </table>
+-->
 @if($data['note'])
-<p>------------------------------------------</p>
-<h3>Proposition et autres informations :</h3>
+<h3>Détails de projet :</h3>
 <p> {{$data['note']}}</p>
 @endif

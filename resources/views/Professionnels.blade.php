@@ -69,7 +69,7 @@
             <h2>Professionnels</h2>
             <ul>
                 <li>
-                    <a href="#">Accueil</a>
+                    <a href="{{ asset('/') }}">Accueil</a>
                 </li>
                 <li>
                     <a href="#">Professionnels</a>
@@ -90,8 +90,8 @@
                     <div class="item">
                         <img src="{{ asset('/professionnels.jpg')}}" alt="Image">
                     </div>
-                   
-                    
+
+
                 </div>
             </div>
 
@@ -101,17 +101,17 @@
 
                 <div class=" mt-4 mb-4 d-flex justify-content-center" style="margin-bottom:20px; padding: 20px; background-color:#CFE3FF">
                         <p style="font-size: 20px;color:#174587">Remplissez le formulaire pour nous faire part de  <b> vos besoins spécifiques !</b></p> <br>
-                        
+
                </div>
-                <a  href="{{asset('/demande-devis')}}" class="main-btn">
+                <a  href="{{asset('/project-talk')}}" class="main-btn">
                 <span>Obtenir une offre</span>
                 </a>
             </div>
         </div>
 
-    
 
-       
+
+
     </div>
 </section>
 <!--=== End Projects Details Section ===-->

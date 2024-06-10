@@ -32,6 +32,7 @@
                                         <th>Nom complet</th>
                                         <th>Téléphone</th>
                                         <th>Email</th>
+                                        <th>Connaissance</th>
                                         <th>Statut</th>
                                         <th>Action</th>
                                     </tr>
@@ -43,6 +44,7 @@
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->professional->phone }}</td>
                                         <td>{{ $user->email }}</td>
+                                        <td>{{ $user->professional->connaissance }}</td>
                                         @if($user->status == 0)
                                         <td id="td-status-{{$user->id}}"><span class="badge badge-warning">En attente</span></td>
                                         @elseif($user->status == 1)

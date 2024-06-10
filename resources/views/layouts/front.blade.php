@@ -72,7 +72,7 @@
 							<li class="nav-item">
 								<a style="cursor: pointer" class="nav-link">Présentation</a>
 							</li>
-
+{{--
 							<li class="nav-item">
 								<a style="cursor: pointer" class="nav-link dropdown-toggles">Produits</a>
 
@@ -98,7 +98,7 @@
 									</li>
 								</ul>
 							</li>
-
+--}}
 							<li class="nav-item">
 								<a style="cursor: pointer" class="nav-link dropdown-toggles">Savoir-faire</a>
 
@@ -108,7 +108,7 @@
 									</li>
 
 									<li class="nav-item">
-										<a style="cursor: pointer" class="nav-link" href="{{asset('/entrepot')}}">Entrepôt Frigorifique</a>
+										<a style="cursor: pointer" class="nav-link" href="{{asset('/entrepot-frigorifique')}}">Entrepôt Frigorifique</a>
 									</li>
 									<li class="nav-item">
 										<a style="cursor: pointer" class="nav-link" href="{{asset('/industrie')}}">Industrie</a>
@@ -119,16 +119,17 @@
 								</ul>
 							</li>
                             <li class="nav-item">
-								<a style="cursor: pointer" class="nav-link" href="{{asset('/catalogue')}}">Catalogue</a>
-
-								<a href="{{asset('/actualites')}}" class="nav-link @yield('actualites-active')">Actualités</a>
-							</li>
+								<a  class="nav-link" href="{{asset('/catalogue')}}">Catalogue</a>
+                            </li>
+                            <li class="nav-item">
+								<a  class="nav-link" href="{{asset('/actualites')}}">Actualités</a>
+                            </li>
                             <li class="nav-item">
 								<a style="cursor: pointer" class="nav-link">Qualité</a>
 
 							</li>
 							<li class="nav-item">
-								<a style="cursor: pointer" class="nav-link" href="{{asset('/demande-devis')}}">Contact</a>
+								<a style="cursor: pointer" class="nav-link" href="{{asset('/contact')}}">Contact</a>
 							</li>
 						</ul>
 
@@ -252,7 +253,7 @@
                             <a style="cursor: pointer" class="nav-link">Qualité</a>
                         </li>
                         <li class="nav-item">
-                            <a style="cursor: pointer" class="nav-link">Contact</a>
+                            <a href="{{ asset('/contact') }}" class="nav-link">Contact</a>
                         </li>
                         <li class="nav-item has-children">
                             <a href="#" class="nav-link dropdown-toggles">S'inscrir / Se connecter</a>
@@ -459,5 +460,6 @@
 
 	    </script>
         @stack('hide-marque-script')
+        @stack('contact-script')
     </body>
 </html>

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('fax')->nullable();
             $table->string('wilaya')->nullable();
             $table->string('carte')->nullable();
+            $table->string('connaissance')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

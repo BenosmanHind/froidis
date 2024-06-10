@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use TheHocineSaad\LaravelAlgereography\Models\Wilaya;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\MessageAdminController;
@@ -43,7 +44,7 @@ Route::get('/professionnels', function () {
     return view('professionnels');
 });
 
-
+Route::resource('/contact',ContactController::class);
 
 
 
@@ -74,9 +75,8 @@ Route::get('/login', function () {
     return view('auth.login',compact('wilayas'));
 });
 
-Route::get('/demande-devis', function () {
-    $wilayas = Wilaya::all();
-    return view('demande-devis',compact('wilayas'));
+Route::get('/project-talk', function () {
+    return view('demande-devis');
 });
 
 Route::get('/actualite/{slug}',[App\Http\Controllers\FrontController::class, 'detailActualite']);
@@ -115,7 +115,7 @@ Route::resource('/professional',ProfessionalController::class)->middleware('can:
 Route::get('/products/{slug}', [App\Http\Controllers\AccueilController::class, 'categoryProducts']);
 Route::get('/product/{slug}', [App\Http\Controllers\AccueilController::class, 'detailProduct']);
 Route::get('/telecharger-pdf/{document}', [App\Http\Controllers\AccueilController::class, 'telechargerPDF']);
-Route::post('/demande-devis', [App\Http\Controllers\DevisController::class, 'store']);
+Route::post('/project-talk', [App\Http\Controllers\DevisController::class, 'store']);
 Route::get('/success-mail', function () {
 
     return view('success-mail');

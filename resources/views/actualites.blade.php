@@ -11,16 +11,16 @@
 }
 </style>
 <!--=== Start Page Banner Section ===-->
-<section class="page-banner-section" style="background-color: #035479; ">
+<section class="page-banner-section bg-6">
     <div class="container">
         <div class="page-banner-content">
-            <h2>Nos actualités</h2>
+            <h2> Actualités</h2>
             <ul>
                 <li>
-                    <a href="#">Accueil</a>
+                    <a href="{{ asset('/') }}">Accueil</a>
                 </li>
-                <li>
-                  Actualités
+                <li style="color: #ffff">
+                    Actualités
                 </li>
             </ul>
         </div>

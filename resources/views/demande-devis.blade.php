@@ -1,17 +1,22 @@
 @extends('layouts.front')
 @section('content')
-
+<style>
+.large-textarea {
+    width: 100%;
+    height: 300px; /* Ajustez la hauteur selon vos besoins */
+}
+</style>
 <!--=== Start Page Banner Section ===-->
 <section class="page-banner-section bg-6">
     <div class="container">
         <div class="page-banner-content">
-            <h2> Demander un devis</h2>
+            <h2> Parlez-nous de votre projet</h2>
             <ul>
                 <li>
                     <a href="{{ asset('/') }}">Accueil</a>
                 </li>
                 <li style="color: #ffff">
-                    Demander un devis
+                    Votre projet
                 </li>
             </ul>
         </div>
@@ -25,9 +30,9 @@
         <div class="row d-flex justify-content-center">
             <div class="col-lg-9 col-md-9 ps-0">
                 <div class="sign-up-form">
-                        <h2>Demandez dès maintenant votre devi !</h2>
-                        <p>Demandez dès maintenant votre devis pour les services de froid. Notre équipe expérimentée vous propose des solutions sur mesure pour la réfrigération,afin de répondre à vos besoins spécifiques.</p>
-                        <form class="form-wrap" method="POST" action="{{ asset('demande-devis') }}">
+                        <h2>Parlez-nous de votre projet !</h2>
+                        <p>Découvrez dès à présent nos offres de services en matière de froid. Notre équipe compétente est là pour vous proposer des solutions adaptées à vos besoins en réfrigération.</p>
+                        <form class="form-wrap" method="POST" action="{{ asset('project-talk') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="card">
                                 <div class="card-header">
@@ -48,18 +53,6 @@
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-floating form-group">
-                                                <select  class="form-control "  name="type" required>
-                                                <option>Vous êtes</option>
-                                                <option value="0">Installateur</option>
-                                                <option value="1">Particulier</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-floating form-group">
                                                 <input type="text" class="form-control @error('phone') is-invalid @enderror" placeholder="Votre numéro *" name="phone" value="{{ old('phone') }}" required>
                                                 <label class="form-label">Votre numéro *</label>
                                                     @error('phone')
@@ -69,24 +62,13 @@
                                                     @enderror
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="col-lg-6">
                                             <div class="form-floating form-group">
                                                 <input type="text" class="form-control @error('email') is-invalid @enderror"  placeholder="Votre email *" name="email" value="{{ old('email') }}" required autocomplete="email">
                                                 <label  class="form-label">Votre email *</label>
                                                     @error('email')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                    @enderror
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-floating form-group">
-                                                <input type="text" class="form-control @error('company') is-invalid @enderror" placeholder="Société " name="company" value="{{ old('company') }}" >
-                                                <label class="form-label">Société</label>
-                                                    @error('company')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
@@ -105,8 +87,34 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-floating form-group">
+                                                <input type="text" class="form-control @error('company') is-invalid @enderror" placeholder="Société " name="company" value="{{ old('company') }}" >
+                                                <label class="form-label">Entreprise</label>
+                                                    @error('company')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                    @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-floating form-group">
+                                                <select  class="form-control " style="padding-top: 0px !important ;padding-bottom : 0px !important;" name="type" required>
+                                                <option selected disabled>Secteur d'activité</option>
+                                                <option value="Fruits et légumes">Fruits et légumes</option>
+                                                <option value="Viandes et poissons">Viandes et poissons</option>
+                                                <option value="Produits laitiers">Produits laitiers</option>
+                                                <option value="Boissons">Boissons</option>
+                                                <option value="Autres">Autres</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            {{--
                             <div class="card mt-3">
                                 <div class="card-header">
                                     <h5 class="card-title">D'autres informations</h5>
@@ -233,16 +241,33 @@
                                     </div>
                                 </div>
                             </div>
+                            --}}
                             <div class="card mt-3">
                                 <div class="card-header">
-                                    <h5 class="card-title">Proposition et autres informations</h5>
+                                    <h5 class="card-title">Envoyer un document</h5>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="form-floating form-group">
                                                 <div class="form-floating">
-                                                    <textarea name="note" id="summary" cols="30" rows="7" class="form-control textarea" placeholder="remarque..."></textarea>
+                                                    <input type="file" class="form-control" placeholder="Société " name="file" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-3">
+                                <div class="card-header">
+                                    <h5 class="card-title">Détails de votre projet</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-floating form-group">
+                                                <div class="form-floating">
+                                                    <textarea name="note" cols="30" rows="10"  class="form-control textarea large-textarea" placeholder="remarque..."></textarea>
                                                     <label for="summary" class="form-label">...........</label>
                                                 </div>
                                             </div>

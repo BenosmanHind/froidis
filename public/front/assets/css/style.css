@@ -54,7 +54,7 @@ Version: 1.0
 03 - Global Style
 <<<<======================================================>>>>*/
 body {
-  font-size: 17px;
+  font-size: 15px;
   font-family: "Saira", sans-serif;
   color: #4a4c59;
 }
@@ -4705,8 +4705,7 @@ textarea.form-control {
 
 .sign-up-form .form-wrap .form-group span {
   position: absolute;
-  top: 22px;
-  right: 20px;
+
   cursor: pointer;
 }
 

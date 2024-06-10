@@ -25,7 +25,11 @@ class DevisController extends Controller
         'address.required' => 'ce champ est obligatoire.',
         ]
     );
-        Mail::to('benosmanhind@gmail.com')->send(new Devis($request));
-        return view('success-mail');
+    $filePath = null;
+    if($request->hasFile('file')){
+        $filePath = $request->file('file')->store('documents');
+    }
+    Mail::to('benosmanhind@gmail.com')->send(new Devis($request , $filePath));
+    return view('success-mail');
     }
 }
