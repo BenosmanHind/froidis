@@ -81,6 +81,9 @@ Route::get('/project-talk', function () {
 
 Route::get('/actualite/{slug}',[App\Http\Controllers\FrontController::class, 'detailActualite']);
 Route::get('/actualites',[App\Http\Controllers\FrontController::class, 'actualites']);
+
+Route::get('/project/{slug}',[App\Http\Controllers\FrontController::class, 'detailProject']);
+Route::get('/projects',[App\Http\Controllers\FrontController::class, 'projects']);
 //admin route
 Route::resource('/admin/categories',CategoryController::class)->middleware('can:admin');
 Route::resource('/admin/products',ProductController::class)->middleware('can:admin');

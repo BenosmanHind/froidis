@@ -37,9 +37,20 @@
                                 <input type="text" class="form-control input-default" value="{{old('flag')}}" name="flag" placeholder="0" >
                             </div>
                             <div class="form-group col-md-6">
-                                <label>Photo*:</label>
-                                <input type="file" class="form-control input-default"  name="image" required>
+                                <label>Photos*:</label>
+                                <input type="file" class="form-control input-default"  name="photos[]" multiple required>
                             </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="mb-3 col-md-12">
+                                 <label>Wilayas *:</label>
+                                 <select class="form-control selectpicker" data-live-search="true" name="wilaya" >
+                                    <option value="0">Séléctionner la wilaya</option>
+                                    @foreach($wilayas as $wilaya)
+                                    <option value="{{$wilaya->name}}">{{$wilaya->name}}</option>
+                                    @endforeach
+                                 </select>
+                             </div>
                         </div>
                         <div class="form-row">
                            <div class="mb-3 col-md-12">
@@ -49,7 +60,7 @@
                         </div>
                         <div class="form-row">
                             <div class="mb-3 col-md-12">
-                                <label>Déscription:</label>
+                                <label>Déscription*:</label>
                                 <textarea class="summernote" class="form-control " name="description" >{{old('description')}}</textarea>
                             </div>
                         </div>
