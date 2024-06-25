@@ -59,11 +59,11 @@
                                 <span>Connexion</span>
                             </button></a>
                         </div>
+                        <div >
 
-                        <p class="already">Vous n'avez pas de compte? <a href="{{asset('/register-pro')}}">Inscrivez-vous</a></p>
-
+                        </div>
+                        <p class="already"><a href="{{url('password/reset')}}"> Mot de passe oublié ? <br></a>Vous n'avez pas de compte? <a href="{{asset('/register-pro')}}">Inscrivez-vous</a></p>
                         <span class="or">Réseaux sociaux</span>
-
                         <ul class="footer-social-link">
                             <li>
                                 <a href="https://www.facebook.com/" target="_blank" class="hover-style">
