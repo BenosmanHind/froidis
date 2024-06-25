@@ -30,6 +30,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Titre</th>
+                                        <th>Wilaya</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -38,10 +39,13 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $project->title }}</td>
+                                        <td>{{ $project->wilaya }}</td>
                                         <td>
+                                            <form action="{{url('admin/projects/'.$project->id)}}" method="post">
+                                                {{csrf_field()}}
+                                                {{method_field('DELETE')}}
                                             <div class="d-flex">
-                                                <a href="#" class="btn btn-warning shadow btn-xs sharp mr-1"><i class="fas fa-pencil-alt"></i></a>
-                                                <button class="btn btn-danger shadow btn-xs sharp" ><i class="fa fa-trash"></i></button>
+                                               <button class="btn btn-danger shadow btn-xs sharp"onclick="return confirm('Vous voulez vraiment supprimer?')" ><i class="fa fa-trash"></i></button>
                                             </div>
                                         </td>
                                     </tr>

@@ -42,7 +42,7 @@
                         <div class="form-floating form-group mt-3">
                             <input type="password" class="form-control @error('password') is-invalid @enderror" id="password-field1" placeholder="Your Password"name="password" value=""required autocomplete="new-password">
                             <label for="password-field1" class="form-label">Mot de passe</label>
-                            <span toggle="#password-field1" class="icofont-eye-alt field-icon toggle-password"></span>
+                            <span toggle="#password-field1" class="icofont-eye-alt field-icon toggle-password" style="top: 22px !important; right:20px !important;"></span>
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -52,7 +52,7 @@
                         <div class="form-floating form-group mt-3">
                             <input type="password" class="form-control @error('password') is-invalid @enderror" id="password-field1" placeholder="Confirmer le mot de passe" name="password_confirmation" required>
                             <label for="password-field1" class="form-label">Confirmer le mot de passe</label>
-                            <span toggle="#password-field1" class="icofont-eye-alt field-icon toggle-password"></span>
+                            <span toggle="#password-field1" class="icofont-eye-alt field-icon toggle-password" style="top: 22px !important; right:20px !important;"></span>
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

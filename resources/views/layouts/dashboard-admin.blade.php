@@ -27,6 +27,9 @@
 
 
     <style>
+        .temp-body {
+		filter: blur(4px);
+		}
     .temp-body {
             filter: blur(3px);
             }

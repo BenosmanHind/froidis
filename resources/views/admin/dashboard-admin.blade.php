@@ -3,6 +3,7 @@
  <!--**********************************
             Content body start
         ***********************************-->
+    <div class="temp-body">
         <div class="content-body">
             <!-- row -->
 			<div class="container-fluid">
@@ -417,5 +418,5 @@
         <!--**********************************
             Content body end
         ***********************************-->
-
+    </div>
 @endsection

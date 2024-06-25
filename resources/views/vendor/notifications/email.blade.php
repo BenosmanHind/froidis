@@ -354,8 +354,8 @@
 
                               <div style="color: #2d4b5f; line-height: 160%; text-align: center; word-wrap: break-word;">
                                 <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 20px; line-height: 32px;"><strong>Contactez-nous</strong></span></p>
-                                <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 16px; line-height: 25.6px; color: #2d4b5f;">+213 (0)560 047 047 |  +213 (0)560 047 047</span></p>
-                                <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 14px; line-height: 22.4px;"><span style="font-size: 16px; line-height: 25.6px; color: #2d4b5f;"><a rel="noopener" href="contact@froidis.dz" target="_blank" style="color: #2d4b5f; text-decoration: underline;">contact@froidis.dz</a><br /></span></span>
+                                <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 16px; line-height: 25.6px; color: #2d4b5f;">+213 (0)560 047 047 |  <a rel="noopener" href="contact@froidis.dz" target="_blank" style="color: #2d4b5f; text-decoration: underline;">contact@froidis.dz</a></span></p>
+
                                 </p>
                               </div>
 
