@@ -41,7 +41,7 @@ Route::get('/industrie', function () {
     return view('industrie');
 });
 Route::get('/professionnels', function () {
-    return view('professionnels');
+    return view('Professionnels');
 });
 
 Route::resource('/contact',ContactController::class);
