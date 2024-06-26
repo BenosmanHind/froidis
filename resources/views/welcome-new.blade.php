@@ -77,9 +77,21 @@
     .controller{
         display: none;
     }
+
+        .slick-dots li button:before {
+            font-size: 20px;
+            color: #1a63c9; /* Color of the dots */
+            content: '■'; /* Square character instead of dot */
+        }
+        .slick-dots li.slick-active button:before {
+            color: #173a7a; /* Color of the active dot */
+        }
+
+
+       
 </style>
 <!--=== Start Banner Section ===-->
-<section class="banner-section bg-1">
+{{--<section class="banner-section bg-1">
     <div class="container">
         <div class="banner-content text-center" style="max-width: 100%">
             <h1 class="wow fadeInUp delay-0-2s" style="font-size: 71px;">Votre partenaire en froid <br> commercial et industriel en Algérie</h1>
@@ -92,15 +104,24 @@
             </a>
         </div>
     </div>
-</section>
+</section>--}}
+
+<div class="container mt-5 ">
+    <div class="your-class">
+        <div><img src="{{asset('images/slider/froidis-slide-1.jpg')}}" class="img-fluid" alt="Image 1"></div>
+        <div><img src="{{asset('images/slider/froidis-slide-2.jpg')}}" class="img-fluid" alt="Image 2"></div>
+        <div><img src="{{asset('images/slider/froidis-slide-3.jpg')}}" class="img-fluid" alt="Image 3"></div>
+    </div>
+</div>
+
 <!--=== End Banner Section ===-->
 
 <!--=== Start Services Section ===-->
 <section class="services-section  pt-100 pb-70" style="background-color: #173a7a;">
     <div class="container">
         <div class="main-section-title wow fadeInUp delay-0-2s">
-            <span class="up-title" style="color: #fff">Secteurs d'activité</span>
-            <h2 style="color: #fff">Depuis 1995, Une large gamme de secteurs d'activité.</h2>
+            <span class="up-title" style="color: #fff">Depuis 1995</span>
+            <h2 style="color: #fff">Notre savoir-faire s'étend à une variété de secteurs</h2>
         </div>
 
         <div class="row">
@@ -184,6 +205,31 @@
 <!--=== End Services Section ===-->
 
 
+<!--=== Start Video Section ===-->
+<section class="project-section ptb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="video-content wow fadeInLeft delay-0-2s">
+                    <span class="up-title" style="color: #fff">Nos projets</span>
+                    <h2>Une sélection de nos projets réussis</h2>
+                    <p>Une présence via le territoire national Algérien témoigne de notre engagement à accompagner nos clients dans leurs projets.</p>
+
+                    <a href="{{asset('/projects')}}" class="main-btn" style="background-color: #fff">
+                        <span style="color: #173a7a">
+                            Découvrir
+                            <i class="icofont-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--=== End Video Section ===-->
+
+
+
 
 
 
@@ -264,8 +310,11 @@
 </section>
 <!--=== End Video Section ===-->
 
+
+
+
 <!--=== Start Blog Section ===-->
-<section class="blog-section pt-100 pb-70">
+<section class="blog-section pt-100 pb-70 " style="background-color: #f1f1f1">
     <div class="container">
         <div class="main-section-title-wrap">
             <div class="row">
@@ -290,7 +339,7 @@
 
 
 <!--=== Start Services Section ===-->
-<section class="services-section  pt-100 pb-70" style="background-color: #173a7a;">
+{{--<section class="services-section  pt-100 pb-70" style="background-color: #173a7a;">
     <div class="container">
         <div class="main-section-title wow fadeInUp delay-0-2s">
             <span class="up-title" style="color: #fff">nos partenaires </span>
@@ -326,7 +375,7 @@
     <img src="{{asset('front/assets/images/services-bg-shape.png')}}" class="services-bg-shape" alt="Image">
 </section>
 <!--=== End Services Section ===-->
-
+--}}
 
 <!--=== Start Blog Section ===-->
 <section class="blog-section pt-100 pb-70">

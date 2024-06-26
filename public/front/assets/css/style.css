@@ -2381,6 +2381,16 @@ textarea.form-control {
   z-index: 1;
 }
 
+
+.project-section {
+  background-image: url(../../assets/images/project-banner.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  }
+
 .video-section::before {
   content: "";
   position: absolute;

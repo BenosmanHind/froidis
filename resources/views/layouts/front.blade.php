@@ -16,6 +16,12 @@
 		<link rel="stylesheet" href="{{ asset('front/assets/css/style.css') }}">
 		<link rel="stylesheet" href="{{ asset('front/assets/css/responsive.css') }}">
 
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+
+<!-- Slick Theme CSS (optionnel) -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+
 		<!--=== Favicon ===-->
 		<link rel="icon" type="image/png" href="{{ asset('front/assets/images/favicon.png') }}">
 		<!--=== Title ===-->
@@ -408,6 +414,20 @@
         <script src="{{ asset('front/assets/js/waypoints.min.js') }}"></script>
         <script src="{{ asset('front/assets/js/countdown.min.js') }}"></script>
 		<script src="{{ asset('front/assets/js/main.js') }}"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+		<script>
+			$('.your-class').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: true,
+    dots: true,
+    adaptiveHeight: true
+  });
+		</script>
         <script>
 
 			$('.article-carousel').owlCarousel({
